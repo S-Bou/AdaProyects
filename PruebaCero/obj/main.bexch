@@ -1,0 +1,19 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\PruebaCero\pruebacero.gpr
+20200924144922 d5f15a1d2a41380d249f1fae75edb4a6
+[BOUND OBJECT FILES]
+C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\PruebaCero\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\PruebaCero\obj\
+-LC:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\PruebaCero\obj\
+-LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000
