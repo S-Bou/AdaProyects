@@ -1,0 +1,19 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Num_primos\num_primos.gpr
+20200928163802 b4c060030c085ef592bc1510c47e9915
+[BOUND OBJECT FILES]
+C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Num_primos\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Num_primos\obj\
+-LC:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Num_primos\obj\
+-LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000

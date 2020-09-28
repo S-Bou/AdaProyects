@@ -1,0 +1,28 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U areas%b		areas.adb		eba83f69 NE OO PK IL
+
+U areas%s		areas.ads		af5a0e79 EE NE OO PK IL
+
+D areas.ads		20200928180450 af5a0e79 areas%s
+D areas.adb		20200928175210 44f23110 areas%b
+D system.ads		20200819050648 32a08138 system%s
+G a e
+G c Z s b [area_rectangulo areas 5 13 none]
+G c Z s s [rectanguloIP areas 11 9 none]
+X 1 areas.ads
+1K9*areas 11E9 15l5 15e10 2|1b14 6l5 6t10
+3R9*rectangulo 11c9 13e14
+5V13*area_rectangulo{integer} 5>29 5>32 2|2b13 5l8 5t23
+5i29 a{integer} 2|2b29 4r14
+5i32 l{integer} 2|2b32 4r16
+12i7*ancho{integer}
+12i14*largo{integer}
+

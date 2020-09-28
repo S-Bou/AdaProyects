@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Areas_simples\defaultareas_simples.gpr
+20200928173534 cbfb1dc6a3b3799b9e77f1d669c34821
+[BOUND OBJECT FILES]
+C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Areas_simples\obj\areas.o
+C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Areas_simples\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Areas_simples\obj\
+-LC:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Areas_simples\obj\
+-LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000

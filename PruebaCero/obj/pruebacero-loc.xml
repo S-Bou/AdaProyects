@@ -2,13 +2,9 @@
 <Locations >
   <Project>
     <vfs_file />
-    <file_marker column=" 1" line=" 1" >
+    <file_marker current="true" column=" 46" line=" 18" >
       <vfs_project />
-      <vfs_file>D:\UNI\4#194;#186;UNI\Semestre_A\SI_Tiempo_Real\AdaProyects\PruebaCero\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 26" line=" 9" >
-      <vfs_project />
-      <vfs_file>D:\UNI\4#194;#186;UNI\Semestre_A\SI_Tiempo_Real\AdaProyects\PruebaCero\src\main.adb</vfs_file>
+      <vfs_file>C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\PruebaCero\src\main.adb</vfs_file>
     </file_marker>
   </Project>
   <Project >
