@@ -1,38 +1,10 @@
 <?xml version="1.0"?>
-<Locations>
+<Locations >
   <Project>
-    <vfs_file />
-    <file_marker column=" 46" line=" 18" >
-      <vfs_project />
-      <vfs_file>C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\PruebaCero\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project />
-      <vfs_file />
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project />
-      <vfs_file>C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Num_primos\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 20" >
-      <vfs_project />
-      <vfs_file>C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Num_primos\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 11" >
-      <vfs_project />
-      <vfs_file>C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Num_primos\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 37" >
-      <vfs_project />
-      <vfs_file>C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Num_primos\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 8" line=" 36" >
-      <vfs_project />
-      <vfs_file>C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Num_primos\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 61" line=" 26" >
-      <vfs_project />
-      <vfs_file>C:\Users\bouyo\Documents\Semestre_A\SI_Tiempo_Real\AdaProyects\Num_primos\src\main.adb</vfs_file>
+    <vfs_file>D:\Programas\GNAT\AdaProyects\Num_primos\num_primos.gpr</vfs_file>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\Num_primos\num_primos.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Num_primos\src\main.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>
