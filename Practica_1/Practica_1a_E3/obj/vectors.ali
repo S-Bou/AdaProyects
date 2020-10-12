@@ -44,8 +44,8 @@ D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
 D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
 D text_io.ads		20200819050648 21b2c898 text_io%s
-D vectors.ads		20201012085040 d6cc9223 vectors%s
-D vectors.adb		20201012093258 5cb4e5f9 vectors%b
+D vectors.ads		20201012140142 d6cc9223 vectors%s
+D vectors.adb		20201012140142 5cb4e5f9 vectors%b
 G a e
 G c Z s b [Oadd vectors 8 13 none]
 G c Z s b [Omultiply vectors 10 13 none]
