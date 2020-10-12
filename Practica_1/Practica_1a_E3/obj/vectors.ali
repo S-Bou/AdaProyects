@@ -11,7 +11,7 @@ RV NO_SECONDARY_STACK
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U vectors%b		vectors.adb		a2b1ac71 NE OO PK IL
+U vectors%b		vectors.adb		8a7877da NE OO PK IL
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
 U vectors%s		vectors.ads		16f41d1b EE NE OO PK IL
@@ -45,7 +45,7 @@ D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
 D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
 D text_io.ads		20200819050648 21b2c898 text_io%s
 D vectors.ads		20201012085040 d6cc9223 vectors%s
-D vectors.adb		20201012085942 747d3e52 vectors%b
+D vectors.adb		20201012093258 5cb4e5f9 vectors%b
 G a e
 G c Z s b [Oadd vectors 8 13 none]
 G c Z s b [Omultiply vectors 10 13 none]
@@ -81,15 +81,15 @@ X 26 vectors.ads
 14a18 Left{6A9} 27|35b18 39r21
 14a24 Right{6A9} 27|35b24 39r31
 16U14*printv 16>22 27|45b14 51l8 51t14
-16a22 data{6A9} 27|45b22 48r11
+16a22 data{6A9} 27|45b22 47r16 48r11
 X 27 vectors.adb
-6a7 data{26|6A9} 9m10 11r14
+6a7 data{26|6A9} 8r16 9m10 11r14
 8i11 i{integer} 9r15 9r27
-16a7 data{26|6A9} 19m10 21r14
+16a7 data{26|6A9} 18r16 19m10 21r14
 18i11 i{integer} 19r15 19r27
-26a7 data{26|6A9} 29m10 31r14
+26a7 data{26|6A9} 28r16 29m10 31r14
 28i11 i{integer} 29r15 29r26 29r37
-36a7 data{26|6A9} 39m10 41r14
+36a7 data{26|6A9} 38r16 39m10 41r14
 38i11 i{integer} 39r15 39r26 39r37
 47i11 i{integer} 48r16
 

@@ -4,7 +4,6 @@ with ada.Float_Text_IO; use ada.Float_Text_IO;
 with ada.Numerics.Elementary_Functions; use ada.Numerics.Elementary_Functions;
 --*****************************************************************************************************************************************
 procedure Main is
-   type myfloat is digits 2 range -1.0..1.0;
 
    type vectstr is array (Integer range <>) of string(1..2);
    name : vectstr(0..3);
@@ -18,12 +17,12 @@ begin
 
    name := ("x1", "y1", "x2", "y2");
 
-   for i in 0..3 loop
+   for i in 0..3 loop       -- = for i in posi'range loop
       Put("Introduzca ");Put(name(i));Put(" en formato real");Put(": ");
       Get(posi(i));
    end loop;
 
-   Put("P1 = (");Put(posi(0), 1, 1, 0);Put(", ");Put(posi(1), 1, 1, 0);Put(")");
+   Put("P1 = (");Put(posi(0), 1, 1, 0);Put(", ");Put(posi(1), 1, 1, 0);Put(")");    --(X, SpaceLeft, Decimals, Exponents)
    New_Line;
    Put("P2 = (");Put(posi(2), 1, 1, 0);Put(", ");Put(posi(3), 1, 1, 0);Put(")");
    New_Line;

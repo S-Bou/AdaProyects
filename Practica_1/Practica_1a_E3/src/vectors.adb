@@ -5,7 +5,7 @@ package body vectors is
    function "+" (K : Float; Right : Vector) return Vector is
       data : Vector(1..10);
    begin
-      for i in 1..10 loop
+      for i in data'range loop
          data(i) := Right(i) + K;
       end loop;
       return data;
@@ -15,7 +15,7 @@ package body vectors is
    function "*" (K : Float; Right : Vector) return Vector is
       data : Vector(1..10);
    begin
-      for i in 1..10 loop
+      for i in data'range loop
          data(i) := Right(i) * K;
       end loop;
       return data;
@@ -25,7 +25,7 @@ package body vectors is
    function "*" (Left, Right : Vector) return Vector is
       data : Vector(1..10);
    begin
-      for i in 1..10 loop
+      for i in data'range loop
          data(i) := Left(i) * Right(i);
       end loop;
       return data;
@@ -35,7 +35,7 @@ package body vectors is
    function "+" (Left, Right : Vector) return Vector is
       data : Vector(1..10);
    begin
-      for i in 1..10 loop
+      for i in data'range loop
          data(i) := Left(i) + Right(i);
       end loop;
       return data;
@@ -44,8 +44,8 @@ package body vectors is
 --Show in console content of vector
    procedure printv (data : in Vector) is
    begin
-      for i in 1..10 loop
-      Put(data(i), 2, 1, 0);
+      for i in data'range loop
+      Put(data(i), 3, 0, 0);   --(X, SpaceLeft, Decimals, Exponents)
       Put(", ");       
       end loop;
    end printv;

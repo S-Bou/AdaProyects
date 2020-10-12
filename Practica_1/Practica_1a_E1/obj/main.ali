@@ -10,7 +10,7 @@ RV NO_FLOATING_POINT
 RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		d5dfb3a1 NE OO SU
+U main%b		main.adb		c7f3d714 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -32,7 +32,7 @@ D a-tiflio.ads		20200819050644 bf196650 ada.text_io.float_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D main.adb		20201010085138 160f0185 main%b
+D main.adb		20201012094630 04236530 main%b
 D system.ads		20200819050648 32a08138 system%s
 D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200819050646 54135002 system.exception_table%s
@@ -58,25 +58,24 @@ X 5 a-numeri.ads
 X 6 a-nuelfu.ads
 18K22*Elementary_Functions[7|39] 15|4w19 4r58
 X 7 a-ngelfu.ads
-52V13*Sqrt{float} 15|33s16[6|18]
+52V13*Sqrt{float} 15|32s16[6|18]
 X 10 a-textio.ads
-264U14*New_Line 15|27s4 29s4 37s4
-465U14*Put 15|22s7 22s26 22s39 22s63 26s4 26s40 26s72 28s4 28s40 28s72 35s4
-508U14*Put_Line 15|36s4
+264U14*New_Line 15|26s4 28s4 36s4
+465U14*Put 15|21s7 21s26 21s39 21s63 25s4 25s40 25s72 27s4 27s40 27s72 34s4
+508U14*Put_Line 15|35s4
 X 11 a-tiflio.ads
-60U14*Get 15|23s7[3|20]
-82U14*Put 15|26s18[3|20] 26s50[3|20] 28s18[3|20] 28s50[3|20] 35s37[3|20]
+60U14*Get 15|22s7[3|20]
+82U14*Put 15|25s18[3|20] 25s50[3|20] 27s18[3|20] 27s50[3|20] 34s37[3|20]
 X 15 main.adb
-6U11*Main 6b11 38l5 38t9
-7F9 myfloat<short_float>
-9A9 vectstr(string)<integer> 10r11
-10a4 name{9A9} 19m4 22r30
-12A9 vectnum(float)<integer> 13r11
-13a4 posi{12A9} 23m11 23r11 26r22 26r54 28r22 28r54 31r10 31r18 32r10 32r18
-15f4 dx{float} 31m4 33r21 33r24
-15f8 dy{float} 32m4 33r27 33r30
-15f12 distance{float} 33m4 35r41
-21i8 i{integer} 22r35 23r16
+6U11*Main 6b11 37l5 37t9
+8A9 vectstr(string)<integer> 9r11
+9a4 name{8A9} 18m4 21r30
+11A9 vectnum(float)<integer> 12r11
+12a4 posi{11A9} 22m11 22r11 25r22 25r54 27r22 27r54 30r10 30r18 31r10 31r18
+14f4 dx{float} 30m4 32r21 32r24
+14f8 dy{float} 31m4 32r27 32r30
+14f12 distance{float} 32m4 34r41
+20i8 i{integer} 21r35 22r16
 X 29 text_io.ads
 24K9*Text_IO=24:29 15|2w6 2r19
 

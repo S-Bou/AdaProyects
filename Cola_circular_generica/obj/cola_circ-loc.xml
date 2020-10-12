@@ -2,9 +2,13 @@
 <Locations >
   <Project>
     <vfs_file>D:\Programas\GNAT\AdaProyects\Cola_circular_generica\cola_circ.gpr</vfs_file>
-    <file_marker current="true" column=" 1" line=" 1" >
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>D:\Programas\GNAT\AdaProyects\Cola_circular_generica\cola_circ.gpr</vfs_project>
       <vfs_file>D:\Programas\GNAT\AdaProyects\Cola_circular_generica\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\Cola_circular_generica\cola_circ.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Cola_circular_generica\src\colas.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>

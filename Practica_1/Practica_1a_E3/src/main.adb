@@ -7,7 +7,7 @@ procedure Main is
    num : float := 2.0;
 
 begin
-   for i in 1..10 loop
+   for i in data'range loop
       vecR(i) := float(i);
       vecL(i) := float(i);
       data(i) := 0.0;
