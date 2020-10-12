@@ -1,15 +1,54 @@
+
 package body vectors is
 
-   package Vectors is
-      type Vector is array(Integer range <>) of Float;
-      function "+" (K : Float; Right : Vector) return Vector;
-      --Calcula la suma de un vector y un escalar
-      function "*" (K : Float; Right : Vector) return Vector;
-      --Calcula el producto de un vector y un escalar
-      function "*" (Left, Right : Vector) return Float;
-      --Calcula el producto de dos vectores
-      function "+" (Left, Right : Vector) return Vector;
-      --Calcula la suma de dos vectores
-   end Vectors;
+--Calcula la suma de un vector y un escalar
+   function "+" (K : Float; Right : Vector) return Vector is
+      data : Vector(1..10);
+   begin
+      for i in 1..10 loop
+         data(i) := Right(i) + K;
+      end loop;
+      return data;
+   end "+";
+   
+--Calcula el producto de un vector y un escalar
+   function "*" (K : Float; Right : Vector) return Vector is
+      data : Vector(1..10);
+   begin
+      for i in 1..10 loop
+         data(i) := Right(i) * K;
+      end loop;
+      return data;
+   end "*";
+             
+--Calcula el producto de dos vectores
+   function "*" (Left, Right : Vector) return Vector is
+      data : Vector(1..10);
+   begin
+      for i in 1..10 loop
+         data(i) := Left(i) * Right(i);
+      end loop;
+      return data;
+   end "*";
+   
+--Calcula la suma de dos vectores
+   function "+" (Left, Right : Vector) return Vector is
+      data : Vector(1..10);
+   begin
+      for i in 1..10 loop
+         data(i) := Left(i) + Right(i);
+      end loop;
+      return data;
+   end "+";
+     
+--Show in console content of vector
+   procedure printv (data : in Vector) is
+   begin
+      for i in 1..10 loop
+      Put(data(i), 2, 1, 0);
+      Put(", ");       
+      end loop;
+   end printv;
    
 end vectors;
+
