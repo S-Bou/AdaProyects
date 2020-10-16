@@ -1,0 +1,1 @@
+main.adb:24:12: warning: variable "coord2" is never read and never assigned

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_1b\pila_generica.gpr</vfs_file>
+    <file_marker column=" 4" line=" 3" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_1b\pila_generica.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_1b\src\pila.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 5" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_1b\pila_generica.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_1b\src\pila.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

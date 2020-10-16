@@ -1,0 +1,96 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U colas%b		colas.adb		2664fd92 NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W text_io%s		text_io.ads		text_io.ali
+
+U colas%s		colas.ads		1a8862e7 BN EE NE OO PK GE KM
+
+D ada.ads		20200819050644 76789da1 ada%s
+D a-except.ads		20200819050644 a7106115 ada.exceptions%s
+D a-flteio.ads		20200819050644 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20200819050644 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-tiflio.ads		20200819050644 bf196650 ada.text_io.float_io%s
+D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
+D colas.ads		20201012180406 1a8862e7 colas%s
+D colas.adb		20201012181946 0a9f99e9 colas%b
+D interfac.ads		20200819050646 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
+D system.ads		20200819050648 32a08138 system%s
+D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050646 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
+D s-parame.ads		20200819050648 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050648 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050648 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050648 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
+D text_io.ads		20200819050648 21b2c898 text_io%s
+G a e
+G c Z s b [colas standard 5 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 13|1r6 1r31 2r6 2r29
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 13|2w10 2r33
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 13|1w10 1r35
+X 8 a-textio.ads
+264U14*New_Line 13|49s7 60s10
+465U14*Put 13|47s7 51s10 56s13
+X 10 a-tiinio.ads
+80U14*Put 13|48s7[4|18]
+X 12 colas.ads
+2+9 nolose 3r30 13r55 14r55 23r34 13|24r56 34r58
+3U19 Imprime 3>27 13|55s13
+3*27 x{2+9}
+5k9*colas 2z9 3z19 21E4 32l5 32e10 13|5b14 64l5 64t10
+7R9*Cola_Circular 9r26 10r26 12r38 13r33 14r31 15r28 24c9 30e17 13|7r27 12r27
+. 17r38 24r34 34r35 44r28
+9V13*Vacia{boolean} 9>19 13|7b13 10l8 10t13 36s13 50s14
+9r19 C{7R9} 13|7b20 9r14
+10V13*Llena{boolean} 10>19 13|12b13 15l8 15t13 26s10
+10r19 C{7R9} 13|12b20 14r14
+12U14*Inicializar 12=27 13|17b14 22l8 22t19
+12r27 C{7R9} 13|17b27 19m7 20m7 21m7
+13U14*Anyadir 13=22 13>48 13|24b14 32l11 32t18
+13r22 C{7R9} 13|24b23 26r16 27m12 27r21 28m10 28r24 29m10 29r24 30r13 30m32
+13*48 I{2+9} 13|24b49 27r35
+14U14*Sacar 14=20 14<46 13|34b17 42l8 42t13
+14r20 C{7R9} 13|34b24 36r19 38r15 38r24 39m10 39r23 40m10 40r24
+14*46 I{2+9} 13|34b50 38m10
+15U14*Listar 15>21 13|44b14 62l8 62t14
+15r21 C{7R9} 13|44b22 48r11 50r20 52r15 55r21 58r27
+17X4*Cola_Llena 13|26r30
+17X16*Cola_Vacia 13|36r33
+21i4 N{integer} 22r38 13|14r27 28r41 39r39 57r30
+22I12 Index{integer} 23r24
+23A9 Cola(2+9)<integer> 26r19
+26a10 Vector{23A9} 13|27m14 38r17 55r23
+27i10 Entrada{integer} 13|19m9 27r23 28m12 28r26 58r29
+28i10 Salida{integer} 13|20m9 30r15 30m34 38r26 39m12 39r25 52r17
+29i10 Contador{integer} 13|9r16 14r16 21m9 29m12 29r26 40m12 40r27 48r13
+X 13 colas.adb
+45i7 K{integer} 52m10 55r30 57m13 57r19 58r23
+X 29 text_io.ads
+24K9*Text_IO=24:29 13|3w6 3r19
+
