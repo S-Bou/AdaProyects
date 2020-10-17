@@ -1,11 +1,20 @@
 package body pila is
 
-   procedure Inicializar(P : in out pila; T : in nolose)is
+   procedure inicializar(deposito : in out pilas)is
    begin
-      P.Entrada  := 0;
-      P.Salida   :=-1;
-      P.Contador := 0;
-   end Inicializar;
+      deposito.posicion := 0;
+   end inicializar;
    
-
+   procedure insertar(deposito : in out pilas; data : in integer)is
+   begin
+      deposito.pila(deposito.posicion) := data;
+      deposito.posicion := deposito.posicion + 1;
+   end insertar;
+   
+   procedure sacar(deposito : in out pilas; data : out integer) is
+   begin
+      data := deposito.pila(deposito.posicion - 1);
+      deposito.posicion := deposito.posicion - 1;
+   end sacar;
+   
 end pila;

@@ -1,0 +1,38 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U pila%b		pila.adb		2acc3721 NE OO PK IL
+
+U pila%s		pila.ads		d14655af EE NE OO PK IL
+
+D pila.ads		20201017184550 d14655af pila%s
+D pila.adb		20201017184906 fb8a628e pila%b
+D system.ads		20200819050648 32a08138 system%s
+G a e
+G c Z s b [inicializar pila 10 14 none]
+G c Z s b [insertar pila 11 14 none]
+G c Z s b [sacar pila 12 14 none]
+G c Z s s [vectorIP pila 6 9 none]
+G c Z s s [pilasIP pila 15 9 none]
+X 1 pila.ads
+2K9*pila 15E9 20l5 20e9 2|1b14 20l5 20t9
+4N4*N 16r24
+6A9*vector(integer)<integer> 16r14
+7R9*pilas 10r44 11r41 12r38 15c9 18e14 2|3r44 8r41 14r38
+10U14*inicializar 10=26 2|3b14 6l8 6t19
+10r26 deposito{7R9} 2|3b26 5m7
+11U14*insertar 11=23 11>48 2|8b14 12l8 12t16
+11r23 deposito{7R9} 2|8b23 10m7 10r21 11m7 11r28
+11i48 data{integer} 2|8b48 10r43
+12U14*sacar 12=20 12<45 2|14b14 18l8 18t13
+12r20 deposito{7R9} 2|14b20 16r15 16r29 17m7 17r28
+12i45 data{integer} 2|14b45 16m7
+16a7*pila{6A9} 2|10m16 16r24
+17i7*posicion{integer} 2|5m16 10r30 11m16 11r37 16r38 17m16 17r37
+

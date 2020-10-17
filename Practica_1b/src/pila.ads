@@ -1,13 +1,20 @@
-generic
 
 package pila is
 
    N : constant := 4;
-   type Vector is array (integer range <>) of nolose;
-   Pila : Vector(0..N-1);
-   Entrada, Salida, Contador : Integer;
+   
+   type vector is array (integer range <>) of integer;
+   type pilas is limited private;
    
    -- Procedure to start package parameters
-   procedure Inicializar(P : in out pila; T : in nolose);
+   procedure inicializar(deposito : in out pilas);
+   procedure insertar(deposito : in out pilas; data : in integer);
+   procedure sacar(deposito : in out pilas; data : out integer);
+   
+   private
+   type pilas is record
+      pila : vector(0..N-1);
+      posicion : integer;
+   end record;
    
 end pila;
