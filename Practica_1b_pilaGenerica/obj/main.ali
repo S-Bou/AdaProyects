@@ -1,0 +1,91 @@
+V "GNAT Lib v2020"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U main%b		main.adb		2ea424a2 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W pilagenerica%s	pilagenerica.adb	pilagenerica.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20200819050644 76789da1 ada%s
+D a-except.ads		20200819050644 a7106115 ada.exceptions%s
+D a-flteio.ads		20200819050644 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20200819050644 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-tiflio.ads		20200819050644 bf196650 ada.text_io.float_io%s
+D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200819050646 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
+D main.adb		20201018101222 30eb75bf main%b
+D pilagenerica.ads	20201018095248 283c5781 pilagenerica%s
+D pilagenerica.adb	20201018101954 ecf67ddb pilagenerica%b
+D system.ads		20200819050648 32a08138 system%s
+D s-conca2.ads		20200819050646 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050646 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
+D s-imgint.ads		20200819050646 02dbe0c2 system.img_int%s
+D s-parame.ads		20200819050648 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050648 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050648 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050648 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
+D text_io.ads		20200819050648 21b2c898 text_io%s
+G a e
+G c Z b b [main standard 6 11 none]
+G r i none [main standard 6 11 none] [pilagenerica standard 6 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 14|1r6 1r31 2r6 2r29 10r7
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 14|2w10 2r33
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 14|1w10 1r35 10r11
+X 8 a-textio.ads
+264U14*New_Line 14|39s20
+465U14*Put 14|27s20
+508U14*Put_Line 14|35s23 41s20 42s25
+X 10 a-tiinio.ads
+59U14*Get 14|27s50[4|18]
+80U14*Put 14|10s27[4|18]
+X 14 main.adb
+6U11*Main 6b11 47l5 47t9
+8U14 imprime_int 8b14 8>27 11l8 11t19 14r50
+8i27 data{integer} 10r31
+14K12 pila_int[15|6] 15r8
+17r4 monton{15|9R9[14]} 22m16 22r16 28m29 28r29 30r29 31m29 31r29 34m29 34r29
+. 38r28
+18i4 muestra{integer} 27m54 28r37 31m37 34m37 35r68
+18i13 option{integer} 23m4 26r12 29m20 32m23 36m23 40m20 43m25
+X 15 pilagenerica.ads
+6k9*pilagenerica 14|4w6 14r28 15|27e17
+9R9 cola 14|17r13[14]
+13U14 inicializar 14|22s4[14]
+14U14 insertar 14|28s20[14]
+15U14 sacar 14|31s23[14] 34s23[14]
+16V13 vacia{boolean} 14|30s23[14]
+18V13 menu{integer} 14|23s14[14] 29s30[14] 32s33[14] 36s33[14] 40s30[14]
+. 43s35[14]
+19U14 mostrar 14|38s20[14]
+X 32 text_io.ads
+24K9*Text_IO=24:29 14|3w6 3r19
+
