@@ -6,17 +6,19 @@ A -march=x86-64
 P ZX
 
 RN
+RV NO_FLOATING_POINT
 RV NO_IO
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		2ea424a2 NE OO SU
+U main%b		main.adb		68f41213 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W pilagenerica%s	pilagenerica.adb	pilagenerica.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.img_real%s	s-imgrea.adb		s-imgrea.ali
 W text_io%s		text_io.ads		text_io.ali
 
 D ada.ads		20200819050644 76789da1 ada%s
@@ -32,15 +34,16 @@ D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D main.adb		20201018101222 30eb75bf main%b
-D pilagenerica.ads	20201018095248 283c5781 pilagenerica%s
-D pilagenerica.adb	20201018101954 ecf67ddb pilagenerica%b
+D main.adb		20201018111840 76bb430e main%b
+D pilagenerica.ads	20201018104424 283c5781 pilagenerica%s
+D pilagenerica.adb	20201018113130 e4ea8d9f pilagenerica%b
 D system.ads		20200819050648 32a08138 system%s
 D s-conca2.ads		20200819050646 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200819050646 54135002 system.exception_table%s
 D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
 D s-imgint.ads		20200819050646 02dbe0c2 system.img_int%s
+D s-imgrea.ads		20200819050646 9f9b9792 system.img_real%s
 D s-parame.ads		20200819050648 4752c4cb system.parameters%s
 D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
 D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
@@ -55,37 +58,49 @@ G a e
 G c Z b b [main standard 6 11 none]
 G r i none [main standard 6 11 none] [pilagenerica standard 6 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 14|1r6 1r31 2r6 2r29 10r7
+16K9*Ada 20e8 14|1r6 1r31 2r6 2r29 10r7 19r7
 X 3 a-flteio.ads
-20K13*Float_Text_IO[9|46] 14|2w10 2r33
+20K13*Float_Text_IO[9|46] 14|2w10 2r33 19r11
 X 4 a-inteio.ads
 18K13*Integer_Text_IO[10|46] 14|1w10 1r35 10r11
 X 8 a-textio.ads
-264U14*New_Line 14|39s20
-465U14*Put 14|27s20
-508U14*Put_Line 14|35s23 41s20 42s25
+264U14*New_Line 14|55s13 78s13
+465U14*Put 14|37s4 43s20 66s20
+508U14*Put_Line 14|36s4 36s35 36s58 51s16 57s20 58s28 74s16 80s20 81s28
+X 9 a-tiflio.ads
+60U14*Get 14|66s50[3|20]
+82U14*Put 14|19s25[3|20]
 X 10 a-tiinio.ads
-59U14*Get 14|27s50[4|18]
+59U14*Get 14|38s4[4|18] 43s50[4|18]
 80U14*Put 14|10s27[4|18]
 X 14 main.adb
-6U11*Main 6b11 47l5 47t9
+6U11*Main 6b11 86l5 86t9
 8U14 imprime_int 8b14 8>27 11l8 11t19 14r50
 8i27 data{integer} 10r31
-14K12 pila_int[15|6] 15r8
-17r4 monton{15|9R9[14]} 22m16 22r16 28m29 28r29 30r29 31m29 31r29 34m29 34r29
-. 38r28
-18i4 muestra{integer} 27m54 28r37 31m37 34m37 35r68
-18i13 option{integer} 23m4 26r12 29m20 32m23 36m23 40m20 43m25
+14K12 pila_int[15|6] 15r8 26r16 40r17 44r13 45r23 47r16 48r26 50r16 52r26
+. 56r23 59r23
+17U14 imprime_float 17b14 17>29 20l8 20t21 23r48
+17f29 data{float} 19r29
+23K12 pila_flo[15|6] 24r8 27r18 63r17 67r13 68r23 70r16 71r26 73r16 75r26
+. 79r23 82r23
+26r4 montonint{15|9R9[14]} 33m16 33r16 44m31 44r31 46r29 47m31 47r31 50m31
+. 50r31 54r28
+27r4 montonfloat{15|9R9[23]} 34m16 34r16 67m31 67r31 69r29 70m31 70r31 73m31
+. 73r31 77r28
+28i4 muestraint{integer} 43m54 44r42 47m42 50m42 51r61
+28i16 option{integer} 38m8 39r7 40m7 42r15 45m13 48m16 52m16 56m13 59m13
+. 63m7 65r15 68m13 71m16 75m16 79m13 82m13
+29f4 muestraflo{float} 66m54 67r44 70m44 73m44 74r59
 X 15 pilagenerica.ads
-6k9*pilagenerica 14|4w6 14r28 15|27e17
-9R9 cola 14|17r13[14]
-13U14 inicializar 14|22s4[14]
-14U14 insertar 14|28s20[14]
-15U14 sacar 14|31s23[14] 34s23[14]
-16V13 vacia{boolean} 14|30s23[14]
-18V13 menu{integer} 14|23s14[14] 29s30[14] 32s33[14] 36s33[14] 40s30[14]
-. 43s35[14]
-19U14 mostrar 14|38s20[14]
-X 32 text_io.ads
+6k9*pilagenerica 14|4w6 14r28 23r28 15|27e17
+9R9 cola 14|26r25[14] 27r27[23]
+13U14 inicializar 14|33s4[14] 34s4[23]
+14U14 insertar 14|44s22[14] 67s22[23]
+15U14 sacar 14|47s25[14] 50s25[14] 70s25[23] 73s25[23]
+16V13 vacia{boolean} 14|46s23[14] 69s23[23]
+18V13 menu{integer} 14|40s26[14] 45s32[14] 48s35[14] 52s35[14] 56s32[14]
+. 59s32[14] 63s26[23] 68s32[23] 71s35[23] 75s35[23] 79s32[23] 82s32[23]
+19U14 mostrar 14|54s20[14] 77s20[23]
+X 33 text_io.ads
 24K9*Text_IO=24:29 14|3w6 3r19
 

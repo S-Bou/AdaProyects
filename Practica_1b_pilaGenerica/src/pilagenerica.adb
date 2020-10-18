@@ -11,7 +11,7 @@ package body pilagenerica is
    procedure insertar(deposito : in out cola; data : in nolose)is
    begin
       if llena(deposito) then
-         Put_line("Deposito lleno elija otra opción");
+         Put_line("Pila llena, elija otra opción");
       else
          deposito.pila(deposito.posicion) := data;
          deposito.posicion := deposito.posicion + 1;
@@ -22,7 +22,7 @@ package body pilagenerica is
    procedure sacar(deposito : in out cola; data : out nolose) is
    begin
       if vacia(deposito) then
-         Put_line("Deposito vacio.");
+         Put_line("Pila vacia.");
          data := deposito.pila(deposito.posicion);
       else
          data := deposito.pila(deposito.posicion - 1);

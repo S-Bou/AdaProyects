@@ -8,7 +8,7 @@ package pilagenerica is
    N : constant := 4;
    type cola is limited private;
    type vector is array (integer range <>) of nolose;
-   
+
    -- Procedure to start package parameters
    procedure inicializar(deposito : in out cola);
    procedure insertar(deposito : in out cola; data : in nolose);

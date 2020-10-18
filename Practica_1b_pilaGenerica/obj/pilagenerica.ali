@@ -8,7 +8,7 @@ RN
 RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U pilagenerica%b	pilagenerica.adb	13336b66 NE OO PK GE IL
+U pilagenerica%b	pilagenerica.adb	1b2f9b22 NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W text_io%s		text_io.ads		text_io.ali
@@ -26,8 +26,8 @@ D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D pilagenerica.ads	20201018095248 283c5781 pilagenerica%s
-D pilagenerica.adb	20201018101954 ecf67ddb pilagenerica%b
+D pilagenerica.ads	20201018104424 283c5781 pilagenerica%s
+D pilagenerica.adb	20201018113130 e4ea8d9f pilagenerica%b
 D system.ads		20200819050648 32a08138 system%s
 D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200819050646 54135002 system.exception_table%s
