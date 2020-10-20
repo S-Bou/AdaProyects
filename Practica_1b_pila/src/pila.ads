@@ -2,7 +2,7 @@
 package pila is
    
    type vector is array (integer range <>) of integer;
-   N : constant := 6;
+   N : constant := 5;
    
    type cola is record
       pila : vector(0..N-1);
