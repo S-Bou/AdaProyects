@@ -4,14 +4,16 @@ with Text_IO; use Text_IO;
 with pilagenerica;
 
 procedure Main is
+   -- Size of pila
+   N : constant := 5;
 
    procedure imprime_int (data : integer) is
    begin
       ada.Integer_Text_IO.put(data, 20);
    end imprime_int;
 
-   --Instanciación del paquete pilagenerica para enteros
-   package pila_int is new pilagenerica(integer, imprime_int);
+   --Pilagenerica package instantiation for integers
+   package pila_int is new pilagenerica(N, integer, imprime_int);
    use pila_int;
 
    procedure imprime_float (data : float) is
@@ -19,8 +21,8 @@ procedure Main is
       ada.Float_Text_IO.put(data, 20, 2, 0);
    end imprime_float;
 
-   --Instanciación del paquete pilagenerica para floats
-   package pila_flo is new pilagenerica(float, imprime_float);
+   --Pilagenerica package instantiation for floats
+   package pila_flo is new pilagenerica(N, float, imprime_float);
    use pila_flo;
 
    montonint : pila_int.cola;

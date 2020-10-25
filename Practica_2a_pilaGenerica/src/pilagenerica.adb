@@ -37,7 +37,7 @@ package body pilagenerica is
    
    function llena(deposito : in cola) return boolean is
    begin
-      return deposito.posicion = N;
+      return deposito.posicion = max;
    end llena;
    
    function menu return integer is 

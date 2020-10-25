@@ -11,7 +11,7 @@ RV NO_IO
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		68f41213 NE OO SU
+U main%b		main.adb		338b8488 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -34,9 +34,9 @@ D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D main.adb		20201018111840 76bb430e main%b
-D pilagenerica.ads	20201018104424 283c5781 pilagenerica%s
-D pilagenerica.adb	20201018113130 e4ea8d9f pilagenerica%b
+D main.adb		20201025091146 4f97c368 main%b
+D pilagenerica.ads	20201025091424 4a6f417c pilagenerica%s
+D pilagenerica.adb	20201025091354 ba07071a pilagenerica%b
 D system.ads		20200819050648 32a08138 system%s
 D s-conca2.ads		20200819050646 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
@@ -58,49 +58,50 @@ G a e
 G c Z b b [main standard 6 11 none]
 G r i none [main standard 6 11 none] [pilagenerica standard 6 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 14|1r6 1r31 2r6 2r29 10r7 19r7
+16K9*Ada 20e8 14|1r6 1r31 2r6 2r29 12r7 21r7
 X 3 a-flteio.ads
-20K13*Float_Text_IO[9|46] 14|2w10 2r33 19r11
+20K13*Float_Text_IO[9|46] 14|2w10 2r33 21r11
 X 4 a-inteio.ads
-18K13*Integer_Text_IO[10|46] 14|1w10 1r35 10r11
+18K13*Integer_Text_IO[10|46] 14|1w10 1r35 12r11
 X 8 a-textio.ads
-264U14*New_Line 14|55s13 78s13
-465U14*Put 14|37s4 43s20 66s20
-508U14*Put_Line 14|36s4 36s35 36s58 51s16 57s20 58s28 74s16 80s20 81s28
+264U14*New_Line 14|57s13 80s13
+465U14*Put 14|39s4 45s20 68s20
+508U14*Put_Line 14|38s4 38s35 38s58 53s16 59s20 60s28 76s16 82s20 83s28
 X 9 a-tiflio.ads
-60U14*Get 14|66s50[3|20]
-82U14*Put 14|19s25[3|20]
+60U14*Get 14|68s50[3|20]
+82U14*Put 14|21s25[3|20]
 X 10 a-tiinio.ads
-59U14*Get 14|38s4[4|18] 43s50[4|18]
-80U14*Put 14|10s27[4|18]
+59U14*Get 14|40s4[4|18] 45s50[4|18]
+80U14*Put 14|12s27[4|18]
 X 14 main.adb
-6U11*Main 6b11 86l5 86t9
-8U14 imprime_int 8b14 8>27 11l8 11t19 14r50
-8i27 data{integer} 10r31
-14K12 pila_int[15|6] 15r8 26r16 40r17 44r13 45r23 47r16 48r26 50r16 52r26
-. 56r23 59r23
-17U14 imprime_float 17b14 17>29 20l8 20t21 23r48
-17f29 data{float} 19r29
-23K12 pila_flo[15|6] 24r8 27r18 63r17 67r13 68r23 70r16 71r26 73r16 75r26
-. 79r23 82r23
-26r4 montonint{15|9R9[14]} 33m16 33r16 44m31 44r31 46r29 47m31 47r31 50m31
-. 50r31 54r28
-27r4 montonfloat{15|9R9[23]} 34m16 34r16 67m31 67r31 69r29 70m31 70r31 73m31
-. 73r31 77r28
-28i4 muestraint{integer} 43m54 44r42 47m42 50m42 51r61
-28i16 option{integer} 38m8 39r7 40m7 42r15 45m13 48m16 52m16 56m13 59m13
-. 63m7 65r15 68m13 71m16 75m16 79m13 82m13
-29f4 muestraflo{float} 66m54 67r44 70m44 73m44 74r59
+6U11*Main 6b11 88l5 88t9
+8N4 N 16r41 25r41
+10U14 imprime_int 10b14 10>27 13l8 13t19 16r53
+10i27 data{integer} 12r31
+16K12 pila_int[15|6] 17r8 28r16 42r17 46r13 47r23 49r16 50r26 52r16 54r26
+. 58r23 61r23
+19U14 imprime_float 19b14 19>29 22l8 22t21 25r51
+19f29 data{float} 21r29
+25K12 pila_flo[15|6] 26r8 29r18 65r17 69r13 70r23 72r16 73r26 75r16 77r26
+. 81r23 84r23
+28r4 montonint{15|8R9[16]} 35m16 35r16 46m31 46r31 48r29 49m31 49r31 52m31
+. 52r31 56r28
+29r4 montonfloat{15|8R9[25]} 36m16 36r16 69m31 69r31 71r29 72m31 72r31 75m31
+. 75r31 79r28
+30i4 muestraint{integer} 45m54 46r42 49m42 52m42 53r61
+30i16 option{integer} 40m8 41r7 42m7 44r15 47m13 50m16 54m16 58m13 61m13
+. 65m7 67r15 70m13 73m16 77m16 81m13 84m13
+31f4 muestraflo{float} 68m54 69r44 72m44 75m44 76r59
 X 15 pilagenerica.ads
-6k9*pilagenerica 14|4w6 14r28 23r28 15|27e17
-9R9 cola 14|26r25[14] 27r27[23]
-13U14 inicializar 14|33s4[14] 34s4[23]
-14U14 insertar 14|44s22[14] 67s22[23]
-15U14 sacar 14|47s25[14] 50s25[14] 70s25[23] 73s25[23]
-16V13 vacia{boolean} 14|46s23[14] 69s23[23]
-18V13 menu{integer} 14|40s26[14] 45s32[14] 48s35[14] 52s35[14] 56s32[14]
-. 59s32[14] 63s26[23] 68s32[23] 71s35[23] 75s35[23] 79s32[23] 82s32[23]
-19U14 mostrar 14|54s20[14] 77s20[23]
+6k9*pilagenerica 14|4w6 16r28 25r28 15|26e17
+8R9 cola 14|28r25[16] 29r27[25]
+12U14 inicializar 14|35s4[16] 36s4[25]
+13U14 insertar 14|46s22[16] 69s22[25]
+14U14 sacar 14|49s25[16] 52s25[16] 72s25[25] 75s25[25]
+15V13 vacia{boolean} 14|48s23[16] 71s23[25]
+17V13 menu{integer} 14|42s26[16] 47s32[16] 50s35[16] 54s35[16] 58s32[16]
+. 61s32[16] 65s26[25] 70s32[25] 73s35[25] 77s35[25] 81s32[25] 84s32[25]
+18U14 mostrar 14|56s20[16] 79s20[25]
 X 33 text_io.ads
 24K9*Text_IO=24:29 14|3w6 3r19
 

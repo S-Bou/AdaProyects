@@ -8,12 +8,12 @@ RN
 RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U pilagenerica%b	pilagenerica.adb	1b2f9b22 NE OO PK GE IL
+U pilagenerica%b	pilagenerica.adb	2791075a NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W text_io%s		text_io.ads		text_io.ali
 
-U pilagenerica%s	pilagenerica.ads	283c5781 BN EE NE OO PK GE IL
+U pilagenerica%s	pilagenerica.ads	4a6f417c BN EE NE OO PK GE IL
 
 D ada.ads		20200819050644 76789da1 ada%s
 D a-except.ads		20200819050644 a7106115 ada.exceptions%s
@@ -26,8 +26,8 @@ D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D pilagenerica.ads	20201018104424 283c5781 pilagenerica%s
-D pilagenerica.adb	20201018113130 e4ea8d9f pilagenerica%b
+D pilagenerica.ads	20201025091424 4a6f417c pilagenerica%s
+D pilagenerica.adb	20201025091354 ba07071a pilagenerica%b
 D system.ads		20200819050648 32a08138 system%s
 D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200819050646 54135002 system.exception_table%s
@@ -55,31 +55,31 @@ X 7 a-textio.ads
 X 8 a-tiinio.ads
 59U14*Get 13|48s7[3|18]
 X 12 pilagenerica.ads
-3+9 nolose 4r34 10r47 14r57 15r55 13|11r57 22r55
+2i4 max{integer} 22r24 13|40r34
+3+9 nolose 4r34 9r47 13r57 14r55 13|11r57 22r55
 4U19 imprime 4>27 13|56s10
 4*27 data{3+9}
-6k9*pilagenerica 3z9 4z19 22E9 27l5 27e17 13|4b14 61l5 61t17
-8N4*N 23r24 13|40r34
-9R9*cola 13r44 14r41 15r38 16r33 17r33 19r36 22c9 25e14 13|6r44 11r41 22r38
+6k9*pilagenerica 2z4 3z9 4z19 21E9 26l5 26e17 13|4b14 61l5 61t17
+8R9*cola 12r44 13r41 14r38 15r33 16r33 18r36 21c9 24e14 13|6r44 11r41 22r38
 . 33r33 38r33 52r36
-10A9*vector(3+9)<integer> 23r14
-13U14*inicializar 13=26 13|6b14 9l8 9t19
-13r26 deposito{9R9} 13|6b26 8m7
-14U14*insertar 14=23 14>47 13|11b14 20l8 20t16
-14r23 deposito{9R9} 13|11b23 13r16 16m10 16r24 17m10 17r31
-14*47 data{3+9} 13|11b47 16r46
-15U14*sacar 15=20 15<44 13|22b14 31l8 31t13
-15r20 deposito{9R9} 13|22b20 24r16 26r18 26r32 28r18 28r32 29m10 29r31
-15*44 data{3+9} 13|22b44 26m10 28m10
-16V13*vacia{boolean} 16>19 13|24s10 33b13 36l8 36t13
-16r19 deposito{9R9} 13|33b19 35r14
-17V13*llena{boolean} 17>19 13|13s10 38b13 41l8 41t13
-17r19 deposito{9R9} 13|38b19 40r14
-18V13*menu{integer} 13|43b13 50l8 50t12
-19U14*mostrar 19>22 13|52b14 59l8 59t15
-19r22 deposito{9R9} 13|52b22 55r27 56r18
-23a7 pila{10A9} 13|16m19 26r27 28r27 56r27
-24i7 posicion{integer} 13|8m16 16r33 17m19 17r40 26r41 28r41 29m19 29r40
+9A9*vector(3+9)<integer> 22r14
+12U14*inicializar 12=26 13|6b14 9l8 9t19
+12r26 deposito{8R9} 13|6b26 8m7
+13U14*insertar 13=23 13>47 13|11b14 20l8 20t16
+13r23 deposito{8R9} 13|11b23 13r16 16m10 16r24 17m10 17r31
+13*47 data{3+9} 13|11b47 16r46
+14U14*sacar 14=20 14<44 13|22b14 31l8 31t13
+14r20 deposito{8R9} 13|22b20 24r16 26r18 26r32 28r18 28r32 29m10 29r31
+14*44 data{3+9} 13|22b44 26m10 28m10
+15V13*vacia{boolean} 15>19 13|24s10 33b13 36l8 36t13
+15r19 deposito{8R9} 13|33b19 35r14
+16V13*llena{boolean} 16>19 13|13s10 38b13 41l8 41t13
+16r19 deposito{8R9} 13|38b19 40r14
+17V13*menu{integer} 13|43b13 50l8 50t12
+18U14*mostrar 18>22 13|52b14 59l8 59t15
+18r22 deposito{8R9} 13|52b22 55r27 56r18
+22a7 pila{9A9} 13|16m19 26r27 28r27 56r27
+23i7 posicion{integer} 13|8m16 16r33 17m19 17r40 26r41 28r41 29m19 29r40
 . 35r23 40r23 55r36
 X 13 pilagenerica.adb
 44i7 data{integer} 48m11 49r14

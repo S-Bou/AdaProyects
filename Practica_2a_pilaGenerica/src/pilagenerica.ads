@@ -1,12 +1,11 @@
 generic
-
+   max : integer;
    type nolose is private;
    with procedure imprime(data : nolose);
    
 package pilagenerica is
 
-   N : constant := 4;
-   --type cola is limited private;
+   type cola is limited private;
    type vector is array (integer range <>) of nolose;
 
    -- Procedure to start package parameters
@@ -18,9 +17,9 @@ package pilagenerica is
    function menu return integer;
    procedure mostrar(deposito : in cola);
    
-   --private
+private
    type cola is record
-      pila : vector(0..N-1);
+      pila : vector(0..max-1);
       posicion : integer;
    end record;
    
