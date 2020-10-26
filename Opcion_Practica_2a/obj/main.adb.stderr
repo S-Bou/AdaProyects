@@ -1,0 +1,15 @@
+main.adb:1:23: a generic package is not allowed in a use clause
+main.adb:7:07: "pila" is not visible
+main.adb:7:07: non-visible declaration at pila_simple.ads:8
+main.adb:14:20: "inicializar" is not visible
+main.adb:14:20: non-visible declaration at pila_simple.ads:14
+main.adb:16:16: "llena" is not visible
+main.adb:16:16: non-visible declaration at pila_simple.ads:17
+main.adb:20:16: "anyadir" is not visible
+main.adb:20:16: non-visible declaration at pila_simple.ads:12
+main.adb:23:16: "vacia" is not visible
+main.adb:23:16: non-visible declaration at pila_simple.ads:16
+main.adb:25:16: "sacar" is not visible
+main.adb:25:16: non-visible declaration at pila_simple.ads:13
+main.adb:28:23: "listar" is not visible
+main.adb:28:23: non-visible declaration at pila_simple.ads:18

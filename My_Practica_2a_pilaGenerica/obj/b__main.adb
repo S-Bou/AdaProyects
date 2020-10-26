@@ -29,7 +29,7 @@ package body ada_main is
    E112 : Short_Integer; pragma Import (Ada, E112, "ada__finalization_E");
    E111 : Short_Integer; pragma Import (Ada, E111, "system__file_io_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "ada__text_io_E");
-   E152 : Short_Integer; pragma Import (Ada, E152, "pila_simple_E");
+   E152 : Short_Integer; pragma Import (Ada, E152, "pilagenerica_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -239,11 +239,11 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   D:\Programas\GNAT\AdaProyects\Practica_2a\obj\pila_simple.o
-   --   D:\Programas\GNAT\AdaProyects\Practica_2a\obj\main.o
-   --   -LD:\Programas\GNAT\AdaProyects\Practica_2a\obj\
-   --   -LD:\Programas\GNAT\AdaProyects\Practica_2a\obj\
-   --   -LD:/programas/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
+   --   C:\GNAT\AdaProyects\My_Practica_2a_pilaGenerica\obj\pilagenerica.o
+   --   C:\GNAT\AdaProyects\My_Practica_2a_pilaGenerica\obj\main.o
+   --   -LC:\GNAT\AdaProyects\My_Practica_2a_pilaGenerica\obj\
+   --   -LC:\GNAT\AdaProyects\My_Practica_2a_pilaGenerica\obj\
+   --   -LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
    --   -static
    --   -lgnat
    --   -Wl,--stack=0x2000000

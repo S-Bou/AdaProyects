@@ -1,23 +1,11 @@
-with ada.Integer_Text_IO; use ada.Integer_Text_IO;
-with ada.Float_Text_IO; use ada.Float_Text_IO;
+with pila_simple; use pila_simple;
 with Text_IO; use text_io;
-with pila_simple;
+with ada.Integer_Text_IO; use ada.Integer_Text_IO;
 
 procedure Main is
-   procedure imprime_floats(data : float) is
-   begin
-      ada.Float_Text_IO.put(data);
-   end imprime_floats;
-
-   package pila_float is new pila_simple(5, float, imprime_floats);
-   use pila_float;
-
-   orden : integer;
-   x : float;
+   orden,x: integer;
    p: pila;
-
 begin
-
    loop
 
       put_line("0 salir, 1 inicializar, 2 anyadir, 3 sacar, 4 listar");

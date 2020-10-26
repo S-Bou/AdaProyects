@@ -8,12 +8,12 @@ RN
 RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U pilagenerica%b	pilagenerica.adb	2791075a NE OO PK GE IL
+U pila_simple%b		pila_simple.adb		0c03a295 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W text_io%s		text_io.ads		text_io.ali
 
-U pilagenerica%s	pilagenerica.ads	4a6f417c BN EE NE OO PK GE IL
+U pila_simple%s		pila_simple.ads		716c3e18 EE NE OO PK IL
 
 D ada.ads		20200819050644 76789da1 ada%s
 D a-except.ads		20200819050644 a7106115 ada.exceptions%s
@@ -26,8 +26,8 @@ D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D pilagenerica.ads	20201025091424 4a6f417c pilagenerica%s
-D pilagenerica.adb	20201025091354 ba07071a pilagenerica%b
+D pila_simple.ads	20201026174158 716c3e18 pila_simple%s
+D pila_simple.adb	20201020073328 aa96ddb1 pila_simple%b
 D system.ads		20200819050648 32a08138 system%s
 D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200819050646 54135002 system.exception_table%s
@@ -43,47 +43,48 @@ D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
 D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
 D text_io.ads		20200819050648 21b2c898 text_io%s
 G a e
-G c Z s b [pilagenerica standard 6 9 none]
+G c Z s b [anyadir pila_simple 9 11 none]
+G c Z s b [sacar pila_simple 10 11 none]
+G c Z s b [inicializar pila_simple 11 11 none]
+G c Z s b [vacia pila_simple 13 10 none]
+G c Z s b [llena pila_simple 14 10 none]
+G c Z s b [listar pila_simple 15 11 none]
+G c Z s s [TvectorBIP pila_simple 6 1 none]
+G c Z s s [pilaIP pila_simple 18 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 13|1r6 1r31
+16K9*Ada 20e8 13|2r6 2r31
 X 3 a-inteio.ads
-18K13*Integer_Text_IO[8|46] 13|1w10 1r35
+18K13*Integer_Text_IO[8|46] 13|2w10 2r35
 X 7 a-textio.ads
-264U14*New_Line 13|54s21 57s10
-465U14*Put 13|47s56 54s7
-508U14*Put_Line 13|14s10 18s10 25s10 46s7 46s37 46s63 47s7 47s35
+264U14*New_Line 13|41s7
+465U14*Put 13|38s26
+508U14*Put_Line 13|35s7
 X 8 a-tiinio.ads
-59U14*Get 13|48s7[3|18]
-X 12 pilagenerica.ads
-2i4 max{integer} 22r24 13|40r34
-3+9 nolose 4r34 9r47 13r57 14r55 13|11r57 22r55
-4U19 imprime 4>27 13|56s10
-4*27 data{3+9}
-6k9*pilagenerica 2z4 3z9 4z19 21E9 26l5 26e17 13|4b14 61l5 61t17
-8R9*cola 12r44 13r41 14r38 15r33 16r33 18r36 21c9 24e14 13|6r44 11r41 22r38
-. 33r33 38r33 52r36
-9A9*vector(3+9)<integer> 22r14
-12U14*inicializar 12=26 13|6b14 9l8 9t19
-12r26 deposito{8R9} 13|6b26 8m7
-13U14*insertar 13=23 13>47 13|11b14 20l8 20t16
-13r23 deposito{8R9} 13|11b23 13r16 16m10 16r24 17m10 17r31
-13*47 data{3+9} 13|11b47 16r46
-14U14*sacar 14=20 14<44 13|22b14 31l8 31t13
-14r20 deposito{8R9} 13|22b20 24r16 26r18 26r32 28r18 28r32 29m10 29r31
-14*44 data{3+9} 13|22b44 26m10 28m10
-15V13*vacia{boolean} 15>19 13|24s10 33b13 36l8 36t13
-15r19 deposito{8R9} 13|33b19 35r14
-16V13*llena{boolean} 16>19 13|13s10 38b13 41l8 41t13
-16r19 deposito{8R9} 13|38b19 40r14
-17V13*menu{integer} 13|43b13 50l8 50t12
-18U14*mostrar 18>22 13|52b14 59l8 59t15
-18r22 deposito{8R9} 13|52b22 55r27 56r18
-22a7 pila{9A9} 13|16m19 26r27 28r27 56r27
-23i7 posicion{integer} 13|8m16 16r33 17m19 17r40 26r41 28r41 29m19 29r40
-. 35r23 40r23 55r36
-X 13 pilagenerica.adb
-44i7 data{integer} 48m11 49r14
-55i11 i{integer} 56r32
+80U14*Put 13|38s13[3|18]
+X 12 pila_simple.ads
+3K9*pila_simple 18E9 23l5 23e16 13|3b14 44l5 44t16
+4R6*pila 9r29 10r27 11r33 13r19 14r19 15r21 18c9 21e14 13|6r32 13r30 19r36
+. 24r22 28r22 33r24
+5N4*max 6r26 13|30r21
+6A6*vector(integer)<integer> 19r10
+9U11*anyadir 9=19 9>35 13|6b14 10l8 10t15
+9r19 p{4R6} 13|6b22 8m7 8r15 9m7 9r11
+9i35 i{integer} 13|6b38 9r20
+10U11*sacar 10=17 10<33 13|13b14 17l8 17t13
+10r17 p{4R6} 13|13b20 15r10 15r14 16m7 16r15
+10i33 i{integer} 13|13b36 15m7
+11U11*inicializar 11=23 13|19b14 22l8 22t19
+11r23 p{4R6} 13|19b26 21m7
+13V10*vacia{boolean} 13>16 13|24b13 27l8 27t13
+13r16 p{4R6} 13|24b19 26r14
+14V10*llena{boolean} 14>16 13|28b13 31l8 31t13
+14r16 p{4R6} 13|28b19 30r14
+15U11*listar 15>18 13|33b14 42l8 42t14
+15r18 p{4R6} 13|33b21 36r16 37r16 38r17
+19a7*v{6A6} 13|9m9 15r12 36r18 38r19
+20i7*cima{integer} 13|8m9 8r17 9r13 15r16 16m9 16r17 21m9 26r16 30r16 37r18
+X 13 pila_simple.adb
+36i11 i{integer} 37r13 38r21
 X 27 text_io.ads
-24K9*Text_IO=24:29 13|2w6 2r19
+24K9*Text_IO=24:29 13|1w6 1r19
 

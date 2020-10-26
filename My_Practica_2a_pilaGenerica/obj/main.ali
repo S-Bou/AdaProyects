@@ -34,9 +34,9 @@ D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D main.adb		20201025091146 4f97c368 main%b
-D pilagenerica.ads	20201025091424 4a6f417c pilagenerica%s
-D pilagenerica.adb	20201025091354 ba07071a pilagenerica%b
+D main.adb		20201025122026 4f97c368 main%b
+D pilagenerica.ads	20201025122026 4a6f417c pilagenerica%s
+D pilagenerica.adb	20201025122026 ba07071a pilagenerica%b
 D system.ads		20200819050648 32a08138 system%s
 D s-conca2.ads		20200819050646 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s

@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\GNAT\AdaProyects\My_Practica_2a_pilaGenerica\pilagenerica.gpr
+20201025122026 7633f3e7ff486b0c5b356cc8a12263da
+[BOUND OBJECT FILES]
+C:\GNAT\AdaProyects\My_Practica_2a_pilaGenerica\obj\pilagenerica.o
+C:\GNAT\AdaProyects\My_Practica_2a_pilaGenerica\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\GNAT\AdaProyects\My_Practica_2a_pilaGenerica\obj\
+-LC:\GNAT\AdaProyects\My_Practica_2a_pilaGenerica\obj\
+-LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000

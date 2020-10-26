@@ -29,7 +29,7 @@ package body ada_main is
    E112 : Short_Integer; pragma Import (Ada, E112, "ada__finalization_E");
    E111 : Short_Integer; pragma Import (Ada, E111, "system__file_io_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "ada__text_io_E");
-   E152 : Short_Integer; pragma Import (Ada, E152, "pilagenerica_E");
+   E135 : Short_Integer; pragma Import (Ada, E135, "pila_simple_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -201,7 +201,7 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E099 := E099 + 1;
-      E152 := E152 + 1;
+      E135 := E135 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -239,11 +239,11 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   D:\Programas\GNAT\AdaProyects\Practica_2a_pilaGenerica\obj\pilagenerica.o
-   --   D:\Programas\GNAT\AdaProyects\Practica_2a_pilaGenerica\obj\main.o
-   --   -LD:\Programas\GNAT\AdaProyects\Practica_2a_pilaGenerica\obj\
-   --   -LD:\Programas\GNAT\AdaProyects\Practica_2a_pilaGenerica\obj\
-   --   -LD:/programas/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
+   --   C:\GNAT\AdaProyects\Bou_Grau_Sergio_Practica_2a\obj\pila_simple.o
+   --   C:\GNAT\AdaProyects\Bou_Grau_Sergio_Practica_2a\obj\main.o
+   --   -LC:\GNAT\AdaProyects\Bou_Grau_Sergio_Practica_2a\obj\
+   --   -LC:\GNAT\AdaProyects\Bou_Grau_Sergio_Practica_2a\obj\
+   --   -LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
    --   -static
    --   -lgnat
    --   -Wl,--stack=0x2000000

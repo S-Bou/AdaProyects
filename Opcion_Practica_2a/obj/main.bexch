@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\GNAT\AdaProyects\Bou_Grau_Sergio_Practica_2a\default.gpr
+20201019165540 af9823bc2f46fec4ce120a8adef07119
+[BOUND OBJECT FILES]
+C:\GNAT\AdaProyects\Bou_Grau_Sergio_Practica_2a\obj\pila_simple.o
+C:\GNAT\AdaProyects\Bou_Grau_Sergio_Practica_2a\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\GNAT\AdaProyects\Bou_Grau_Sergio_Practica_2a\obj\
+-LC:\GNAT\AdaProyects\Bou_Grau_Sergio_Practica_2a\obj\
+-LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000
