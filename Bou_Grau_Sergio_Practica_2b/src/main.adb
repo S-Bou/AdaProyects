@@ -60,8 +60,8 @@ procedure Main is
          sacar(p_delay, x);
          sumTime := sumTime + x;
       end loop;
-      put("Sumatorio de tiempos: ");
-      put(sumTime/float(dimen));
+      put("Media de tiempos: ");
+      put(sumTime/float(dimen), 1, 6, 0);
 
    else
    loop
@@ -75,7 +75,7 @@ procedure Main is
                       inicializar(p_int);
                    end if;
          when 2 => if option = 1 then                     --Anyadir
-                      if llena(p_flo) then raise pila_llena with "La pila está llena.";
+                      if llena(p_flo) then raise pila_llena; --0with "La pila está llena.";
                       else
                          Put_line("Dime el elemento");
                          get(x);

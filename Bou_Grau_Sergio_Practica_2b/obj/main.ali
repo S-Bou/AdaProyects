@@ -18,7 +18,7 @@ RV NO_RELATIVE_DELAY
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		f6a640f9 NE OO SU
+U main%b		main.adb		57b6c554 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
@@ -47,7 +47,7 @@ D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D main.adb		20201027113218 491c7dd5 main%b
+D main.adb		20201027125908 e80cf878 main%b
 D pila_simple.ads	20201026205608 ce84ac90 pila_simple%s
 D pila_simple.adb	20201027113218 631d4c55 pila_simple%b
 D system.ads		20200819050648 32a08138 system%s
