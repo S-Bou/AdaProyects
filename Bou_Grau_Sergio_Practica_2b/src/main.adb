@@ -1,9 +1,12 @@
 with ada.Integer_Text_IO; use ada.Integer_Text_IO;
 with ada.Float_Text_IO; use ada.Float_Text_IO;
+with ada.Calendar; use ada.Calendar;
 with Text_IO; use text_io;
 with pila_simple;
 
 procedure Main is
+   dimen : constant := 2000;
+
    procedure imprime_floats(data : float) is
    begin
       ada.Float_Text_IO.put(data);
@@ -20,20 +23,49 @@ procedure Main is
    package pila_int is new pila_simple(5, integer, imprime_int);
    use pila_int;
 
+   procedure imprime_time(data : float) is
+   begin
+      ada.Float_Text_IO.put(data, 1, 6, 0);
+   end imprime_time;
+
+   package pila_delay is new pila_simple(dimen, float, imprime_time);
+   use pila_delay;
+
    option, orden, y : integer;
-   x : float;
+   x, sumTime: float;
    p_flo: pila_float.pila;
    p_int: pila_int.pila;
+   p_delay: pila_delay.pila;
    pila_llena: exception;
    pila_vacia: exception;
+   T1, T2: ada.calendar.time;
+   interval: Duration;
 
    begin
 
    Put_line("Escoja una opción:");Put_line("1. Decimales");Put_line("2. Enteros");
-   Put("Opcion elejida: ");Get(option);
+   Put_line("3. Ejercicio 2");Put("Opcion elejida: ");Get(option);
+   if option = 3 then
+      inicializar(p_delay);
+      sumTime:=0.0;
+      for i in 1..dimen loop
+         T1 := clock;
+         Delay(0.01);
+         T2 := clock;
+         interval := T2-T1;
+         anyadir(p_delay, float(interval));
+      end loop;
+      listar(p_delay);
+      for i in 1..dimen loop
+         sacar(p_delay, x);
+         sumTime := sumTime + x;
+      end loop;
+      put("Sumatorio de tiempos: ");
+      put(sumTime/float(dimen));
 
+   else
    loop
-begin
+      begin
       put_line("0 salir, 1 inicializar, 2 anyadir, 3 sacar, 4 listar");
       get(orden);
       case orden is
@@ -80,8 +112,9 @@ begin
             when others => null;
          end case;
          exception
-   when pila_llena => put_line("La pila esta llena, no se puede añadir.");
-   when pila_vacia => put_line("La pila esta vacia");
+            when pila_llena => put_line("La pila esta llena, no se puede añadir.");
+            when pila_vacia => put_line("La pila esta vacia");
          end;
-   end loop;
+      end loop;
+   end if;
 end Main;

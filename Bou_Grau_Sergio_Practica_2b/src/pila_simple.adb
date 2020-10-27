@@ -32,7 +32,7 @@ package body pila_simple is
 
    procedure listar(p: pila) is
    begin
-      Put_line("Elementos en la pila");
+      Put_line("Elementos en la pila:");
       for i in p.v'range loop
          if i<=p.cima then
             imprime(p.v(i)); Put(";");
