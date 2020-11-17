@@ -1,4 +1,4 @@
-package barrera is
+package barreras is
    protected barrera is
 
       entry entrar;
@@ -8,4 +8,4 @@ package barrera is
       abierta : boolean := true;
 
    end barrera;
-end barrera;
+end barreras;

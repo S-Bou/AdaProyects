@@ -1,4 +1,4 @@
-package body barrera is
+package body barreras is
    protected body barrera is
 
       entry entrar when abierta is
@@ -12,4 +12,4 @@ package body barrera is
       end salir;
 
    end barrera;
-end barrera;
+end barreras;

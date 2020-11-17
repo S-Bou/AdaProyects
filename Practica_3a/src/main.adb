@@ -1,6 +1,6 @@
 with Text_IO; use Text_IO;
 with ada.Real_Time; use ada.Real_Time;
-with barrera; use barrera;
+with barreras; use barreras;
 procedure Main is
 
    task type coche(id:integer);
@@ -11,13 +11,13 @@ procedure Main is
       loop
          -- Entra en tramo compartido
          barrera.entrar; -- Protocolo de entrada
-         put_line("Coche " & integer'image(id) & " en cruze");
+         put_line("Coche" & integer'image(id) & " en cruze");
          delay to_duration(milliseconds(espera_dentro));
 
          -- Sale en tramo compartido
-         barrera.salir; -- Protocolo de salida
-         put_line("Coche " & integer'image(id) & " fuera cruze");
+         put_line("Coche" & integer'image(id) & " fuera cruze");
          delay to_duration(milliseconds(espera_fuera));
+         barrera.salir; -- Protocolo de salida
       end loop;
    end coche;
 
