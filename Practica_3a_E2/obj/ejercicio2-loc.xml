@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_3a_E2\ejercicio2.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_3a_E2\src\barreras.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_3a_E2\ejercicio2.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_3a_E2\src\barreras.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
