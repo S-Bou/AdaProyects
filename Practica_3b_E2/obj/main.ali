@@ -6,25 +6,34 @@ A -march=x86-64
 P ZX
 
 RN
+RV NO_CALENDAR
 RV NO_DELAY
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
 RV NO_FIXED_POINT
 RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
 RV NO_RELATIVE_DELAY
+RV NO_SELECT_STATEMENTS
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_TASK_HIERARCHY
 RV NO_TASKING
+RV NO_TERMINATE_ALTERNATIVES
 RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV MAX_SELECT_ALTERNATIVES=5
+RV MAX_TASK_ENTRIES=4
 RV MAX_TASKS=1+
-RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U main%b		main.adb		e150e09e NE OO SU
+U main%b		main.adb		bf1b8cb0 NE OO SU
 W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
-W barreras%s		barreras.adb		barreras.ali
 Z system%s		system.ads		system.ali
 Z system.concat_3%s	s-conca3.adb		s-conca3.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
@@ -32,8 +41,7 @@ Z system.parameters%s	s-parame.adb		s-parame.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
-Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
-Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 W text_io%s		text_io.ads		text_io.ali
 
@@ -42,18 +50,19 @@ D a-calend.ads		20200819050642 474d9720 ada.calendar%s
 D a-caldel.ads		20200819050642 9f20b83d ada.calendar.delays%s
 D a-except.ads		20200819050644 a7106115 ada.exceptions%s
 D a-finali.ads		20200819050644 bf4f806b ada.finalization%s
+D a-inteio.ads		20200819050644 f64b89a4 ada.integer_text_io%s
 D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
 D a-reatim.ads		20200819050642 0240fc73 ada.real_time%s
 D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
 D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
 D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
-D barreras.ads		20201118113936 51918716 barreras%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-c.ads		20200819050646 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200819050646 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D main.adb		20201119151828 93335363 main%b
+D main.adb		20201122141752 2defa6df main%b
 D system.ads		20200819050648 32a08138 system%s
 D s-atacco.ads		20200819050646 4c36d12f system.address_to_access_conversions%s
 D s-conca3.ads		20200819050646 0b705ca5 system.concat_3%s
@@ -77,7 +86,7 @@ D s-taprop.ads		20200819050642 6eefbe12 system.task_primitives.operations%s
 D s-taskin.ads		20200819050642 88fba9ad system.tasking%s
 D s-taprob.ads		20200819050642 acd6094d system.tasking.protected_objects%s
 D s-tpoben.ads		20200819050642 60ad3dae system.tasking.protected_objects.entries%s
-D s-tpobop.ads		20200819050642 5f548bb3 system.tasking.protected_objects.operations%s
+D s-tasren.ads		20200819050642 a67a9949 system.tasking.rendezvous%s
 D s-tassta.ads		20200819050642 cca55c94 system.tasking.stages%s
 D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
@@ -85,48 +94,60 @@ D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
 D s-win32.ads		20200819050648 15ac53fb system.win32%s
 D text_io.ads		20200819050648 21b2c898 text_io%s
 G a e
-G c Z b b [main standard 4 11 none]
-G r o none [main standard 4 11 none] [entra_sur barreras__barrera 6 13 none]
-G r p none [main standard 4 11 none] [sale_sur barreras__barrera 8 17 none]
-G r o none [main standard 4 11 none] [entra_norte barreras__barrera 5 13 none]
-G r p none [main standard 4 11 none] [sale_norte barreras__barrera 7 17 none]
+G c Z b b [main standard 6 11 none]
 X 1 ada.ads
-16K9*Ada 20e8 17|2r6 2r25
-X 7 a-reatim.ads
-39K13*Real_Time 185e18 17|2w10 2r29
+16K9*Ada 20e8 18|1r6 1r31 2r6 2r24 3r6 3r25 9r13
+X 2 a-calend.ads
+36K13*Calendar 409e17 18|2w10 2r28 9r17
+42I9*Time<222I9> 18|9r26
+56V13*Clock{42I9} 18|107s20 109s24
+112V14*"-"{duration} 18|109s30
+222I9 Time_Rep<long_long_integer>
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[12|46] 18|1w10 1r35
+X 8 a-reatim.ads
+39K13*Real_Time 185e18 18|3w10 3r29
 54O9*Time_Span<duration>
-110V13*To_Duration{duration} 17|19s22 24s22 32s22 37s22
-119V13*Milliseconds{54O9} 17|19s34 24s34 32s34 37s34
-X 10 a-textio.ads
-508U14*Put_Line 17|18s16 22s16 31s16 35s16
-X 12 barreras.ads
-1K9*barreras 14e13 17|3w6 3r20
-3w14*barrera 17|16r13 23r13 29r13 36r13
-5Y13 entra_Norte 17|16s21
-6Y13 entra_Sur 17|29s21
-7U17 sale_Norte 17|23s21
-8U17 sale_Sur 17|36s21
-X 17 main.adb
-4U11*Main 4b11 56l5 56t9
-6T14 coche 6d20 6d32 6d46 6d61 9b14 42l8 42t13 44r9 45r9 46r9 47r9 48r9 49r9
-. 50r9 51r9
-6i20 id{integer} 18r49 22r49 31r49 35r49
-6i32 e_in{integer} 11r24
-6i46 e_out{integer} 12r24
-6e61 lado{character} 14r13 27r16
-7i7 espera_dentro{integer} 11m7 19r47 32r47
-8i7 espera_fuera{integer} 12m7 24r47 37r47
-44t4 C1{6T14}
-45t4 C2{6T14}
-46t4 C3{6T14}
-47t4 C4{6T14}
-48t4 C5{6T14}
-49t4 C6{6T14}
-50t4 C7{6T14}
-51t4 C8{6T14}
-X 32 s-stausa.ads
+110V13*To_Duration{duration} 18|67s22 72s22 78s22 83s22
+119V13*Milliseconds{54O9} 18|67s34 72s34 78s34 83s34
+X 11 a-textio.ads
+264U14*New_Line 18|120s10
+508U14*Put_Line 18|66s16 70s16 77s16 81s16 103s7 122s10
+X 12 a-tiinio.ads
+59U14*Get 18|104s7[6|18]
+X 18 main.adb
+6U11*Main 6b11 126l5 126t9
+7i4 data{integer} 104m11 106r10
+8b4 omega{boolean}
+9i4 Inicio{2|42I9} 107m10 109r32
+11t9 barrera 18b14 46l8 46t15 64r16 71r16 75r16 82r16
+12Y13 entra_Norte 25b23 27l20 27t31 64s24
+13Y13 sale_Norte 29b20 31l17 31t27 71s24
+14Y13 entra_Sur 34b23 36l20 36t29 75s24
+15Y13 sale_Sur 38b20 40l17 40t25 82s24
+19N7 MAX 24r35 33r33
+20i7 contador_Norte{integer} 24r18 26m19 26r37 30m16 30r34 33r41
+20i23 contador_Sur{integer} 24r43 33r18 35m19 35r35 39m16 39r32
+49T14 coche 49d20 49d32 49d46 49d61 51l8 51e13 53b14 90l8 90t13 92r9 93r9
+. 94r9 95r9 96r9 97r9 98r9 99r9
+49i20 id{integer} 66r49 70r49 77r49 81r49
+49i32 e_in{integer} 58r24
+49i46 e_out{integer} 59r24
+49e61 lado{character} 63r16 74r19
+50Y13 iniciar 62b20 110s16 111s16 112s16 113s16 114s16 115s16 116s16 117s16
+54i7 espera_dentro{integer} 58m7 67r47 78r47
+55i7 espera_fuera{integer} 59m7 72r47 83r47
+92t4 C1{49T14} 110r13
+93t4 C2{49T14} 111r13
+94t4 C3{49T14} 112r13
+95t4 C4{49T14} 113r13
+96t4 C5{49T14} 114r13
+97t4 C6{49T14} 115r13
+98t4 C7{49T14} 116r13
+99t4 C8{49T14} 117r13
+X 33 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
-X 47 text_io.ads
-24K9*Text_IO=24:29 17|1w6 1r19
+X 48 text_io.ads
+24K9*Text_IO=24:29 18|4w6 4r19
 
