@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_3b_E2\ejercicio2.gpr</vfs_file>
+  <Project >
     <file_marker column=" 1" line=" 1" >
       <vfs_project />
       <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_3b_E2\src\main.adb</vfs_file>
@@ -122,8 +121,12 @@
       <vfs_project />
       <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_3b_E2\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 6" line=" 88" >
+    <file_marker column=" 6" line=" 88" >
       <vfs_project />
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_3b_E2\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_3b_E2\ejercicio2.gpr</vfs_project>
       <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_3b_E2\src\main.adb</vfs_file>
     </file_marker>
   </Project>
