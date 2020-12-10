@@ -32,12 +32,18 @@ package body data is
       end if;
    end params;
 
-   procedure ordenarPrioridad (taskup: in task_set) is
-      T_S_AUX: task_set(taskup'range);
-   begin
+   procedure ordenarPrioridad (taskup: in out task_set) is
+      T_S_AUX: tarea; --task_set(taskup'range);
+      D_AUX:integer:=0;
+   begin                       -- mirar el Deadline para ordenar prioridades
       for i in taskup'range loop
-         -- mirar el Deadline para ordenar prioridades
-         null;
+         for j in taskup'range loop
+            if taskup(i).deadline < taskup(j).deadline then
+               T_S_AUX:=taskup(j);
+               taskup(j):=taskup(i);
+               taskup(i):=T_S_AUX;
+            end if;
+         end loop;
       end loop;
    end ordenarPrioridad;
 
@@ -70,7 +76,7 @@ package body data is
          dataTask(taskup(2), 50, 70, 80);
          dataTask(taskup(3), 70,100,110);
       elsif number=5 and Num_T=3 then
-         dataTask(taskup(1),  2, 11, 10);  --RM Sí planificable
+         dataTask(taskup(1),  2, 10, 10);  --RM Sí planificable
          dataTask(taskup(2),  4, 18, 18);
          dataTask(taskup(3),  6, 24, 24);
       elsif number=6 and Num_T=3 then

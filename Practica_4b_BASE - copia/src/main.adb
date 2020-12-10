@@ -25,7 +25,8 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
       Get(Num_Conjunto);
 
       conjuntos(tareas, Num_Conjunto, Num_tasks); --Establece los valores de las tareas
-   
+      ordenarPrioridad(tareas);
+      
       Put_line ("Programa que calcula si las siguientes tareas son planificables:");  
       -- imprimir parametros temporales de tareas 
       imprimir(tareas);
@@ -67,7 +68,7 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
 -- si periodos /= deadlines
       if tipe_RM=false and plani and tipe_DM then
 --      test del peor tiempo de respuesta 
-            Put_Line("Se realiza test del peor tiempo de respuesta para.");
+            Put_Line("Se realiza test del peor tiempo de respuesta.");
       end if;
       
    end;
