@@ -7,21 +7,21 @@ with data; use data;
 procedure Main is
    Num_tasks: integer:=0;
    Num_Conjunto: integer;
-   tipe_RM, plani: boolean:=true;
+   tipe_RM, tipe_DM, plani: boolean:=true;
    U_RM, Un_RM: float:=0.0;
 
 begin  --Hay que indicar el numero de tareas que tendrá el conjunto
    loop
-      Put("Introduzca el numero de tareas del conjunto (3 ó 4): ");
+      Put("Introduzca el numero de tareas del conjunto: ");
       Get(Num_tasks);
-      exit when Num_tasks=3 or Num_tasks=4;
+      exit when Num_tasks>0;
    end loop;
    declare 
-      tareas:task_set(1..Num_tasks);
+      tareas: task_set(1..Num_tasks);
    begin 
       
       inicializar(tareas); --Pone todos los valores a cero
-      Put("Introduzca el numero del conjunto [1..4]: ");
+      Put("Introduzca el numero del conjunto [1..6]: ");
       Get(Num_Conjunto);
 
       conjuntos(tareas, Num_Conjunto, Num_tasks); --Establece los valores de las tareas
@@ -29,10 +29,14 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
       Put_line ("Programa que calcula si las siguientes tareas son planificables:");  
       -- imprimir parametros temporales de tareas 
       imprimir(tareas);
-      -- Se comprueba si todos los periodos = deadlines  
+      -- Se comprueba si todos los periodos = deadlines y que periodos < deadlines
       for i in 1..Num_tasks loop
          if (params(tareas(i), 'T') /= params(tareas(i), 'D')) then
             tipe_RM := false;
+         end if;
+         if (params(tareas(i), 'T') < params(tareas(i), 'D')) then
+            Put_Line("El conjunto NO es planificable (D > T).");
+            tipe_DM := false;
          end if;
       end loop; 
 -- si periodos = deadlines
@@ -54,16 +58,17 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
             plani:=false;   
             end if;
          end if;
-         if plani then
+      if plani then
 --        test del peor tiempo de respuesta 
-            Put_Line("Se realiza test del peor tiempo de respuesta para RM");
-         end if;
-
--- si periodos /= deadlines
-         else if tipe_RM = false then
---      test del peor tiempo de respuesta 
-            Put_Line("Se realiza test del peor tiempo de respuesta para DM");
+            Put_Line("Hay que hacer el test del peor tiempo de respuesta.");
+            tipe_RM:=false;
          end if;
       end if;
+-- si periodos /= deadlines
+      if tipe_RM=false and plani and tipe_DM then
+--      test del peor tiempo de respuesta 
+            Put_Line("Se realiza test del peor tiempo de respuesta para.");
+      end if;
+      
    end;
 end Main;

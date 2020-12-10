@@ -70,7 +70,7 @@ package body data is
          dataTask(taskup(2), 50, 70, 80);
          dataTask(taskup(3), 70,100,110);
       elsif number=5 and Num_T=3 then
-         dataTask(taskup(1),  2, 11, 10);  --RM Sí planificable
+         dataTask(taskup(1),  2, 10, 10);  --RM Sí planificable
          dataTask(taskup(2),  4, 18, 18);
          dataTask(taskup(3),  6, 24, 24);
       elsif number=6 and Num_T=3 then
