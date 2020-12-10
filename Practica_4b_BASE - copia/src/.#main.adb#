@@ -26,7 +26,7 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
 
       conjuntos(tareas, Num_Conjunto, Num_tasks); --Establece los valores de las tareas
    
-      Put_line ("Programa que calcula si las siguientes tareas son planificables");  
+      Put_line ("Programa que calcula si las siguientes tareas son planificables:");  
       -- imprimir parametros temporales de tareas 
       imprimir(tareas);
       -- Se comprueba si todos los periodos = deadlines  

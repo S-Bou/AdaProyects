@@ -22,6 +22,7 @@ package body ada_main is
    E047 : Short_Integer; pragma Import (Ada, E047, "system__dwarf_lines_E");
    E021 : Short_Integer; pragma Import (Ada, E021, "system__soft_links__initialize_E");
    E039 : Short_Integer; pragma Import (Ada, E039, "system__traceback__symbolic_E");
+   E151 : Short_Integer; pragma Import (Ada, E151, "ada__numerics_E");
    E103 : Short_Integer; pragma Import (Ada, E103, "ada__tags_E");
    E101 : Short_Integer; pragma Import (Ada, E101, "ada__streams_E");
    E115 : Short_Integer; pragma Import (Ada, E115, "system__file_control_block_E");
@@ -29,7 +30,7 @@ package body ada_main is
    E112 : Short_Integer; pragma Import (Ada, E112, "ada__finalization_E");
    E111 : Short_Integer; pragma Import (Ada, E111, "system__file_io_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "ada__text_io_E");
-   E135 : Short_Integer; pragma Import (Ada, E135, "data_E");
+   E158 : Short_Integer; pragma Import (Ada, E158, "data_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -185,6 +186,8 @@ package body ada_main is
       System.Traceback.Symbolic'Elab_Body;
       E039 := E039 + 1;
       E008 := E008 + 1;
+      Ada.Numerics'Elab_Spec;
+      E151 := E151 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Tags'Elab_Body;
       E103 := E103 + 1;
@@ -201,7 +204,7 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E099 := E099 + 1;
-      E135 := E135 + 1;
+      E158 := E158 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -239,10 +242,10 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   D:\Programas\GNAT\AdaProyects\Practica_4a - copia\obj\data.o
-   --   D:\Programas\GNAT\AdaProyects\Practica_4a - copia\obj\main.o
-   --   -LD:\Programas\GNAT\AdaProyects\Practica_4a - copia\obj\
-   --   -LD:\Programas\GNAT\AdaProyects\Practica_4a - copia\obj\
+   --   D:\Programas\GNAT\AdaProyects\Practica_4b_BASE - copia\obj\data.o
+   --   D:\Programas\GNAT\AdaProyects\Practica_4b_BASE - copia\obj\main.o
+   --   -LD:\Programas\GNAT\AdaProyects\Practica_4b_BASE - copia\obj\
+   --   -LD:\Programas\GNAT\AdaProyects\Practica_4b_BASE - copia\obj\
    --   -LD:/programas/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
    --   -static
    --   -lgnat

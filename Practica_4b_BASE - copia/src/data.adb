@@ -50,8 +50,8 @@ package body data is
          dataTask(taskup(3),  5, 11, 14);
       elsif number=2 and Num_T=4 then
          dataTask(taskup(1),  2,  5,  5);
-         dataTask(taskup(2),  3, 10, 13);
-         dataTask(taskup(3),  5, 16, 20);
+         dataTask(taskup(2),  3, 13, 13);   -- (3, 10, 13)
+         dataTask(taskup(3),  5, 20, 20);   -- (5, 16, 20)
          dataTask(taskup(4),  2, 24, 24);
       elsif number=3 and Num_T=3 then
          dataTask(taskup(1),  2,  9,  9);
