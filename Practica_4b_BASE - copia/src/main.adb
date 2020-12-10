@@ -7,7 +7,7 @@ with data; use data;
 procedure Main is
    Num_tasks: integer:=0;
    Num_Conjunto: integer;
-   tipe_RM: boolean:=true;
+   tipe_RM, plani: boolean:=true;
    U_RM, Un_RM: float:=0.0;
 
 begin  --Hay que indicar el numero de tareas que tendrá el conjunto
@@ -26,7 +26,7 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
 
       conjuntos(tareas, Num_Conjunto, Num_tasks); --Establece los valores de las tareas
    
-      Put_line ("Programa que calcula si las siguientes tareas son planificables");  
+      Put_line ("Programa que calcula si las siguientes tareas son planificables:");  
       -- imprimir parametros temporales de tareas 
       imprimir(tareas);
       -- Se comprueba si todos los periodos = deadlines  
@@ -42,14 +42,28 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
             U_RM:=U_RM + float(params(tareas(i), 'C')) / float(params(tareas(i), 'T'));
          end loop;
          Un_RM:= float(Num_tasks)*(2.0**(1.0/float(Num_tasks))-1.0);
-         Put("U = ");Put(U_RM);Put("; ");Put("U(n) = ");Put(Un_RM);
-      end if;
-      
-      --      test del factor de utilizacion 
-      --      si test utilizacion dice que no es planificable
-      --        test del peor tiempo de respuesta 
-      -- si no  
-      --      test del peor tiempo de respuesta  
+         Put("U = ");Put(U_RM,1,2,0);Put("; ");Put("U(n) = ");Put(Un_RM,1,2,0);
+         --      test del factor de utilizacion 
+         if U_RM <= Un_RM then
+            New_Line;
+            Put_Line("El test del factor de utilizacion dice que el conjunto SÍ es planificable U <= U(n).");
+            --      si test utilizacion dice que no es planificable
+         else if U_RM > Un_RM then
+            New_Line;
+            Put_Line("El test del factor de utilizacion dice que el conjunto NO es planificable U > U(n).");
+            plani:=false;   
+            end if;
+         end if;
+         if plani then
+--        test del peor tiempo de respuesta 
+            Put_Line("Test del peor tiempo de respuesta para RM");
+         end if;
 
+      -- si no  
+         else if tipe_RM = false then
+--      test del peor tiempo de respuesta 
+            Put_Line("Test del peor tiempo de respuesta para DM");
+         end if;
+      end if;
    end;
 end Main;

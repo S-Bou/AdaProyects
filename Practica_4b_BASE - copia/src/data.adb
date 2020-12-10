@@ -33,6 +33,15 @@ package body data is
       end if;
    end params;
 
+   procedure ordenarPrioridad (taskup: in task_set) is
+      T_S_AUX : task_set(taskup'range);
+   begin
+      for i in taskup'range loop
+         -- mirar tiempo de computo para ordenar prioridades
+         null;
+      end loop;
+   end ordenarPrioridad;
+
    procedure imprimir (taskup: in task_set) is
    begin
       for i in taskup'range loop
@@ -50,8 +59,8 @@ package body data is
          dataTask(taskup(3),  5, 11, 14);
       elsif number=2 and Num_T=4 then
          dataTask(taskup(1),  2,  5,  5);
-         dataTask(taskup(2),  3, 13, 13);   -- (3, 10, 13)
-         dataTask(taskup(3),  5, 20, 20);   -- (5, 16, 20)
+         dataTask(taskup(2),  3, 10, 13);
+         dataTask(taskup(3),  5, 16, 20);
          dataTask(taskup(4),  2, 24, 24);
       elsif number=3 and Num_T=3 then
          dataTask(taskup(1),  2,  9,  9);
@@ -64,6 +73,9 @@ package body data is
       else
          Put_Line("El número de tareas no coincide con el conjunto.");
          Put_Line("Tareas no definidas.");
+         dataTask(taskup(1), 2, 10, 10);
+         dataTask(taskup(2), 4, 12, 12);
+         dataTask(taskup(3), 6, 22, 22);
       end if;
    end conjuntos;
 
