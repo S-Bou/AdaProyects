@@ -35,7 +35,7 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
             tipe_RM := false;
          end if;
       end loop; 
-      -- si periodos = deadlines
+-- si periodos = deadlines
       if tipe_RM then
          Put_Line("Todas las tareas tienen T = D");
          for i in 1..Num_tasks loop
@@ -43,11 +43,11 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
          end loop;
          Un_RM:= float(Num_tasks)*(2.0**(1.0/float(Num_tasks))-1.0);
          Put("U = ");Put(U_RM,1,2,0);Put("; ");Put("U(n) = ");Put(Un_RM,1,2,0);
-         --      test del factor de utilizacion 
+--      test del factor de utilizacion 
          if U_RM <= Un_RM then
             New_Line;
             Put_Line("El test del factor de utilizacion dice que el conjunto SÍ es planificable U <= U(n).");
-            --      si test utilizacion dice que no es planificable
+--      si test utilizacion dice que no es planificable
          else if U_RM > Un_RM then
             New_Line;
             Put_Line("El test del factor de utilizacion dice que el conjunto NO es planificable U > U(n).");
@@ -56,13 +56,13 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
          end if;
          if plani then
 --        test del peor tiempo de respuesta 
-            Put_Line("Test del peor tiempo de respuesta para RM");
+            Put_Line("Se realiza test del peor tiempo de respuesta para RM");
          end if;
 
-      -- si no  
+-- si periodos /= deadlines
          else if tipe_RM = false then
 --      test del peor tiempo de respuesta 
-            Put_Line("Test del peor tiempo de respuesta para DM");
+            Put_Line("Se realiza test del peor tiempo de respuesta para DM");
          end if;
       end if;
    end;

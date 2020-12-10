@@ -34,7 +34,7 @@ package body data is
    end params;
 
    procedure ordenarPrioridad (taskup: in task_set) is
-      T_S_AUX : task_set(taskup'range);
+      T_S_AUX: task_set(taskup'range);
    begin
       for i in taskup'range loop
          -- mirar tiempo de computo para ordenar prioridades
@@ -73,9 +73,10 @@ package body data is
       else
          Put_Line("El número de tareas no coincide con el conjunto.");
          Put_Line("Tareas no definidas.");
-         dataTask(taskup(1), 2, 10, 10);
-         dataTask(taskup(2), 4, 12, 12);
-         dataTask(taskup(3), 6, 22, 22);
+         --RM Sí planificable
+         dataTask(taskup(1), 2, 10, 10);dataTask(taskup(2), 4, 18, 18);dataTask(taskup(3), 6, 24, 24);
+         --RM No planificable;
+         --dataTask(taskup(1), 2, 10, 10);dataTask(taskup(2), 4, 12, 12);dataTask(taskup(3), 6, 22, 22);
       end if;
    end conjuntos;
 
