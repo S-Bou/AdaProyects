@@ -13,6 +13,8 @@ type task_set is array (integer range <>) of tarea;
    procedure dataTask (taskup:in out tarea; dataC, dataD, dataT:in integer);
    function params (taskup:in tarea; param:in character) return integer;
    procedure ordenarPrioridad (taskup: in out task_set);
+   function TiempoRespuesta (taskup: in task_set; N: integer) return boolean;
+   function sumatorio (taskup: in task_set; Wi, count: integer) return integer;
    procedure imprimir (taskup: in task_set);
    procedure conjuntos (taskup: in out task_set; number, Num_T : in integer);
 

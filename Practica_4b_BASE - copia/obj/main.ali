@@ -12,7 +12,7 @@ RV NO_IO
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		fcbec3e9 NE OO SU
+U main%b		main.adb		5ce99eaf NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -35,10 +35,10 @@ D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
 D a-tiflio.ads		20200819050644 bf196650 ada.text_io.float_io%s
 D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
-D data.ads		20201210163040 dca6b1e3 data%s
+D data.ads		20201211221400 fa994e65 data%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D main.adb		20201210163154 9ac5547f main%b
+D main.adb		20201211161740 1cadf6bf main%b
 D system.ads		20200819050648 32a08138 system%s
 D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200819050646 54135002 system.exception_table%s
@@ -55,10 +55,11 @@ D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
 G a e
 G c Z b b [main standard 7 11 none]
 G r c none [main standard 7 11 none] [inicializar data 12 14 none]
-G r c none [main standard 7 11 none] [conjuntos data 17 14 none]
+G r c none [main standard 7 11 none] [conjuntos data 19 14 none]
 G r c none [main standard 7 11 none] [ordenarprioridad data 15 14 none]
-G r c none [main standard 7 11 none] [imprimir data 16 14 none]
+G r c none [main standard 7 11 none] [imprimir data 18 14 none]
 G r c none [main standard 7 11 none] [params data 14 13 none]
+G r c none [main standard 7 11 none] [tiemporespuesta data 16 13 none]
 X 1 ada.ads
 16K9*Ada 20e8 18|1r6 1r45 2r6 2r31 3r6 3r29 4r6 4r23
 X 3 a-flteio.ads
@@ -75,30 +76,32 @@ X 11 a-textio.ads
 57K13*Text_IO 727e16 18|4w10 4r27
 264U14*New_Line 18|53s13 57s13
 465U14*Put 18|15s7 24s7 50s10 50s38 50s48
-508U14*Put_Line 18|30s7 39s13 45s10 54s13 58s13 64s13 71s13
+508U14*Put_Line 18|30s7 39s13 45s10 54s13 58s13 64s13 71s10 73s13 75s10 79s10
 X 12 a-tiflio.ads
 82U14*Put 18|50s22[3|20] 50s63[3|20]
 X 13 a-tiinio.ads
 59U14*Get 18|16s7[4|18] 25s7[4|18]
 X 15 data.ads
-1K9*data 29e9 18|5w6 5r16
+1K9*data 31e9 18|5w6 5r16
 9A6*task_set(6R6)<integer> 18|20r15
 12U14*inicializar 18|23s7
-14V13*params{integer} 18|35s14 35s40 38s14 38s39 47s32 47s64
+14V13*params{integer} 18|35s14 35s40 38s14 38s39 47s32 47s63
 15U14*ordenarPrioridad 18|28s7
-16U14*imprimir 18|32s7
-17U14*conjuntos 18|27s7
+16V13*TiempoRespuesta{boolean} 18|72s13
+18U14*imprimir 18|32s7
+19U14*conjuntos 18|27s7
 X 18 main.adb
-7U11*Main 7b11 75l5 75t9
-8i4 Num_tasks{integer} 16m11 17r17 20r27 27r39 34r19 46r22 49r24 49r52
+7U11*Main 7b11 83l5 83t9
+8i4 Num_tasks{integer} 16m11 17r17 20r27 27r39 34r19 49r24 49r52 72r37
 9i4 Num_Conjunto{integer} 25m11 27r25
 10b4 tipe_RM{boolean} 36m13 44r10 65m13 69r10
 10b13 tipe_DM{boolean} 40m13 69r38
 10b22 plani{boolean} 59m13 62r10 69r28
 11f4 U_RM{float} 47m13 47r19 50r26 52r13 56r18
 11f10 Un_RM{float} 49m10 50r67 52r21 56r25
+12f4 Aux_u{float}
 20a7 tareas{15|9A6} 23m19 23r19 27m17 27r17 28m24 28r24 32r16 35r21 35r47
-. 38r21 38r46 47r39 47r71
+. 38r21 38r46 46r19 47r39 47r70 72r29
 34i11 i{integer} 35r28 35r54 38r28 38r53
-46i14 i{integer} 47r46 47r78
+46i14 i{integer} 47r46 47r77
 

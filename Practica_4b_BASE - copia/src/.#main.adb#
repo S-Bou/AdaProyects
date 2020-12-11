@@ -74,10 +74,8 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
          else
          Put_Line("El conjunto de tareas NO es planificable.");
          end if;
-         
       else
          Put_Line("El conjunto de tareas NO es planificable.");
-      end if;
-      
+      end if;      
    end;
 end Main;
