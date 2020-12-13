@@ -242,10 +242,10 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   D:\Programas\GNAT\AdaProyects\Practica_4b_BASE - copia\obj\data.o
-   --   D:\Programas\GNAT\AdaProyects\Practica_4b_BASE - copia\obj\main.o
-   --   -LD:\Programas\GNAT\AdaProyects\Practica_4b_BASE - copia\obj\
-   --   -LD:\Programas\GNAT\AdaProyects\Practica_4b_BASE - copia\obj\
+   --   D:\Programas\GNAT\AdaProyects\Practica_4b - copia\obj\data.o
+   --   D:\Programas\GNAT\AdaProyects\Practica_4b - copia\obj\main.o
+   --   -LD:\Programas\GNAT\AdaProyects\Practica_4b - copia\obj\
+   --   -LD:\Programas\GNAT\AdaProyects\Practica_4b - copia\obj\
    --   -LD:/programas/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
    --   -static
    --   -lgnat

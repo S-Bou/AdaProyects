@@ -52,11 +52,11 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
          if U_RM <= Un_RM then
             New_Line;
             Put_Line("El test del factor de utilizacion dice que el conjunto SÍ es planificable U <= U(n).");
+            plani:=false;
 --      si test utilizacion dice que no es planificable
          else if U_RM > Un_RM then
             New_Line;
-            Put_Line("El test del factor de utilizacion dice que el conjunto NO es planificable U > U(n).");
-            plani:=false;   
+            Put_Line("El test del factor de utilizacion dice que el conjunto NO es planificable U > U(n).");   
             end if;
          end if;
       if plani then
@@ -74,8 +74,6 @@ begin  --Hay que indicar el numero de tareas que tendrá el conjunto
          else
          Put_Line("El conjunto de tareas NO es planificable.");
          end if;
-      else
-         Put_Line("El conjunto de tareas NO es planificable.");
       end if;      
    end;
 end Main;

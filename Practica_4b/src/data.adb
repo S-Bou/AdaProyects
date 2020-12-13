@@ -90,21 +90,21 @@ package body data is
 
    procedure conjuntos (taskup: in out task_set; number, Num_T : in integer) is
    begin
-      if    number=1 and Num_T=3 then
-         dataTask(taskup(1),  2,  6,  8);   -- Tx=(C, D, T)
+      if    number=1 and Num_T=3 then       --Tx=(C, D, T)
+         dataTask(taskup(1),  2,  6,  8);   --No planificable
          dataTask(taskup(2),  4, 10, 15);
          dataTask(taskup(3),  5, 11, 14);
       elsif number=2 and Num_T=4 then
-         dataTask(taskup(1),  2,  5,  5);
+         dataTask(taskup(1),  2,  5,  5);  --No planificable
          dataTask(taskup(2),  3, 10, 13);
          dataTask(taskup(3),  5, 16, 20);
          dataTask(taskup(4),  2, 24, 24);
       elsif number=3 and Num_T=3 then
-         dataTask(taskup(1),  2,  9,  9);
+         dataTask(taskup(1),  2,  9,  9);  --Sí planificable
          dataTask(taskup(2),  3,  5, 10);
          dataTask(taskup(3),  3,  7, 11);
       elsif number=4 and Num_T=3 then
-         dataTask(taskup(1), 20, 50, 60);
+         dataTask(taskup(1), 20, 50, 60);  --No planificable
          dataTask(taskup(2), 50, 70, 80);
          dataTask(taskup(3), 70,100,110);
       elsif number=5 and Num_T=3 then
@@ -116,8 +116,8 @@ package body data is
          dataTask(taskup(2),  4, 12, 12);
          dataTask(taskup(3),  6, 22, 22);
       elsif number=7 and Num_T=4 then
-         dataTask(taskup(1),  3, 10, 10);
-         dataTask(taskup(2),  3, 15, 15);
+         dataTask(taskup(1),  3, 10, 10);  --RM = NO
+         dataTask(taskup(2),  3, 15, 15);  --DM = SÍ
          dataTask(taskup(3),  2, 18, 18);
          dataTask(taskup(4),  5, 24, 24);
       else

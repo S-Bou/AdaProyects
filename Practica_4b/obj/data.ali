@@ -1,0 +1,129 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U data%b		data.adb		e9927fe1 NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+
+U data%s		data.ads		fa994e65 EE NE OO PK IL
+
+D ada.ads		20200819050644 76789da1 ada%s
+D a-except.ads		20200819050644 a7106115 ada.exceptions%s
+D a-inteio.ads		20200819050644 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
+D data.ads		20201211221400 fa994e65 data%s
+D data.adb		20201213120346 4bb46d4d data%b
+D interfac.ads		20200819050646 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
+D system.ads		20200819050648 32a08138 system%s
+D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050646 54135002 system.exception_table%s
+D s-fatflt.ads		20200819050646 11beb392 system.fat_flt%s
+D s-fatgen.ads		20200819050646 49cbaf86 system.fat_gen%s
+D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
+D s-parame.ads		20200819050648 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050648 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050648 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050648 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [inicializar data 12 14 none]
+G c Z s b [datatask data 13 14 none]
+G c Z s b [params data 14 13 none]
+G c Z s b [ordenarprioridad data 15 14 none]
+G c Z s b [tiemporespuesta data 16 13 none]
+G c Z s b [sumatorio data 17 13 none]
+G c Z s b [imprimir data 18 14 none]
+G c Z s b [conjuntos data 19 14 none]
+G c Z s s [tareaIP data 27 6 none]
+G c Z s s [task_setIP data 9 6 none]
+G c Z s s [set_tasksIP data 21 6 none]
+X 1 ada.ads
+16K9*Ada 20e8 11|1r6 1r31 2r6 2r23
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 11|1w10 1r35
+X 7 a-textio.ads
+57K13*Text_IO 727e16 11|2w10 2r27
+264U14*New_Line 11|60s10 87s10
+465U14*Put 11|59s10 59s51 85s10 85s33 85s66 86s36 86s69
+508U14*Put_Line 11|124s10 125s10
+X 8 a-tiinio.ads
+80U14*Put 11|59s42[3|18] 59s61[3|18] 85s24[3|18] 85s44[3|18] 86s10[3|18]
+. 86s45[3|18]
+X 10 data.ads
+1K9*data 27E6 31l5 31e9 11|3b14 129l5 129t9
+6R6*tarea 9r46 13r38 14r31 27c6 29e11 11|14r38 21r31 35r16
+9A6*task_set(6R6)<integer> 12r42 15r47 16r41 17r35 18r35 19r40 23r11 11|5r42
+. 34r47 49r41 68r35 82r35 91r40
+12U14*inicializar 12=27 11|5b14 12l8 12t19
+12a27 taskup{9A6} 11|5b27 7r16 8m10 9m10 10m10
+13U14*dataTask 13=24 13>45 13>52 13>59 11|14b14 19l8 19t16 94s10 95s10 96s10
+. 98s10 99s10 100s10 101s10 103s10 104s10 105s10 107s10 108s10 109s10 111s10
+. 112s10 113s10 115s10 116s10 117s10 119s10 120s10 121s10 122s10
+13r24 taskup{6R6} 11|14b24 16m7 17m7 18m7
+13i45 dataC{integer} 11|14b45 16r20
+13i52 dataD{integer} 11|14b52 17r24
+13i59 dataT{integer} 11|14b59 18r22
+14V13*params{integer} 14>21 14>38 11|21b13 32l8 32t14
+14r21 taskup{6R6} 11|21b21 24r17 26r17 28r17
+14e38 param{character} 11|21b38 23r13 25r13 27r13
+15U14*ordenarPrioridad 15=32 11|34b14 47l8 47t24
+15a32 taskup{9A6} 11|34b32 38r16 39r19 40r16 40r37 41r25 42m16 42r27 43m16
+16V13*TiempoRespuesta{boolean} 16>30 16>51 11|49b13 66l8 66t23
+16a30 taskup{9A6} 11|49b30 51r29 56r18 56r43 61r19
+16i51 N{integer} 11|49b51 53r19
+17V13*sumatorio{integer} 17>24 17>45 17>49 11|56s33 68b13 80l8 80t17
+17a24 taskup{9A6} 11|68b24 76r63 76r83
+17i45 Wi{integer} 11|68b45 76r53
+17i49 count{integer} 11|68b49 72r10 75r22
+18U14*imprimir 18>24 11|82b14 89l8 89t16
+18a24 taskup{9A6} 11|82b24 84r16 85r48 86r14 86r49
+19U14*conjuntos 19=25 19>50 19>58 11|91b14 127l8 127t17
+19a25 taskup{9A6} 11|91b25 94m19 94r19 95m19 95r19 96m19 96r19 98m19 98r19
+. 99m19 99r19 100m19 100r19 101m19 101r19 103m19 103r19 104m19 104r19 105m19
+. 105r19 107m19 107r19 108m19 108r19 109m19 109r19 111m19 111r19 112m19 112r19
+. 113m19 113r19 115m19 115r19 116m19 116r19 117m19 117r19 119m19 119r19 120m19
+. 120r19 121m19 121r19 122m19 122r19
+19i50 number{integer} 11|91b50 93r13 97r13 102r13 106r13 110r13 114r13 118r13
+19i58 Num_T{integer} 11|91b58 93r26 97r26 102r26 106r26 110r26 114r26 118r26
+21R6*set_tasks 21d17 24e12
+21i17*Num_tasks{integer} 23r23
+23a4*tareas{9A6}
+28i7*wcet{integer} 11|8m20 16m14 24r24 51r39 56r28 76r93 85r58
+28i13*deadline{integer} 11|9m20 17m14 26r24 40r26 40r47 61r29 86r24
+28i23*period{integer} 11|10m20 18m14 28r24 76r73 86r59
+X 11 data.adb
+7i11 i{integer} 8r17 9r17 10r17
+35r7 T_S_AUX{10|6R6} 41m16 43r27
+36i7 D_AUX{integer}
+38i11 i{integer} 40r23 42r34 43r23
+39i14 j{integer} 40r44 41r32 42r23
+50b7 EsPlaniONo{boolean} 62m13 65r14
+51i7 W_i{integer} 55r21 56m13 56r51 57r23 59r65 61r13
+51i12 last_W{integer} 55m13 57r27
+53i11 i{integer} 56r25 56r56 59r46 61r26
+69i7 suma{integer} 71m7 73r17 76m13 76r19 78r17
+75i14 i{integer} 76r70 76r90
+84i11 i{integer} 85r28 85r55 86r21 86r56
+
