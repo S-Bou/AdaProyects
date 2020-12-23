@@ -1,105 +1,18 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project >
+  <Project>
+    <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\schedulerrm.gpr</vfs_file>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.ads</vfs_file>
+      <vfs_project />
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\src\data.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.adb</vfs_file>
+      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\schedulerrm.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\src\data.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 30" line=" 38" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 39" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 38" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 6" line=" 41" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 38" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 37" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 16" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 37" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 38" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 13" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 38" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 13" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 9" line=" 15" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 17" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 16" line=" 18" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 17" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 18" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 110" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 32" line=" 33" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 38" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 47" line=" 14" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.ads</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 23" line=" 24" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\schedulerrm.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b - copia\src\data.adb</vfs_file>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\schedulerrm.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\src\main.adb</vfs_file>
     </file_marker>
   </Project>
   <Project >
