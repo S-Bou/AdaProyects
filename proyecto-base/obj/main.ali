@@ -1,0 +1,94 @@
+V "GNAT Lib v2020"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U main%b		main.adb		c168957c NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W data%s		data.adb		data.ali
+W schedule_output_functions%s  schedule_output_functions.adb  schedule_output_functions.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20200819050644 76789da1 ada%s
+D a-except.ads		20200819050644 a7106115 ada.exceptions%s
+D a-inteio.ads		20200819050644 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
+D data.ads		20201228200342 684fb2fb data%s
+D interfac.ads		20200819050646 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
+D main.adb		20201228200258 a04bc6eb main%b
+D schedule_output_functions.ads  20201218134410 de95a050 schedule_output_functions%s
+D system.ads		20200819050648 32a08138 system%s
+D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050646 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
+D s-parame.ads		20200819050648 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050648 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050648 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050648 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
+D text_io.ads		20200819050648 21b2c898 text_io%s
+G a e
+G c Z b b [main standard 6 11 none]
+G r c none [main standard 6 11 none] [setdata data 10 11 none]
+G r c none [main standard 6 11 none] [settimeevents data 14 10 none]
+G r c none [main standard 6 11 none] [imprimir data 12 11 none]
+G r c none [main standard 6 11 none] [imprimiret data 13 11 none]
+G r c none [main standard 6 11 none] [write_chronogram schedule_output_functions 5 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 13|3r6 3r31
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 13|3w10 3r35
+X 7 a-textio.ads
+465U14*Put 13|20s10 26s10
+508U14*Put_Line 13|80s7
+X 8 a-tiinio.ads
+59U14*Get 13|21s10[3|18] 27s10[3|18]
+X 10 data.ads
+1K9*data 32e9 13|1w6 1r16
+8A6*v_enteros(integer)<integer> 13|32r12 33r16 34r14 35r18
+10U11*Setdata 13|39s7
+12U11*Imprimir 13|45s7
+13U11*ImprimirET 13|47s7
+14V10*SetTimeEvents{integer} 13|43s23
+21i9*task_id{integer} 13|66m14 69m14 72m14 75m14
+22i9*start{integer} 13|67m14 70m14 73m14 76m14
+23i9*finish{integer} 13|68m14 71m14 74m14 77m14
+27A6*chrono_set(20R6)<integer>
+31a1*chrono{27A6} 13|66m4 67m4 68m4 69m4 70m4 71m4 72m4 73m4 74m4 75m4 76m4
+. 77m4 79r39
+X 13 main.adb
+6U11*Main 6b11 82l5 82t9
+8i4 num_tasks{integer} 21m14 22r17 22r33 32r25 33r29 34r27 39m15 39r15 79r47
+8i15 num_events{integer} 27m14 28r17 28r34 35r31
+8i27 t_compu_events{integer} 43m7 47r18
+11i4 exec{integer} 79r58
+32a7 wcet{10|8A6} 39m25 39r25 45r16
+33a7 deadline{10|8A6} 39m30 39r30 45r21 79r29
+34a7 period{10|8A6} 39m39 39r39 45r30 79r21
+35a7 eventstime{10|8A6} 43m37 43r37 47r33
+51i8 time{integer}
+X 14 schedule_output_functions.ads
+3K9*Schedule_Output_functions 13|2w6 2r37 14|7e30
+5U11*write_Chronogram 13|79s4
+X 28 text_io.ads
+24K9*Text_IO=24:29 13|4w6 4r19
+

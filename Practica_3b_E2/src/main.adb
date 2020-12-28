@@ -86,7 +86,6 @@ procedure Main is
             terminate;
          end select;
       end loop;
-
    end coche;
 
    C1 : coche(1, 10, 55, 'N');   -- Impares Norte, pares Sur
@@ -121,6 +120,5 @@ begin
       else
          put_line("Comando no valido.");
       end if;
-
    end loop;
 end Main;

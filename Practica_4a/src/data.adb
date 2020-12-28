@@ -17,7 +17,6 @@ package body data is
       taskup.wcet:=dataC;
       taskup.deadline:=dataD;
       taskup.period:=dataT;
-      --null;
    end dataTask;
 
    function params (taskup:in tarea; param:in character) return integer is
@@ -32,6 +31,18 @@ package body data is
          return 0;
       end if;
    end params;
+
+   procedure ordenarPrioridad (taskup: in task_set) is
+      T_S_AUX: task_set(taskup'range);
+      priority:integer:=0;
+   begin
+      for i in taskup'range loop
+         -- mirar el Deadline para ordenar prioridades
+         if taskup(i).deadline > priority then
+            priority:=taskup(i).deadline;
+         end if;
+      end loop;
+   end ordenarPrioridad;
 
    procedure imprimir (taskup: in task_set) is
    begin
@@ -61,6 +72,14 @@ package body data is
          dataTask(taskup(1), 20, 50, 60);
          dataTask(taskup(2), 50, 70, 80);
          dataTask(taskup(3), 70,100,110);
+      elsif number=5 and Num_T=3 then
+         dataTask(taskup(1),  2, 10, 10);  --RM Sí planificable
+         dataTask(taskup(2),  4, 18, 18);
+         dataTask(taskup(3),  6, 24, 24);
+      elsif number=6 and Num_T=3 then
+         dataTask(taskup(1),  2, 10, 10);  --RM No planificable
+         dataTask(taskup(2),  4, 12, 12);
+         dataTask(taskup(3),  6, 22, 22);
       else
          Put_Line("El número de tareas no coincide con el conjunto.");
          Put_Line("Tareas no definidas.");
