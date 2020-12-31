@@ -50,6 +50,8 @@ begin
       tasksstate:v_enteros(1..num_tasks);
    -- vector con el valor actualizado del tiempo de computo   
       real_WCET:v_enteros(1..num_tasks);
+   -- vector con tareas ordenadas por prioridad
+      rowtasks:v_enteros(1..num_tasks);
    begin 
    -- Introducimos los datos de las tareas aqui a mano o elegimos uno conjunto predefinido
    -- Mejora: se pueden pedir por teclado
@@ -64,8 +66,9 @@ begin
    -- Se muestra por pantalla los tiempos de los eventos aperiódicos
       ImprimirET(wcet_aperiodic,eventstime);
    --Inicializar lo que haga falta
-      for i in tasksstate'Range loop
-         tasksstate(i):=1;
+      for i in 1..num_tasks loop
+         tasksstate(i):=0;
+         rowtasks(i):=0;
       end loop;
       -- copio tiempos de computo para manejarlos
       real_WCET:=wcet;
@@ -73,9 +76,9 @@ begin
       for time in 0..100 loop     
          -- Actualizar tareas activas
          tasksstate:=Estadotareas(time,tasksstate,period,real_WCET);
-         taskactiva:=Setpriority(tasksstate);     
+         rowtasks:=Setpriority(tasksstate,rowtasks);     
          -- muestra por consola el tiempo y el estado de las tareas
-         Showstatetasks(time,taskactiva,tasksstate);
+         Showstatetasks(time,taskactiva,tasksstate,rowtasks);
                 
          -- Ver si hay algun evento aperiodico activado en este tiempo
          -- Si hay evento aperiodico, decidir que hacer. Si se elige para
