@@ -11,7 +11,7 @@ RV NO_IO
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		046ed4e0 NE OO SU
+U main%b		main.adb		6f4699a0 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W data%s		data.adb		data.ali
@@ -27,10 +27,10 @@ D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
 D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
 D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
-D data.ads		20201231163200 0be2a9f4 data%s
+D data.ads		20201231181008 5b9c550e data%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D main.adb		20201231163502 06e09c78 main%b
+D main.adb		20201231181030 3db62dc2 main%b
 D schedule_output_functions.ads  20201218134410 de95a050 schedule_output_functions%s
 D system.ads		20200819050648 32a08138 system%s
 D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
@@ -48,15 +48,16 @@ D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
 D text_io.ads		20200819050648 21b2c898 text_io%s
 G a e
 G c Z b b [main standard 7 11 none]
-G r c none [main standard 7 11 none] [setnumtasks data 21 11 none]
-G r c none [main standard 7 11 none] [setdata data 24 11 none]
-G r c none [main standard 7 11 none] [settimeevents data 30 10 none]
-G r c none [main standard 7 11 none] [imprimir data 28 11 none]
-G r c none [main standard 7 11 none] [imprimiret data 29 11 none]
-G r c none [main standard 7 11 none] [inittasks data 27 11 none]
-G r c none [main standard 7 11 none] [estadotareas data 23 11 none]
-G r c none [main standard 7 11 none] [showstatetasks data 31 11 none]
-G r c none [main standard 7 11 none] [getpriority data 32 10 none]
+G r c none [main standard 7 11 none] [setnumtasks data 19 14 none]
+G r c none [main standard 7 11 none] [setdata data 22 14 none]
+G r c none [main standard 7 11 none] [settimeevents data 28 13 none]
+G r c none [main standard 7 11 none] [imprimir data 26 14 none]
+G r c none [main standard 7 11 none] [imprimiret data 27 14 none]
+G r c none [main standard 7 11 none] [inittasks data 25 14 none]
+G r c none [main standard 7 11 none] [estadotareas data 21 14 none]
+G r c none [main standard 7 11 none] [setpriority data 23 14 none]
+G r c none [main standard 7 11 none] [showstatetasks data 29 14 none]
+G r c none [main standard 7 11 none] [getpriority data 30 13 none]
 G r c none [main standard 7 11 none] [write_chronogram schedule_output_functions 5 11 none]
 X 1 ada.ads
 16K9*Ada 20e8 13|3r6 3r31
@@ -70,23 +71,24 @@ X 8 a-tiinio.ads
 59U14*Get 13|25s10[3|18] 31s10[3|18]
 80U14*Put 13|100s10[3|18] 100s33[3|18]
 X 10 data.ads
-1K9*data 52e9 13|5w6 5r16
-18A6*v_taskgroup(9R9)<integer> 13|48r17
-19A6*v_enteros(integer)<integer> 13|36r12 37r16 38r14 40r18 42r18 44r17 46r16
-21U11*SetNumTasks 13|52s7
-23U11*Estadotareas 13|74s10
-24U11*Setdata 13|53s7
-27U11*Inittasks 13|64s7
-28U11*Imprimir 13|60s7
-29U11*ImprimirET 13|62s7
-30V10*SetTimeEvents{integer} 13|58s23
-31U11*ShowStateTasks 13|77s10
-32V10*Getpriority{integer} 13|89s35
-40i9*task_id{integer} 13|89m26 100r24
-41i9*start{integer} 13|90m26 91r47 100r47
-42i9*finish{integer} 13|91m26
-46A6*chrono_set(39R6)<integer>
-50a1*chrono{46A6} 13|89m13 90m13 91m13 91r34 99r16 100r14 100r37 102r42
+1K9*data 50e9 13|5w6 5r16
+16A9*v_taskgroup(7R9)<integer> 13|48r17
+17A9*v_enteros(integer)<integer> 13|36r12 37r16 38r14 40r18 42r18 44r17 46r16
+19U14*SetNumTasks 13|52s7
+21U14*Estadotareas 13|74s10
+22U14*Setdata 13|53s7
+23U14*Setpriority 13|75s10
+25U14*Inittasks 13|64s7
+26U14*Imprimir 13|60s7
+27U14*ImprimirET 13|62s7
+28V13*SetTimeEvents{integer} 13|58s23
+29U14*ShowStateTasks 13|77s10
+30V13*Getpriority{integer} 13|89s35
+38i7*task_id{integer} 13|89m26 100r24
+39i7*start{integer} 13|90m26 91r47 100r47
+40i7*finish{integer} 13|91m26
+44A9*chrono_set(37R9)<integer>
+48a4*chrono{44A9} 13|89m13 90m13 91m13 91r34 99r16 100r14 100r37 102r42
 X 13 main.adb
 7U11*Main 7b11 105l5 105t9
 11i4 taskactiva{integer} 87r13
@@ -95,14 +97,14 @@ X 13 main.adb
 15i4 exec{integer} 88m13 88r19 89r20 90r20 91r20 91r41 102r61
 18i4 num_aperiodic{integer} 31m14 32r17 32r37 40r31
 20i4 wcet_aperiodic{integer} 58m7 62r18
-36a7 wcet{10|19A6} 53m15 53r15 60r16 64r27 70r18
-37a7 deadline{10|19A6} 53m20 53r20 60r21 64r32 102r32
-38a7 period{10|19A6} 53m29 53r29 60r30 64r41 102r24
-40a7 eventstime{10|19A6} 58m37 58r37 62r33
-42a7 tasksstate{10|19A6} 66m10
-44a7 real_WCET{10|19A6} 70m7
-46a7 rowtasks{10|19A6} 67m10
-48a7 taskgroup{10|18A6} 64m17 64r17 74m28 74r28 77r30
+36a7 wcet{10|17A9} 53m15 53r15 60r16 64r27 70r18
+37a7 deadline{10|17A9} 53m20 53r20 60r21 64r32 102r32
+38a7 period{10|17A9} 53m29 53r29 60r30 64r41 102r24
+40a7 eventstime{10|17A9} 58m37 58r37 62r33
+42a7 tasksstate{10|17A9} 66m10
+44a7 real_WCET{10|17A9} 70m7
+46a7 rowtasks{10|17A9} 67m10
+48a7 taskgroup{10|16A9} 64m17 64r17 74m28 74r28 75m22 75r22 77r30
 65i11 i{integer} 66r21 67r19
 72i11 time{integer} 74r23 77r25 90r33
 99i11 i{integer} 100r21 100r44

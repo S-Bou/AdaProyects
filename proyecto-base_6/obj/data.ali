@@ -2,23 +2,21 @@ V "GNAT Lib v2020"
 A -gnatA
 A -mtune=generic
 A -march=x86-64
-P SS ZX
+P ZX
 
 RN
 RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IO
-RV NO_SECONDARY_STACK
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U data%b		data.adb		af254a06 NE OO PK IL
+U data%b		data.adb		251977bf NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U data%s		data.ads		0be2a9f4 EE NE OO PK IL
+U data%s		data.ads		5b9c550e EE NE OO PK IL
 
 D ada.ads		20200819050644 76789da1 ada%s
 D a-except.ads		20200819050644 a7106115 ada.exceptions%s
@@ -29,8 +27,8 @@ D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
 D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
 D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
-D data.ads		20201231163200 0be2a9f4 data%s
-D data.adb		20201231163532 fc78bf3b data%b
+D data.ads		20201231181008 5b9c550e data%s
+D data.adb		20201231181008 263a7e78 data%b
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
 D system.ads		20200819050648 32a08138 system%s
@@ -47,117 +45,118 @@ D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
 D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
 G a e
-G c Z s b [setnumtasks data 21 11 none]
-G c Z s b [refreshcomput data 22 10 none]
-G c Z s b [estadotareas data 23 11 none]
-G c Z s b [setdata data 24 11 none]
-G c Z s b [setpriority data 25 10 none]
-G c Z s b [conjuntos data 26 11 none]
-G c Z s b [inittasks data 27 11 none]
-G c Z s b [imprimir data 28 11 none]
-G c Z s b [imprimiret data 29 11 none]
-G c Z s b [settimeevents data 30 10 none]
-G c Z s b [showstatetasks data 31 11 none]
-G c Z s b [getpriority data 32 10 none]
-G c Z s s [eventsIP data 39 6 none]
-G c Z s s [chrono_setIP data 46 6 none]
-G c Z s s [tareaIP data 9 9 none]
-G c Z s s [v_taskgroupIP data 18 6 none]
-G c Z s s [v_enterosIP data 19 6 none]
+G c Z s b [setnumtasks data 19 14 none]
+G c Z s b [refreshcomput data 20 14 none]
+G c Z s b [estadotareas data 21 14 none]
+G c Z s b [setdata data 22 14 none]
+G c Z s b [setpriority data 23 14 none]
+G c Z s b [conjuntos data 24 14 none]
+G c Z s b [inittasks data 25 14 none]
+G c Z s b [imprimir data 26 14 none]
+G c Z s b [imprimiret data 27 14 none]
+G c Z s b [settimeevents data 28 13 none]
+G c Z s b [showstatetasks data 29 14 none]
+G c Z s b [getpriority data 30 13 none]
+G c Z s s [eventsIP data 37 9 none]
+G c Z s s [chrono_setIP data 44 9 none]
+G c Z s s [tareaIP data 7 9 none]
+G c Z s s [v_taskgroupIP data 16 9 none]
+G c Z s s [v_enterosIP data 17 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 11|1r6 1r31 2r6 2r23
 X 3 a-inteio.ads
 18K13*Integer_Text_IO[8|46] 11|1w10 1r35
 X 7 a-textio.ads
 57K13*Text_IO 727e16 11|2w10 2r27
-264U14*New_Line 11|98s10 105s7 108s10 127s16 158s7
-465U14*Put 11|48s10 52s16 59s16 59s77 62s16 62s69 65s16 65s71 78s10 84s13
-. 84s73 96s10 96s33 96s59 97s29 97s55 104s7 107s10 107s45 114s7 124s13 127s7
-. 149s7 149s34 152s13 154s13 157s7
-508U14*Put_Line 11|46s10 47s10 142s10 143s10
+264U14*New_Line 11|91s10 98s7 101s10 120s16 159s7
+465U14*Put 11|41s10 45s16 52s16 52s77 55s16 55s69 58s16 58s71 71s10 77s13
+. 77s73 89s10 89s33 89s59 90s29 90s55 97s7 100s10 100s45 107s7 117s13 120s7
+. 142s7 142s34 145s13 147s13 150s7 151s7 153s10 154s38 156s10 158s7
+508U14*Put_Line 11|39s10 40s10 135s10 136s10
 X 8 a-tiinio.ads
-59U14*Get 11|49s10[3|18] 53s16[3|18] 60s16[3|18] 63s16[3|18] 66s16[3|18]
-. 79s10[3|18] 85s13[3|18]
-80U14*Put 11|59s68[3|18] 62s60[3|18] 65s62[3|18] 84s64[3|18] 96s24[3|18]
-. 96s44[3|18] 97s10[3|18] 97s38[3|18] 104s61[3|18] 107s36[3|18] 107s56[3|18]
-. 122s10[3|18] 149s22[3|18]
+59U14*Get 11|42s10[3|18] 46s16[3|18] 53s16[3|18] 56s16[3|18] 59s16[3|18]
+. 72s10[3|18] 78s13[3|18]
+80U14*Put 11|52s68[3|18] 55s60[3|18] 58s62[3|18] 77s64[3|18] 89s24[3|18]
+. 89s44[3|18] 90s10[3|18] 90s38[3|18] 97s61[3|18] 100s36[3|18] 100s56[3|18]
+. 115s10[3|18] 142s22[3|18] 154s10[3|18] 155s10[3|18]
 X 10 data.ads
-1K9*data 52l5 52e9 11|3b14 171l5 171t9
-2i4*Num_tasks{integer} 11|7r19 58r25 115r19 123r15 133r25 137r28 163m7
-3i4*tarea_on{integer} 11|19m13 25r10 26m10 34r20 34r41 37r20 37r36 168r14
-4b4*procesingtask{boolean} 11|18r31 21m13 33r10
-5b4*aperiodic{boolean} 11|25r25
-9R9*tarea 16e14 18r49
-10i12*task_id{integer} 11|116m23 122r27
-11i7*time{integer} 11|9m28 117m23
-12b7*state{boolean} 11|10m28 118m23 151r26
-13i7*wcet{integer} 11|119m23
-14i7*deadline{integer} 11|120m23
-15i7*period{integer} 11|8r37 121m23
-18A6*v_taskgroup(9R9)<integer> 23r62 27r39 31r56 11|5r65 112r42 147r59
-19A6*v_enteros(integer)<integer> 22r57 22r75 24r51 25r49 25r67 26r75 27r75
-. 28r48 29r58 30r43 11|15r53 15r71 31r60 31r78 42r54 74r46 93r51 102r61 112r78
-. 131r77
-21U11*SetNumTasks 21>24 11|161b14 164l8 164t19
-21i24 N_tasks{integer} 11|161b27 163r18
-22V10*Refreshcomput{19A6} 22=25 22=34 22=39 11|31b13 40l8 40t21
-22a25 tareason{19A6} 11|31b28
-22a34 wcet{19A6} 11|31b37 37r31
-22a39 real_wcet{19A6} 11|31b42 34m10 34r31 35r17 37m10 38r17
-23U11*Estadotareas 23>25 23=42 11|5b14 13l8 13t20
-23i25 TIME{integer} 11|5b28 8r13 9r34
-23a42 grupotareas{18A6} 11|5b45 8r22 9m13 10m13
-24U11*Setdata 24=20 24=26 24=36 11|42b14 72l8 72t15
-24a20 Wcet{19A6} 11|42b23 56m36 61m16
-24a26 Deadline{19A6} 11|42b29 56m41 64m16
-24a36 Period{19A6} 11|42b39 56m50 67m16
-25V10*Setpriority{19A6} 25=23 25=32 11|15b13 29l8 29t19
-25a23 tareason{19A6} 11|15b26 17r16 18r13
-25a32 rowtasks{19A6} 11|15b36 20m13 28r14
-26U11*conjuntos 26>22 26=44 26=50 26=60 11|56s13 131b14 145l8 145t17
-26i22 conjunto{integer} 11|131b25 133r10 137r13
-26a44 Wcet{19A6} 11|131b46 134m10 138m10
-26a50 Deadline{19A6} 11|131b52 135m10 139m10
-26a60 Period{19A6} 11|131b62 136m10 140m10
-27U11*Inittasks 27=22 27>51 27>56 27>65 11|112b14 128l8 128t17
-27a22 taskgroup{18A6} 11|112b25 116m10 117m10 118m10 119m10 120m10 121m10
-. 122r14
-27a51 wcet{19A6} 11|112b54 119r29
-27a56 deadline{19A6} 11|112b59 120r33
-27a65 period{19A6} 11|112b68 121r31
-28U11*Imprimir 28>21 28>27 28>37 11|93b14 100l8 100t16
-28a21 Wcet{19A6} 11|93b24 95r16 96r48
-28a27 Deadline{19A6} 11|93b30 97r14
-28a37 Period{19A6} 11|93b40 97r42
-29U11*ImprimirET 29>23 29>43 11|102b14 110l8 110t18
-29i23 T_Compu{integer} 11|102b26 104r65
-29a43 Eventstime{19A6} 11|102b46 106r16 107r60
-30V10*SetTimeEvents{integer} 30=25 11|74b13 91l8 91t21
-30a25 Eventstime{19A6} 11|74b28 82r16 88m10
-31U11*ShowStateTasks 31>27 31>43 11|147b14 159l8 159t22
-31i27 time{integer} 11|147b30 149r26
-31a43 taskgroup{18A6} 11|147b46 150r16 151r13
-32V10*Getpriority{integer} 11|166b13 169l8 169t19
-39R6*events 43e11 46r48
-40i9*task_id{integer}
-41i9*start{integer}
-42i9*finish{integer}
-46A6*chrono_set(39R6)<integer> 50r9
-48i1*num_execs{integer} 50r23
-50a1*chrono{46A6}
+1K9*data 50l5 50e9 11|3b14 172l5 172t9
+2i4*Num_tasks{integer} 11|7r19 51r25 108r19 116r15 126r25 130r28 164m7
+3i4*Task_ON{integer} 11|27m7 169r14
+7R9*tarea 14e14 16r52 11|16r17
+8i7*task_id{integer} 11|27r31 109m23 115r27 154r27
+9i7*time{integer} 11|9m28 20r31 20r53 110m23 155r27
+10b7*state{boolean} 11|10m28 111m23 144r26
+11i7*wcet{integer} 11|112m23
+12i7*deadline{integer} 11|113m23
+13i7*period{integer} 11|8r37 114m23
+16A9*v_taskgroup(7R9)<integer> 21r65 23r47 25r42 29r59 11|5r65 15r47 105r42
+. 140r59
+17A9*v_enteros(integer)<integer> 20r61 22r54 24r78 25r78 26r51 27r61 28r46
+. 11|30r61 35r54 67r46 86r51 95r61 105r78 124r77
+19U14*SetNumTasks 19>27 11|162b14 165l8 165t19
+19i27 N_tasks{integer} 11|162b27 164r18
+20U14*Refreshcomput 20=29 20=38 20=43 11|30b14 33l8 33t21
+20a29 tareason{17A9} 11|30b29
+20a38 wcet{17A9} 11|30b38
+20a43 real_wcet{17A9} 11|30b43
+21U14*Estadotareas 21>28 21=45 11|5b14 13l8 13t20
+21i28 TIME{integer} 11|5b28 8r13 9r34
+21a45 grupotareas{16A9} 11|5b45 8r22 9m13 10m13
+22U14*Setdata 22=23 22=29 22=39 11|35b14 65l8 65t15
+22a23 Wcet{17A9} 11|35b23 49m36 54m16
+22a29 Deadline{17A9} 11|35b29 49m41 57m16
+22a39 Period{17A9} 11|35b39 49m50 60m16
+23U14*Setpriority 23=27 11|15b14 28l8 28t19
+23a27 grupotareas{16A9} 11|15b27 18r16 19r19 20r16 20r38 21r27 22m16 22r32
+. 23m16 27r16
+24U14*conjuntos 24>25 24=47 24=53 24=63 11|49s13 124b14 138l8 138t17
+24i25 conjunto{integer} 11|124b25 126r10 130r13
+24a47 Wcet{17A9} 11|124b46 127m10 131m10
+24a53 Deadline{17A9} 11|124b52 128m10 132m10
+24a63 Period{17A9} 11|124b62 129m10 133m10
+25U14*Inittasks 25=25 25>54 25>59 25>68 11|105b14 121l8 121t17
+25a25 taskgroup{16A9} 11|105b25 109m10 110m10 111m10 112m10 113m10 114m10
+. 115r14
+25a54 wcet{17A9} 11|105b54 112r29
+25a59 deadline{17A9} 11|105b59 113r33
+25a68 period{17A9} 11|105b68 114r31
+26U14*Imprimir 26>24 26>30 26>40 11|86b14 93l8 93t16
+26a24 Wcet{17A9} 11|86b24 88r16 89r48
+26a30 Deadline{17A9} 11|86b30 90r14
+26a40 Period{17A9} 11|86b40 90r42
+27U14*ImprimirET 27>26 27>46 11|95b14 103l8 103t18
+27i26 T_Compu{integer} 11|95b26 97r65
+27a46 Eventstime{17A9} 11|95b46 99r16 100r60
+28V13*SetTimeEvents{integer} 28=28 11|67b13 84l8 84t21
+28a28 Eventstime{17A9} 11|67b28 75r16 81m10
+29U14*ShowStateTasks 29>30 29>46 11|140b14 160l8 160t22
+29i30 time{integer} 11|140b30 142r26
+29a46 taskgroup{16A9} 11|140b46 143r16 144r13 152r16 154r14 155r14
+30V13*Getpriority{integer} 11|167b13 170l8 170t19
+37R9*events 41e14 44r51
+38i7*task_id{integer}
+39i7*start{integer}
+40i7*finish{integer}
+44A9*chrono_set(37R9)<integer> 48r12
+46i4*num_execs{integer} 48r26
+48a4*chrono{44A9}
 X 11 data.adb
 7i11 i{integer} 8r34 9r25 10r25
-17i11 i{integer} 18r22 19r23 20r22 20r26
-43i7 menu{integer} 49m14 50r13 57r16 70r20 70r30
-43i13 Num_Conjunto{integer} 53m20 54r26 54r46 56r23
-43i27 data{integer} 60m20 61r25 63m20 64r29 66m20 67r27
-58i17 i{integer} 59r72 61r21 62r64 64r25 65r66 67r23
-75i7 data{integer} 85m17 86r20 86r31 88r25
-75i13 dataTime{integer} 79m14 80r20 80r36 90r14
-82i11 i{integer} 84r68 88r21
-95i11 i{integer} 96r28 96r53 97r23 97r49
-106i11 i{integer} 107r40 107r71
-115i11 i{integer} 116r20 116r32 117r20 118r20 119r20 119r34 120r20 120r42
-. 121r20 121r38 122r24 123r13
-150i11 i{integer} 151r23
+16r7 tarea_AUX{10|7R9} 21m16 23r32
+18i11 i{integer} 20r28 21r39 22r28
+19i14 j{integer} 20r50 22r44 23r28
+36i7 menu{integer} 42m14 43r13 50r16 63r20 63r30
+36i13 Num_Conjunto{integer} 46m20 47r26 47r46 49r23
+36i27 data{integer} 53m20 54r25 56m20 57r29 59m20 60r27
+51i17 i{integer} 52r72 54r21 55r64 57r25 58r66 60r23
+68i7 data{integer} 78m17 79r20 79r31 81r25
+68i13 dataTime{integer} 72m14 73r20 73r36 83r14
+75i11 i{integer} 77r68 81r21
+88i11 i{integer} 89r28 89r53 90r23 90r49
+99i11 i{integer} 100r40 100r71
+108i11 i{integer} 109r20 109r32 110r20 111r20 112r20 112r34 113r20 113r42
+. 114r20 114r38 115r24 116r13
+143i11 i{integer} 144r23
+152i11 i{integer} 154r24 155r24
 

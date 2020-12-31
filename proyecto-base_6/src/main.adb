@@ -69,10 +69,10 @@ begin
       -- copio tiempos de computo para manejarlos
       real_WCET:=wcet;
       -- Planificacion -----------------------------------------------------
-      for time in 0..100 loop     
+      for time in 0..99 loop     
          -- Actualizar tareas activas
          Estadotareas(time,taskgroup);
-         --rowtasks:=Setpriority(tasksstate,rowtasks);     
+         Setpriority(taskgroup);     
          -- muestra por consola el tiempo y el estado de las tareas
          ShowStateTasks(time,taskgroup);
                 
@@ -84,7 +84,7 @@ begin
          --    elegir la tarea según el algoritmo de planificacion
          --    considerar el caso de que no haya ninguna activa
          -- Escribir en chrono 
-         if taskactiva/=-1 then
+         if taskactiva/=0 then
             exec:=exec+1;
             chrono(exec).task_id:=Getpriority;
             chrono(exec).start:=time;

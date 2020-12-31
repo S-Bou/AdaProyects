@@ -11,7 +11,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U schedule_output_functions%b  schedule_output_functions.adb  8e478160 NE OO PK
+U schedule_output_functions%b  schedule_output_functions.adb  de397d9a NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
@@ -23,7 +23,7 @@ Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W text_io%s		text_io.ads		text_io.ali
 
-U schedule_output_functions%s  schedule_output_functions.ads  d57709a4 EE NE OO PK
+U schedule_output_functions%s  schedule_output_functions.ads  8509f55e EE NE OO PK
 W data%s		data.adb		data.ali
 
 D ada.ads		20200819050644 76789da1 ada%s
@@ -38,7 +38,7 @@ D a-strmap.ads		20200819050644 e8bb714a ada.strings.maps%s
 D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
 D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
-D data.ads		20201231163200 0be2a9f4 data%s
+D data.ads		20201231181008 5b9c550e data%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
 D schedule_output_functions.ads  20201218134410 de95a050 schedule_output_functions%s
@@ -96,18 +96,18 @@ X 11 a-textio.ads
 498U14*Put_Line 17|13s7 14s7 15s7 21s7 27s6 39s13 40s13 41s13 56s10 58s12
 . 70s9 71s10
 X 13 data.ads
-1K9*data 52e9 16|1w6 1r16 17|1w6 1r16
-19A6*v_enteros(integer)<integer> 16|5r32 17|30r51 78r32
-40i9*task_id{integer} 17|101r18 102r116
-41i9*start{integer} 17|102r64 102r81 104r64 104r81
-42i9*finish{integer} 17|85r34 102r52 104r52
-46A6*chrono_set(39R6)<integer> 16|5r46 17|78r46
+1K9*data 50e9 16|1w6 1r16 17|1w6 1r16
+17A9*v_enteros(integer)<integer> 16|5r32 17|30r51 78r32
+38i7*task_id{integer} 17|101r18 102r116
+39i7*start{integer} 17|102r64 102r81 104r64 104r81
+40i7*finish{integer} 17|85r34 102r52 104r52
+44A9*chrono_set(37R9)<integer> 16|5r46 17|78r46
 X 16 schedule_output_functions.ads
 3K9*Schedule_Output_functions 7l5 7e30 17|5b14 118l5 118t30
 5U11*write_Chronogram 5>28 5>30 5>43 5>58 5>60 5>71 17|78b11 113l8 113t24
-5a28 d{13|19A6} 17|78b28 92r31
-5a30 p{13|19A6} 17|78b30 92r29
-5a43 v{13|46A6} 17|78b43 85r29 101r13 102r47 102r59 102r76 102r111 104r47
+5a28 d{13|17A9} 17|78b28 92r31
+5a30 p{13|17A9} 17|78b30 92r29
+5a43 v{13|44A9} 17|78b43 85r29 101r13 102r47 102r59 102r76 102r111 104r47
 . 104r59 104r76
 5i58 n{integer} 17|78b58 86r31 91r28 104r111
 5i60 e{integer} 17|78b60 85r31 100r19
@@ -134,8 +134,8 @@ X 17 schedule_output_functions.adb
 24i46 y{integer} 27r387
 30U14 SVG_Put_Task_Params 30b14 30>34 30>47 30>49 48l8 48t27 92s7
 30p34 f{11|64P9} 39r22 40r22 41r22
-30a47 d{13|19A6} 33r16 37r19
-30a49 p{13|19A6} 36r27
+30a47 d{13|17A9} 33r16 37r19
+30a49 p{13|17A9} 36r27
 31i4 x{integer} 36m13 37r17 39r104 39r155 40r104
 31i6 xf{integer} 37m13 40r155 41r104 41r156
 31i9 y{integer} 38m13 39r206 39r257 40r207 40r258 41r208 41r259

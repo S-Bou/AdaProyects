@@ -12,31 +12,24 @@ package body data is
       end loop;
    end Estadotareas;
 
-   function Setpriority (tareason, rowtasks: in out v_enteros) return v_enteros is
-   begin
-      for i in tareason'Range loop
-         if tareason(i)=1 and procesingtask=false then
-            tarea_on:=i;
-            rowtasks(i):=i;
-            procesingtask:=true;
-            exit;
-         end if;
+   procedure Setpriority (grupotareas: in out v_taskgroup)  is
+      tarea_AUX:tarea;
+   begin -- mirar el tiempo de activación para ordenar prioridades
+      for i in grupotareas'range loop
+         for j in grupotareas'range loop
+            if grupotareas(i).time < grupotareas(j).time then
+               tarea_AUX:=grupotareas(i);
+               grupotareas(i):=grupotareas(j);
+               grupotareas(j):=tarea_AUX;
+            end if;
+         end loop;
       end loop;
-      if tarea_on=0 and aperiodic=false then
-         tarea_on:=-1;
-      end if;
-      return rowtasks;
+      Task_ON:=grupotareas(1).task_id;
    end Setpriority;
 
-   function Refreshcomput (tareason,wcet,real_wcet: in out v_enteros) return v_enteros is
+   procedure Refreshcomput (tareason,wcet,real_wcet: in out v_enteros) is
    begin
-      if procesingtask then
-         real_wcet(tarea_on):=real_wcet(tarea_on)-1;
-         return real_wcet;
-      else
-         real_wcet(tarea_on):=wcet(tarea_on);
-         return real_wcet;
-      end if;
+null;
    end Refreshcomput;
 
    procedure Setdata (Wcet, Deadline, Period: in out v_enteros) is
@@ -155,6 +148,14 @@ package body data is
          end if;
       end loop;
       Put("]");
+      Put("; [id, time] = [ ");
+      for i in taskgroup'Range loop
+         Put("(");
+         Put(taskgroup(i).task_id,3);Put(", ");
+         Put(taskgroup(i).time,3);
+         Put(") ");
+      end loop;
+      Put("]");
       New_Line;
    end ShowStateTasks;
 
@@ -165,7 +166,7 @@ package body data is
 
    function Getpriority return integer is
    begin
-      return tarea_on;
+      return Task_ON;
    end Getpriority;
 
 end data;
