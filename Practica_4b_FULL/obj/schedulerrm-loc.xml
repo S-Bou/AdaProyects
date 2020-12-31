@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\schedulerrm.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\src\data.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\schedulerrm.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\src\data.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

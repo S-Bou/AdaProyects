@@ -1,0 +1,157 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U schedule_output_functions%b  schedule_output_functions.adb  48ca333a NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W data%s		data.adb		data.ali
+Z system.concat_5%s	s-conca5.adb		s-conca5.ali
+Z system.concat_9%s	s-conca9.adb		s-conca9.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W text_io%s		text_io.ads		text_io.ali
+
+U schedule_output_functions%s  schedule_output_functions.ads  13fabbfe EE NE OO PK
+W data%s		data.adb		data.ali
+
+D ada.ads		20200819050644 76789da1 ada%s
+D a-charac.ads		20200819050642 2d3ec45b ada.characters%s
+D a-chlat1.ads		20200819050642 66457d31 ada.characters.latin_1%s
+D a-except.ads		20200819050644 a7106115 ada.exceptions%s
+D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
+D a-string.ads		20200819050644 90ac6797 ada.strings%s
+D a-strfix.ads		20200819050644 86d6bc21 ada.strings.fixed%s
+D a-strmap.ads		20200819050644 e8bb714a ada.strings.maps%s
+D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
+D data.ads		20201228222858 cd6f1bae data%s
+D interfac.ads		20200819050646 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
+D schedule_output_functions.ads  20201218134410 de95a050 schedule_output_functions%s
+D schedule_output_functions.adb  20201218143720 fc54fc7d schedule_output_functions%b
+D system.ads		20200819050648 32a08138 system%s
+D s-conca5.ads		20200819050646 875e432e system.concat_5%s
+D s-conca9.ads		20200819050646 dc4a3424 system.concat_9%s
+D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050646 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
+D s-imgint.ads		20200819050646 02dbe0c2 system.img_int%s
+D s-parame.ads		20200819050648 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050648 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050648 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050648 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
+D text_io.ads		20200819050648 21b2c898 text_io%s
+G a e
+G c Z s b [write_chronogram schedule_output_functions 5 11 none]
+G c Z b b [svg_put_header schedule_output_functions 10 14 none]
+G c Z b b [svg_put_footer schedule_output_functions 19 14 none]
+G c Z b b [svg_put_exec schedule_output_functions 24 14 none]
+G c Z b b [svg_put_task_params schedule_output_functions 30 14 none]
+G c Z b b [svg_put_grid schedule_output_functions 51 14 none]
+G c Z b b [svg_put_task_lines schedule_output_functions 66 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 17|3r6 3r29 27r57 27r283 27r336 27r390 39r107 39r158 39r209
+. 39r267 40r107 40r159 40r210 40r261 41r108 41r160 41r211 41r269 56r142 56r207
+. 56r263 56r328 58r60 58r209 58r271 58r317 70r57 70r197 70r259 70r306 71r117
+. 71r172 71r235 71r298
+X 7 a-string.ads
+16K13*Strings 35e16 17|3r10 3r33 27r61 27r287 27r340 27r394 39r111 39r162
+. 39r213 39r271 40r111 40r163 40r214 40r265 41r112 41r164 41r215 41r273 56r146
+. 56r211 56r267 56r332 58r64 58r213 58r275 58r321 70r61 70r201 70r263 70r310
+. 71r121 71r176 71r239 71r302
+33n24*Left{33E9} 17|27r69 27r295 27r348 27r402 39r119 39r170 39r221 39r279
+. 40r119 40r171 40r222 40r273 41r120 41r172 41r223 41r281 56r154 56r219 56r275
+. 56r340 58r72 58r221 58r283 58r329 70r69 70r209 70r271 70r318 71r129 71r184
+. 71r247 71r310
+X 8 a-strfix.ads
+43K21*Fixed 596e22 17|3w18 3r41
+468V13*Trim{string} 17|27s35 27s261 27s314 27s368 39s85 39s136 39s187 39s238
+. 40s85 40s136 40s188 40s239 41s85 41s137 41s189 41s240 56s106 56s171 56s236
+. 56s292 58s38 58s173 58s237 58s295 70s35 70s170 70s225 70s284 71s95 71s146
+. 71s201 71s264
+X 11 a-textio.ads
+64P9*File_Type 17|10r31 19r31 24r29 30r36 51r29 66r35 80r10
+66n32*Out_File{66E9} 17|83r17
+99U14*Create 17|83s7
+129U14*Close 17|111s7
+498U14*Put_Line 17|13s7 14s7 15s7 21s7 27s6 39s13 40s13 41s13 56s10 58s12
+. 70s9 71s10
+X 13 data.ads
+1K9*data 34e9 16|1w6 1r16 17|1w6 1r16
+8A6*v_enteros(integer)<integer> 16|5r32 17|30r51 78r32
+23i9*task_id{integer} 17|101r18 102r116
+24i9*start{integer} 17|102r64 102r81 104r64 104r81
+25i9*finish{integer} 17|85r34 102r52 104r52
+29A6*chrono_set(22R6)<integer> 16|5r46 17|78r46
+X 16 schedule_output_functions.ads
+3K9*Schedule_Output_functions 7l5 7e30 17|5b14 118l5 118t30
+5U11*write_Chronogram 5>28 5>30 5>43 5>58 5>60 5>71 17|78b11 113l8 113t24
+5a28 d{13|8A6} 17|78b28 92r31
+5a30 p{13|8A6} 17|78b30 92r29
+5a43 v{13|29A6} 17|78b43 85r29 101r13 102r47 102r59 102r76 102r111 104r47
+. 104r59 104r76
+5i58 n{integer} 17|78b58 86r31 91r28 104r111
+5i60 e{integer} 17|78b60 85r31 100r19
+5a71 file_name{string} 17|78b72 83r27
+X 17 schedule_output_functions.adb
+6i4 width{integer} 15r89 71r165 85m7
+6i11 height{integer} 15r50 43r25 56r311 58r256 61r27 86m7
+7i4 zoom{integer} 36r32 37r24 38r18 43r32 56r127 56r192 58r194 61r22 70r246
+. 71r222 71r285 85r23 86r25 102r29 102r41 102r71 102r105 104r29 104r41 104r71
+. 104r105
+8i4 offset{integer} 36r18 38r23 39r259 41r261 56r134 56r199 56r255 56r320
+. 58r201 58r263 70r189 70r251 71r227 71r290 85r16 86r18 102r34 102r89 102r98
+. 104r34 104r89 104r98
+10U14 SVG_Put_Header 10b14 10>29 17l8 17t22 88s7
+10p29 f{11|64P9} 13r16 14r16 15r16
+19U14 SVG_Put_Footer 19b14 19>29 22l8 22t22 109s7
+19p29 f{11|64P9} 21r16
+24U14 SVG_Put_Exec 24b14 24>27 24>40 24>42 24>44 24>46 28l8 28t20 102s13
+. 104s13
+24p27 f{11|64P9} 27r15
+24i40 h{integer} 27r54
+24i42 w{integer} 27r280
+24i44 x{integer} 27r333
+24i46 y{integer} 27r387
+30U14 SVG_Put_Task_Params 30b14 30>34 30>47 30>49 48l8 48t27 92s7
+30p34 f{11|64P9} 39r22 40r22 41r22
+30a47 d{13|8A6} 33r16 37r19
+30a49 p{13|8A6} 36r27
+31i4 x{integer} 36m13 37r17 39r104 39r155 40r104
+31i6 xf{integer} 37m13 40r155 41r104 41r156
+31i9 y{integer} 38m13 39r206 39r257 40r207 40r258 41r208 41r259
+31i11 j{integer} 34m10 36r25 42m13 42r16 43r23
+33i11 i{integer} 36r29 37r21 38r16
+51U14 SVG_Put_Grid 51b14 51>27 63l8 63t20 96s7
+51p27 f{11|64P9} 56r19 58r21
+52i9 i{integer} 56r125 56r190 57r14 58r57 58r192 58r314 60m10 60r13 61r20
+53i9 inc{integer} 60r15
+66U14 SVG_Put_Task_Lines 66b14 66>33 66>46 74l8 74t26 91s7
+66p33 f{11|64P9} 70r18 71r19
+66i46 n{integer} 68r19
+68i11 i{integer} 70r54 70r244 70r303 71r220 71r283
+80p7 f{11|64P9} 83m14 83r14 88r22 91r26 92r27 96r20 102r27 104r27 109r22
+. 111m13 111r13
+100i11 i{integer} 101r15 102r49 102r61 102r78 102r113 104r49 104r61 104r78
+X 34 text_io.ads
+24K9*Text_IO=24:29 17|2w6 2r19
+
