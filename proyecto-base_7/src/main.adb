@@ -38,13 +38,9 @@ begin
       period:v_enteros(1..num_tasks);
    -- vector de tiempos de ocurrencia de eventos aperiodicos
       eventstime:v_enteros(1..num_aperiodic);
-   -- vector con estados de las tareas: 1= activa, 0 inactiva
-      tasksstate:v_enteros(1..num_tasks);
    -- vector con el valor actualizado del tiempo de computo   
       real_WCET:v_enteros(1..num_tasks);
-   -- vector con tareas ordenadas por prioridad
-      rowtasks:v_enteros(1..num_tasks);
-      
+   -- vector con parámetros de tareas   
       taskgroup:v_taskgroup(1..num_tasks);
    begin 
    -- Introducimos los datos de las tareas aqui a mano o elegimos uno conjunto predefinido
@@ -62,10 +58,7 @@ begin
       ImprimirET(wcet_aperiodic,eventstime);
       --Inicializar lo que haga falta
       Inittasks(taskgroup,wcet,deadline,period);
-      for i in 1..num_tasks loop
-         tasksstate(i):=0;
-         rowtasks(i):=0;
-      end loop;
+
       -- copio tiempos de computo para manejarlos
       real_WCET:=wcet;
       -- Planificacion -----------------------------------------------------
