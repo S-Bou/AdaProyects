@@ -1,23 +1,35 @@
 package data is
    Num_tasks:integer;
-   priority:integer:=0;
+   tarea_on:integer:=0;
+   procesingtask:boolean:=false;
    aperiodic:boolean:=false;
 --------------------------------------
 ------ Definicion de tareas ----------
 --------------------------------------
+   type tarea is record
+	   task_id: integer;
+      time: integer;
+      state:boolean;
+      wcet: integer;
+      deadline:integer;
+      period:integer;
+   end record;
 
+type v_taskgroup is array (integer range <>) of tarea;
 type v_enteros is array (integer range <>) of integer;
 
 procedure SetNumTasks (N_tasks:in integer);
-function Refreshcomput (tarea_on:in integer; Wcet,real_wcet: in out v_enteros) return v_enteros;
-function Estadotareas (TIME: in integer;tareason,Period,R_wcet: in out v_enteros) return v_enteros;
-procedure Setdata (N_tasks: in out integer; Wcet, Deadline, Period: in out v_enteros);
+function Refreshcomput (tareason,wcet,real_wcet: in out v_enteros) return v_enteros;
+procedure Estadotareas (TIME: in integer;grupotareas: in out v_taskgroup);
+procedure Setdata (Wcet, Deadline, Period: in out v_enteros);
 function Setpriority (tareason,rowtasks: in out v_enteros) return v_enteros;
 procedure conjuntos (conjunto: in integer; Wcet, Deadline, Period: in out v_enteros);
+procedure Inittasks (taskgroup:in out v_taskgroup;wcet,deadline,period:in v_enteros);
 procedure Imprimir (Wcet, Deadline, Period: in v_enteros);
 procedure ImprimirET (T_Compu:in integer; Eventstime: in v_enteros);
 function SetTimeEvents (Eventstime:in out v_enteros) return integer;
-procedure Showstatetasks (TIME,taskon:in integer; tareason,rowtasks:in v_enteros);
+procedure ShowStateTasks (time:in integer;taskgroup:in v_taskgroup);
+function Getpriority return integer;
 
 --------------------------------------
 ------- Definicion de cronograma -----

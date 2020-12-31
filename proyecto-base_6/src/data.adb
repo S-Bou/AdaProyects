@@ -2,42 +2,44 @@ with ada.Integer_Text_IO; use ada.Integer_Text_IO;
 with Ada.Text_IO; use Ada.Text_IO;
 package body data is
 
-   function Estadotareas (TIME: in integer;tareason,Period,R_wcet: in out v_enteros) return v_enteros is
+   procedure Estadotareas (time: in integer;grupotareas: in out v_taskgroup) is
    begin
       for i in 1..Num_tasks loop
-         if(TIME mod Period(i) = 0) then
-            tareason(i):=1;
+         if(TIME mod grupotareas(i).period = 0) then
+            grupotareas(i).time:=time;
+            grupotareas(i).state:=true;
          end if;
       end loop;
-      return tareason;
    end Estadotareas;
 
    function Setpriority (tareason, rowtasks: in out v_enteros) return v_enteros is
    begin
       for i in tareason'Range loop
-         if(tareason(i)=1) then
-            priority:=i;
+         if tareason(i)=1 and procesingtask=false then
+            tarea_on:=i;
             rowtasks(i):=i;
+            procesingtask:=true;
+            exit;
          end if;
       end loop;
-      if priority=0 and aperiodic=false then
-         priority:=-1;
+      if tarea_on=0 and aperiodic=false then
+         tarea_on:=-1;
       end if;
       return rowtasks;
    end Setpriority;
 
-   function Refreshcomput (tarea_on:in integer; Wcet,real_wcet: in out v_enteros) return v_enteros is
+   function Refreshcomput (tareason,wcet,real_wcet: in out v_enteros) return v_enteros is
    begin
-      if(tarea_on<=0) then
-         real_wcet:=Wcet;
+      if procesingtask then
+         real_wcet(tarea_on):=real_wcet(tarea_on)-1;
          return real_wcet;
       else
-         real_wcet(tarea_on):=real_wcet(tarea_on)-1;
+         real_wcet(tarea_on):=wcet(tarea_on);
          return real_wcet;
       end if;
    end Refreshcomput;
 
-   procedure Setdata (N_tasks: in out integer; Wcet, Deadline, Period: in out v_enteros) is
+   procedure Setdata (Wcet, Deadline, Period: in out v_enteros) is
       menu, Num_Conjunto, data: integer:=0;
    begin
       loop
@@ -53,7 +55,7 @@ package body data is
             end loop;
             conjuntos(Num_Conjunto,Wcet,Deadline,Period); --Establece los valores de las tareas
          elsif menu=2 then
-            for i in 1..N_tasks loop
+            for i in 1..Num_tasks loop
                Put("Introduzca el T. de Computo (C) de la tarea ");Put(i,1);Put(": ");
                Get(data);
                Wcet(i):=data;
@@ -107,6 +109,25 @@ package body data is
       end loop;
    end ImprimirET;
 
+   procedure Inittasks (taskgroup:in out v_taskgroup;wcet,deadline,period:in v_enteros) is
+   begin
+      Put("Prioridad inicial de tareas: [");
+      for i in 1..Num_tasks loop
+         taskgroup(i).task_id:=i;
+         taskgroup(i).time:=0;
+         taskgroup(i).state:=false;
+         taskgroup(i).wcet:=wcet(i);
+         taskgroup(i).deadline:=deadline(i);
+         taskgroup(i).period:=period(i);
+         Put(taskgroup(i).task_id,1);
+         if i<Num_tasks then
+            Put(", ");
+         end if;
+      end loop;
+      Put("]");New_Line;
+   end Inittasks;
+
+
    procedure conjuntos (conjunto: in integer;Wcet, Deadline, Period: in out v_enteros) is
    begin
       if conjunto=1 and Num_tasks=3 then
@@ -123,22 +144,28 @@ package body data is
       end if;
    end conjuntos;
 
-   procedure Showstatetasks (TIME,taskon:in integer; tareason, rowtasks:in v_enteros) is
+   procedure ShowStateTasks (time:in integer;taskgroup:in v_taskgroup) is
    begin
-      Put("Time = ");Put(TIME,3);Put("; Task state = ");
-      for i in tareason'Range loop
-         Put(tareason(i),1);
+      Put("Time = ");Put(TIME,3);Put("; Task state = [");
+      for i in taskgroup'Range loop
+         if taskgroup(i).state then
+            Put(" ON ");
+         else
+            Put(" OFF ");
+         end if;
       end loop;
-      Put("; Task on: ");Put(taskon,1);Put("; Prio task on: ");
-      for i in tareason'Range loop
-         Put(rowtasks(i),1);
-      end loop;
+      Put("]");
       New_Line;
-   end Showstatetasks;
+   end ShowStateTasks;
 
    procedure SetNumTasks (N_tasks:in integer) is
    begin
       Num_tasks:=N_tasks;
    end SetNumTasks;
+
+   function Getpriority return integer is
+   begin
+      return tarea_on;
+   end Getpriority;
 
 end data;
