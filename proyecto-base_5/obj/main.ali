@@ -1,0 +1,119 @@
+V "GNAT Lib v2020"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U main%b		main.adb		a0ea5772 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W data%s		data.adb		data.ali
+W schedule_output_functions%s  schedule_output_functions.adb  schedule_output_functions.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20200819050644 76789da1 ada%s
+D a-except.ads		20200819050644 a7106115 ada.exceptions%s
+D a-inteio.ads		20200819050644 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
+D data.ads		20201231100114 45f02c70 data%s
+D interfac.ads		20200819050646 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
+D main.adb		20201231110956 ec769a6e main%b
+D schedule_output_functions.ads  20201218134410 de95a050 schedule_output_functions%s
+D system.ads		20200819050648 32a08138 system%s
+D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050646 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
+D s-parame.ads		20200819050648 4752c4cb system.parameters%s
+D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050648 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050648 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050648 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
+D text_io.ads		20200819050648 21b2c898 text_io%s
+G a e
+G c Z b b [main standard 7 11 none]
+G r c none [main standard 7 11 none] [setnumtasks data 11 11 none]
+G r c none [main standard 7 11 none] [setdata data 14 11 none]
+G r c none [main standard 7 11 none] [settimeevents data 19 10 none]
+G r c none [main standard 7 11 none] [imprimir data 17 11 none]
+G r c none [main standard 7 11 none] [imprimiret data 18 11 none]
+G r c none [main standard 7 11 none] [estadotareas data 13 10 none]
+G r c none [main standard 7 11 none] [setpriority data 15 10 none]
+G r c none [main standard 7 11 none] [showstatetasks data 20 11 none]
+G r c none [main standard 7 11 none] [refreshcomput data 12 10 none]
+G r c none [main standard 7 11 none] [write_chronogram schedule_output_functions 5 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 13|3r6 3r31
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 13|3w10 3r35
+X 7 a-textio.ads
+264U14*New_Line 13|103s54
+465U14*Put 13|32s10 38s10
+508U14*Put_Line 13|106s7
+X 8 a-tiinio.ads
+59U14*Get 13|33s10[3|18] 39s10[3|18]
+80U14*Put 13|103s10[3|18] 103s33[3|18]
+X 10 data.ads
+1K9*data 40e9 13|5w6 5r16
+9A6*v_enteros(integer)<integer> 13|44r12 45r16 46r14 48r18 50r18 52r17
+11U11*SetNumTasks 13|56s7
+12V10*Refreshcomput{9A6} 13|97s21
+13V10*Estadotareas{9A6} 13|75s22
+14U11*Setdata 13|57s7
+15V10*Setpriority{integer} 13|76s22
+17U11*Imprimir 13|63s7
+18U11*ImprimirET 13|65s7
+19V10*SetTimeEvents{integer} 13|61s23
+20U11*Showstatetasks 13|78s10
+28i9*task_id{integer} 13|90m26 103r24
+29i9*start{integer} 13|91m26 92r47 103r47
+30i9*finish{integer} 13|92m26
+34A6*chrono_set(27R6)<integer>
+38a1*chrono{34A6} 13|90m13 91m13 92m13 92r34 102r16 103r14 103r37 105r42
+X 13 main.adb
+7U11*Main 7b11 108l5 108t9
+8i4 menu{integer}
+11i4 taskactiva{integer} 76m10 78r30 88r13 90r35 97r35
+15b4 estadotarea{boolean}
+17b4 estadoaperi{boolean}
+19i4 Num_conjunto{integer}
+19i18 num_tasks{integer} 33m14 34r17 34r33 44r25 45r29 46r27 50r31 52r30
+. 56r19 57m15 57r15 105r50
+22i4 exec{integer} 89m13 89r19 90r20 91r20 92r20 92r41 105r61
+26i4 num_events{integer} 39m14 40r17 40r34 48r31
+28i4 wcet_aperiodic{integer} 61m7 65r18
+44a7 wcet{10|9A6} 57m25 57r25 63r16 71r18 97m46 97r46
+45a7 deadline{10|9A6} 57m30 57r30 63r21 105r32
+46a7 period{10|9A6} 57m39 57r39 63r30 75m51 75r51 105r24
+48a7 eventstime{10|9A6} 61m37 61r37 65r33
+50a7 tasksstate{10|9A6} 67r16 68m10 75m10 75m40 75r40 76r34 78r41
+52a7 real_WCET{10|9A6} 71m7 75m58 75r58 97m10 97m51 97r51
+67i11 i{integer} 68r21
+73i11 time{integer} 75r35 78r25 91r33
+102i11 i{integer} 103r21 103r44
+X 14 schedule_output_functions.ads
+3K9*Schedule_Output_functions 13|2w6 2r37 14|7e30
+5U11*write_Chronogram 13|105s7
+X 28 text_io.ads
+24K9*Text_IO=24:29 13|4w6 4r19
+

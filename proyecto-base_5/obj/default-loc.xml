@@ -1,10 +1,30 @@
 <?xml version="1.0"?>
 <Locations >
   <Project>
-    <vfs_file>D:\Programas\GNAT\AdaProyects\proyecto-base_4\default.gpr</vfs_file>
-    <file_marker current="true" column=" 47" line=" 46" >
-      <vfs_project>D:\Programas\GNAT\AdaProyects\proyecto-base_4\default.gpr</vfs_project>
-      <vfs_file>D:\Programas\GNAT\AdaProyects\proyecto-base_4\src\main.adb</vfs_file>
+    <vfs_file>D:\Programas\GNAT\AdaProyects\proyecto-base_3\default.gpr</vfs_file>
+    <file_marker column=" 7" line=" 57" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\proyecto-base_3\default.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\proyecto-base_3\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 55" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\proyecto-base_3\default.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\proyecto-base_3\src\data.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 57" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\proyecto-base_3\default.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\proyecto-base_3\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 45" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\proyecto-base_3\default.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\proyecto-base_3\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 80" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\proyecto-base_3\default.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\proyecto-base_3\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 10" line=" 74" >
+      <vfs_project>D:\Programas\GNAT\AdaProyects\proyecto-base_3\default.gpr</vfs_project>
+      <vfs_file>D:\Programas\GNAT\AdaProyects\proyecto-base_3\src\main.adb</vfs_file>
     </file_marker>
   </Project>
   <Project >
