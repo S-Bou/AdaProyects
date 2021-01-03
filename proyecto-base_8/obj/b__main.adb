@@ -241,11 +241,11 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   D:\Programas\GNAT\AdaProyects\proyecto-base_7\obj\data.o
-   --   D:\Programas\GNAT\AdaProyects\proyecto-base_7\obj\schedule_output_functions.o
-   --   D:\Programas\GNAT\AdaProyects\proyecto-base_7\obj\main.o
-   --   -LD:\Programas\GNAT\AdaProyects\proyecto-base_7\obj\
-   --   -LD:\Programas\GNAT\AdaProyects\proyecto-base_7\obj\
+   --   D:\Programas\GNAT\AdaProyects\proyecto-base_8\obj\data.o
+   --   D:\Programas\GNAT\AdaProyects\proyecto-base_8\obj\schedule_output_functions.o
+   --   D:\Programas\GNAT\AdaProyects\proyecto-base_8\obj\main.o
+   --   -LD:\Programas\GNAT\AdaProyects\proyecto-base_8\obj\
+   --   -LD:\Programas\GNAT\AdaProyects\proyecto-base_8\obj\
    --   -LD:/programas/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
    --   -static
    --   -lgnat

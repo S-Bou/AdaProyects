@@ -1,7 +1,9 @@
 package data is
    Num_tasks:integer;
    Task_ON:integer:=1;
-   aperiodico:boolean:=false;
+   Tarea_activa:Boolean:=true;
+   Aperiodic_ON:integer;
+   Num_aperiodicos:integer;
    --------------------------------------
    ------ Definicion de tareas ----------
    --------------------------------------
@@ -18,15 +20,15 @@ package data is
    type v_enteros is array (integer range <>) of integer;
 
    procedure SetNumTasks (N_tasks:in integer);
-   procedure Refreshcomput (grupotareas: in out v_taskgroup;wcet: in v_enteros);
-   procedure Estadotareas (TIME: in integer;grupotareas: in out v_taskgroup);
+   procedure Refreshcomput (grupotareas,grupoaperiodicos: in out v_taskgroup;wcet: in v_enteros);
+   procedure Estadotareas (TIME: in integer;grupotareas,grupoaperiodicos: in out v_taskgroup);
    procedure Setdata (Wcet, Deadline, Period: in out v_enteros);
-   procedure Setpriority (grupotareas: in out v_taskgroup) ;
+   procedure Setpriority (grupotareas,grupoaperiodicos: in out v_taskgroup;time: in integer);
    procedure conjuntos (conjunto: in integer; Wcet, Deadline, Period: in out v_enteros);
    procedure Inittasks (taskgroup:in out v_taskgroup;wcet,deadline,period:in v_enteros);
    procedure Imprimir (Wcet, Deadline, Period: in v_enteros);
-   procedure ImprimirET (T_Compu:in integer; Eventstime: in v_enteros);
-   function SetTimeEvents (Eventstime:in out v_enteros) return integer;
+   procedure ImprimirAperiodicos (T_Compu:in integer; aperiodicdata: in v_taskgroup);
+   function SetTimeEvents (N_aperiodicos:in integer) return v_taskgroup;
    procedure ShowStateTasks (time:in integer;taskgroup:in v_taskgroup);
    function Getpriority return integer;
 

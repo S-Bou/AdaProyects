@@ -2,44 +2,61 @@ with ada.Integer_Text_IO; use ada.Integer_Text_IO;
 with Ada.Text_IO; use Ada.Text_IO;
 package body data is
 
-   procedure Estadotareas (time: in integer;grupotareas: in out v_taskgroup) is
+   procedure Estadotareas (time: in integer;grupotareas,grupoaperiodicos: in out v_taskgroup) is
    begin
-      for i in 1..Num_tasks loop
+      for i in grupotareas'Range loop
          if(time mod grupotareas(i).period = 0) then
             grupotareas(i).time:=time;
             grupotareas(i).state:=true;
          end if;
       end loop;
+      for i in grupoaperiodicos'Range loop
+         if grupoaperiodicos(i).time=time then
+            grupoaperiodicos(i).state:=true;
+         end if;
+      end loop;
    end Estadotareas;
 
-   procedure Setpriority (grupotareas: in out v_taskgroup)  is
+   procedure Setpriority (grupotareas,grupoaperiodicos: in out v_taskgroup;time: in integer)  is
    begin -- mirar el tiempo de activación para ordenar prioridades
-      if Task_ON>0 then
-         if grupotareas(Task_ON).state=false then
-            for i in grupotareas'range loop
-               if grupotareas(i).state then
-                  Task_ON:=i;
-                  exit;
-               end if;
+      if Tarea_activa then
+         for i in grupotareas'range loop
+            if grupotareas(i).state then
+               Task_ON:=i;
+               Tarea_activa:=false;
+               exit;
+            elsif grupoaperiodicos(i).state then
+               Aperiodic_ON:=i;
                Task_ON:=0;
-            end loop;
-         end if;
+               Tarea_activa:=false;
+            end if;
+         end loop;
       end if;
+      if Tarea_activa then
+         Task_ON:=-1;
+         Tarea_activa:=true;
+      end if;
+
    end Setpriority;
 
-   procedure Refreshcomput (grupotareas: in out v_taskgroup;wcet: in v_enteros) is
+   procedure Refreshcomput (grupotareas,grupoaperiodicos: in out v_taskgroup;wcet: in v_enteros) is
    begin
       if Task_ON=0 then
-
-
-         Task_ON:=1;
-      else
+         if grupoaperiodicos(Aperiodic_ON).wcet > 0 then
+            grupoaperiodicos(Aperiodic_ON).wcet:=grupoaperiodicos(Aperiodic_ON).wcet - 1;
+         end if;
+         if grupoaperiodicos(Aperiodic_ON).wcet <= 0 then
+            grupoaperiodicos(Aperiodic_ON).state:=false;
+            Tarea_activa:=true;
+         end if;
+      elsif Task_ON>0 then
          if grupotareas(Task_ON).wcet > 0 then
             grupotareas(Task_ON).wcet:=grupotareas(Task_ON).wcet - 1;
          end if;
          if grupotareas(Task_ON).wcet <= 0 then
             grupotareas(Task_ON).state:=false;
             grupotareas(Task_ON).wcet:=wcet(grupotareas(Task_ON).task_id);
+            Tarea_activa:=true;
          end if;
       end if;
    end Refreshcomput;
@@ -76,23 +93,31 @@ package body data is
       end loop;
    end Setdata;
 
-   function SetTimeEvents (Eventstime:in out v_enteros) return integer is
-      data, dataTime: integer:=0;
+   function SetTimeEvents (N_aperiodicos:in integer) return v_taskgroup is
+      data,lastdata,dataTime: integer:=0;
+      aperiodicdata:v_taskgroup(1..N_aperiodicos);
    begin
+      Num_aperiodicos:=N_aperiodicos;
       loop
          Put("Introduzca el tiempo de computo de los eventos [1..5]: ");
          Get(dataTime);
          exit when dataTime>=1 and dataTime<=5;
       end loop;
-      for i in Eventstime'Range loop
+      for i in aperiodicdata'Range loop
          loop
             Put("Introduzca el tiempo del evento aperiódico ");Put(i,1);Put(" [0..100]: ");
             Get(data);
-         exit when data>0 and data<100;
+            exit when data>0 and data<100 and data>lastdata;
          end loop;
-         Eventstime(i):=data;
+         lastdata:=data;
+         aperiodicdata(i).task_id:=i;
+         aperiodicdata(i).time:=data;
+         aperiodicdata(i).state:=false;
+         aperiodicdata(i).wcet:=dataTime;
+         aperiodicdata(i).deadline:=0;
+         aperiodicdata(i).period:=0;
       end loop;
-      return dataTime;
+      return aperiodicdata;
    end SetTimeEvents;
 
    procedure Imprimir (Wcet, Deadline, Period: in v_enteros) is
@@ -104,15 +129,18 @@ package body data is
       end loop;
    end Imprimir;
 
-   procedure ImprimirET (T_Compu:in integer; Eventstime: in v_enteros) is
+   procedure ImprimirAperiodicos (T_Compu:in integer; aperiodicdata: in v_taskgroup) is
    begin
-      Put("Tiempo de computo de cada evento aperiódico = ");Put(T_Compu,1);
-      New_Line;
-      for i in Eventstime'Range loop
-         Put("Tiempo del evento ");Put(i,1);Put(" = ");Put(Eventstime(i),2);
-         New_Line;
+      Put("Eventos aperiodicos: [id, time, wcet] = [");
+      for i in aperiodicdata'Range loop
+         Put("(");
+         Put(aperiodicdata(i).task_id,2);Put(",");
+         Put(aperiodicdata(i).time,2);Put(",");
+         Put(aperiodicdata(i).wcet,2);Put(")");
       end loop;
-   end ImprimirET;
+      Put("]");
+      New_Line;
+   end ImprimirAperiodicos;
 
    procedure Inittasks (taskgroup:in out v_taskgroup;wcet,deadline,period:in v_enteros) is
    begin

@@ -37,7 +37,7 @@ begin
       deadline:v_enteros(1..num_tasks);
       period:v_enteros(1..num_tasks);
    -- vector de tiempos de ocurrencia de eventos aperiodicos
-      eventstime:v_enteros(1..num_aperiodic);
+      aperiodicgroup:v_taskgroup(1..num_aperiodic);
    -- vector con el valor actualizado del tiempo de computo   
       real_WCET:v_enteros(1..num_tasks);
    -- vector con parámetros de tareas   
@@ -50,12 +50,12 @@ begin
  
    -- Introducimos los datos de computo aperiódico 
    -- y tiempos en los que suceden los eventos
-   -- Mejora: se pueden pedir por teclado   
-      wcet_aperiodic:=SetTimeEvents(eventstime);
+   -- Mejora: se pueden pedir por teclado 
+      aperiodicgroup:=SetTimeEvents(num_aperiodic);
    -- Se muestra por pantalla los valores de las tareas   
       Imprimir(wcet,deadline,period);
    -- Se muestra por pantalla los tiempos de los eventos aperiódicos
-      ImprimirET(wcet_aperiodic,eventstime);
+      ImprimirAperiodicos(wcet_aperiodic,aperiodicgroup);
       --Inicializar lo que haga falta
       Inittasks(taskgroup,wcet,deadline,period);
 
@@ -64,8 +64,8 @@ begin
       -- Planificacion -----------------------------------------------------
       for time in 0..99 loop     
          -- Actualizar tareas activas
-         Estadotareas(time,taskgroup);
-         Setpriority(taskgroup);     
+         Estadotareas(time,taskgroup,aperiodicgroup);
+         Setpriority(taskgroup,aperiodicgroup,time);     
 
          -- Ver si hay algun evento aperiodico activado en este tiempo
          -- Si hay evento aperiodico, decidir que hacer. Si se elige para
@@ -82,7 +82,6 @@ begin
          --    elegir la tarea según el algoritmo de planificacion
          --    considerar el caso de que no haya ninguna activa
         
-
          -- Escribir en chrono 
       elsif Getpriority>0 then
             exec:=exec+1;
@@ -93,13 +92,13 @@ begin
 
          -- Decrementar computo pendiente de la tarea elegida 
          --    y si llega a cero, suspenderla            
-      Refreshcomput(taskgroup,wcet);
+      Refreshcomput(taskgroup,aperiodicgroup,wcet);
       end loop;
       --------------------------
       -- Y lo escribimos en un fichero
-      for i in chrono'Range loop
-         Put(chrono(i).task_id);Put(chrono(i).start);New_Line;
-      end loop;
+      --for i in chrono'Range loop
+       --  Put(chrono(i).task_id);Put(chrono(i).start);New_Line;
+      --end loop;
       write_chronogram(period, deadline, chrono, num_tasks, exec, "test.svg");
       Put_line("Cronograma generado en test.svg");
    end;
