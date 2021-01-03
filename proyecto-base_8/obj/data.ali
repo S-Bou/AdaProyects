@@ -11,7 +11,7 @@ RV NO_SECONDARY_STACK
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U data%b		data.adb		20312010 NE OO PK IL
+U data%b		data.adb		ae4e2020 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -30,7 +30,7 @@ D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
 D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
 D data.ads		20210103000144 0229ec66 data%s
-D data.adb		20210103002016 7aa790bf data%b
+D data.adb		20210103162342 f4d8908f data%b
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
 D system.ads		20200819050648 32a08138 system%s
@@ -84,18 +84,18 @@ X 8 a-tiinio.ads
 . 155s10[3|18] 182s22[3|18] 194s10[3|18] 195s10[3|18] 198s17[3|18]
 X 10 data.ads
 1K9*data 53l5 53e9 11|3b14 212l5 212t9
-2i4*Num_tasks{integer} 11|7r19 80r25 148r19 156r15 166r25 170r28 204m7
+2i4*Num_tasks{integer} 11|80r25 148r19 156r15 166r25 170r28 204m7
 3i4*Task_ON{integer} 11|25m16 30m16 36m10 44r10 52r13 53r25 54r25 54r52 56r25
 . 57r25 58r25 58r57 198r21 209r14
-4b4*Tarea_activa{boolean} 11|22r10 26m16 31m16 35r10 37m10 50m13 59m13
-5i4*Aperiodic_ON{integer} 11|29m16 45r30 46r30 46r67 48r30 49r30
+4b4*Tarea_activa{boolean} 11|22r10 26m16 31m16 35r10 37m10 47m13 59m13
+5i4*Aperiodic_ON{integer} 11|29m16 45r30 46r30 46r67 49r30 50r30
 6i4*Num_aperiodicos{integer} 11|100m7
 10R9*tarea 17e14 19r52
 11i7*task_id{integer} 11|58r66 113m27 137r31 149m23 155r27 194r27
 12i7*time{integer} 11|9m28 14r33 114m27 138r31 150m23 195r27
-13b7*state{boolean} 11|10m28 15m33 24r31 28r39 49m44 57m34 115m27 151m23
+13b7*state{boolean} 11|10m28 15m33 24r31 28r39 50m44 57m34 115m27 151m23
 . 184r26
-14i7*wcet{integer} 11|45r44 46m44 46r81 48r44 53r34 54m34 54r61 56r34 58m34
+14i7*wcet{integer} 11|45r44 46m44 46r81 49r44 53r34 54m34 54r61 56r34 58m34
 . 116m27 139r31 152m23
 15i7*deadline{integer} 11|117m27 153m23
 16i7*period{integer} 11|8r37 118m27 154m23
@@ -107,11 +107,11 @@ X 10 data.ads
 22i27 N_tasks{integer} 11|202b27 204r18
 23U14*Refreshcomput 23=29 23=41 23>78 11|42b14 62l8 62t21
 23a29 grupotareas{19A9} 11|42b29 53r13 54m13 54r40 56r13 57m13 58m13 58r45
-23a41 grupoaperiodicos{19A9} 11|42b41 45r13 46m13 46r50 48r13 49m13
+23a41 grupoaperiodicos{19A9} 11|42b41 45r13 46m13 46r50 49r13 50m13
 23a78 wcet{20A9} 11|42b78 58r40
 24U14*Estadotareas 24>28 24=45 24=57 11|5b14 18l8 18t20
 24i28 TIME{integer} 11|5b28 8r13 9r34 14r38
-24a45 grupotareas{19A9} 11|5b45 8r22 9m13 10m13
+24a45 grupotareas{19A9} 11|5b45 7r16 8r22 9m13 10m13
 24a57 grupoaperiodicos{19A9} 11|5b57 13r16 14r13 15m13
 25U14*Setdata 25=23 25=29 25=39 11|64b14 94l8 94t15
 25a23 Wcet{20A9} 11|64b23 78m36 83m16

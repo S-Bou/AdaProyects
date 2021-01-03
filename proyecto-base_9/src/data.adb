@@ -1,34 +1,65 @@
 with ada.Integer_Text_IO; use ada.Integer_Text_IO;
+with Ada.Float_Text_IO; use Ada.Float_Text_IO;
 with Ada.Text_IO; use Ada.Text_IO;
 package body data is
 
-   procedure Estadotareas (time: in integer;grupotareas,grupoaperiodicos: in out v_taskgroup) is
+   procedure Estadotareas (time_loop: in integer;grupotareas,grupoaperiodicos: in out v_taskgroup) is
+      orden:float:=0.0;
+      tarea_AUX:tarea;
    begin
+      if Tarea_activa then
+         for i in grupotareas'range loop
+            for j in grupotareas'range loop
+               if grupotareas(i).task_id < grupotareas(j).task_id then
+                  tarea_AUX:=grupotareas(i);
+                  grupotareas(i):=grupotareas(j);
+                  grupotareas(j):=tarea_AUX;
+               end if;
+            end loop;
+         end loop;
+      end if;
+
       for i in grupotareas'Range loop
-         if(time mod grupotareas(i).period = 0) then
-            grupotareas(i).time:=time;
+         orden:=orden+0.1;
+         if(time_loop mod grupotareas(i).period = 0) then
+            grupotareas(i).time:=float(time_loop)+orden;
             grupotareas(i).state:=true;
          end if;
       end loop;
       for i in grupoaperiodicos'Range loop
-         if grupoaperiodicos(i).time=time then
+         if grupoaperiodicos(i).time=float(time_loop) then
             grupoaperiodicos(i).state:=true;
          end if;
       end loop;
    end Estadotareas;
 
    procedure Setpriority (grupotareas,grupoaperiodicos: in out v_taskgroup;time: in integer)  is
+      tarea_AUX:tarea;
    begin -- mirar el tiempo de activación para ordenar prioridades
       if Tarea_activa then
+         for i in grupotareas'range loop
+            for j in grupotareas'range loop
+               if grupotareas(i).time < grupotareas(j).time then
+                  tarea_AUX:=grupotareas(i);
+                  grupotareas(i):=grupotareas(j);
+                  grupotareas(j):=tarea_AUX;
+               end if;
+            end loop;
+         end loop;
          for i in grupotareas'range loop
             if grupotareas(i).state then
                Task_ON:=i;
                Tarea_activa:=false;
-               exit;
-            elsif grupoaperiodicos(i).state then
-               Aperiodic_ON:=i;
-               Task_ON:=0;
-               Tarea_activa:=false;
+               Exit;
+            end if;
+            if i=grupotareas'Last then
+               for i in grupoaperiodicos'range loop
+                  if grupoaperiodicos(i).state then
+                     Aperiodic_ON:=i;
+                     Task_ON:=0;
+                     Tarea_activa:=false;
+                  end if;
+               end loop;
             end if;
          end loop;
       end if;
@@ -36,7 +67,6 @@ package body data is
          Task_ON:=-1;
          Tarea_activa:=true;
       end if;
-
    end Setpriority;
 
    procedure Refreshcomput (grupotareas,grupoaperiodicos: in out v_taskgroup;wcet: in v_enteros) is
@@ -111,7 +141,7 @@ package body data is
          end loop;
          lastdata:=data;
          aperiodicdata(i).task_id:=i;
-         aperiodicdata(i).time:=data;
+         aperiodicdata(i).time:=float(data);
          aperiodicdata(i).state:=false;
          aperiodicdata(i).wcet:=dataTime;
          aperiodicdata(i).deadline:=0;
@@ -135,7 +165,7 @@ package body data is
       for i in aperiodicdata'Range loop
          Put("(");
          Put(aperiodicdata(i).task_id,2);Put(",");
-         Put(aperiodicdata(i).time,2);Put(",");
+         Put(aperiodicdata(i).time,2,2,0);Put(",");
          Put(aperiodicdata(i).wcet,2);Put(")");
       end loop;
       Put("]");
@@ -147,7 +177,7 @@ package body data is
       Put("Prioridad inicial de tareas: [");
       for i in 1..Num_tasks loop
          taskgroup(i).task_id:=i;
-         taskgroup(i).time:=0;
+         taskgroup(i).time:=0.0;
          taskgroup(i).state:=false;
          taskgroup(i).wcet:=wcet(i);
          taskgroup(i).deadline:=deadline(i);
@@ -171,6 +201,10 @@ package body data is
          Wcet:=(2,3,4,5);
          Deadline:=(8,10,15,18);
          Period:=(10,12,20,22);
+      elsif conjunto=3 and Num_tasks=4 then
+         Wcet:=(2,3,5,2);          --No planificable
+         Deadline:=(5,10,16,24);
+         Period:=(5,13,20,24);
       else
          Put_Line("El número de tareas no coincide con el conjunto.");
          Put_Line("Tareas no definidas.");
@@ -191,11 +225,11 @@ package body data is
       Put("; [id, time] = [ ");
       for i in taskgroup'Range loop
          Put("(");
-         Put(taskgroup(i).task_id,3);Put(", ");
-         Put(taskgroup(i).time,3);
+         Put(taskgroup(i).task_id,1);Put(", ");
+         Put(taskgroup(i).time,2,1,0);
          Put(") ");
       end loop;
-      Put("] ");Put(Task_ON,3);
+      Put("] ");Put("Task_ON: ");Put(Task_ON,2);Put(" Aperiodic_ON: ");Put(Aperiodic_ON,2);
       New_Line;
    end ShowStateTasks;
 
