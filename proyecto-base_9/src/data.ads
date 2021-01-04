@@ -4,6 +4,7 @@ package data is
    Tarea_activa:Boolean:=false;
    Aperiodic_ON:integer;
    Num_aperiodicos:integer;
+
    --------------------------------------
    ------ Definicion de tareas ----------
    --------------------------------------
@@ -29,8 +30,9 @@ package data is
    procedure Imprimir (Wcet, Deadline, Period: in v_enteros);
    procedure ImprimirAperiodicos (T_Compu:in integer; aperiodicdata: in v_taskgroup);
    function SetTimeEvents (N_aperiodicos:in integer) return v_taskgroup;
+   function CompruebaParametros (Wcet, Deadline, Period: in out v_enteros) return integer;
    procedure ShowStateTasks (time:in integer;taskgroup:in v_taskgroup);
-   function Getpriority return integer;
+   function GetTaskON return integer;
 
    --------------------------------------
    ------- Definicion de cronograma -----

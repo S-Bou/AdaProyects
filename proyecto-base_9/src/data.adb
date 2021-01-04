@@ -7,6 +7,7 @@ package body data is
       orden:float:=0.0;
       tarea_AUX:tarea;
    begin
+   -- Ordenar las tareas por índice por si hay varias con el mismo tiempo
       if Tarea_activa then
          for i in grupotareas'range loop
             for j in grupotareas'range loop
@@ -18,7 +19,7 @@ package body data is
             end loop;
          end loop;
       end if;
-
+   -- Si se activa una tarea se pone a true el estado
       for i in grupotareas'Range loop
          orden:=orden+0.1;
          if(time_loop mod grupotareas(i).period = 0) then
@@ -26,6 +27,7 @@ package body data is
             grupotareas(i).state:=true;
          end if;
       end loop;
+   -- si coincide el time_loop con el tiempo del evento aperiodico se pone a true el estado
       for i in grupoaperiodicos'Range loop
          if grupoaperiodicos(i).time=float(time_loop) then
             grupoaperiodicos(i).state:=true;
@@ -35,7 +37,8 @@ package body data is
 
    procedure Setpriority (grupotareas,grupoaperiodicos: in out v_taskgroup;time: in integer)  is
       tarea_AUX:tarea;
-   begin -- mirar el tiempo de activación para ordenar prioridades
+   begin
+   -- mirar el tiempo de activación para ordenar prioridades
       if Tarea_activa then
          for i in grupotareas'range loop
             for j in grupotareas'range loop
@@ -46,12 +49,14 @@ package body data is
                end if;
             end loop;
          end loop;
+   -- Si hay alguna tarea activa se actualiza Task_ON y sale
          for i in grupotareas'range loop
             if grupotareas(i).state then
                Task_ON:=i;
                Tarea_activa:=false;
                Exit;
             end if;
+   -- Si no hay tareas activas se actualiza Aperiodic_ON y Task_ON
             if i=grupotareas'Last then
                for i in grupoaperiodicos'range loop
                   if grupoaperiodicos(i).state then
@@ -63,6 +68,7 @@ package body data is
             end if;
          end loop;
       end if;
+   -- Si no hay tareas activas ni eventos aperiodicos se actualiza Task_ON
       if Tarea_activa then
          Task_ON:=-1;
          Tarea_activa:=true;
@@ -101,24 +107,39 @@ package body data is
          Get(menu);
          if menu=1 then
             loop
-               Put("Introduzca el numero del conjunto [1..7]: ");
+               Put("Introduzca el numero del conjunto [1..4]: ");
                Get(Num_Conjunto);
-               exit when Num_Conjunto>=1 and Num_Conjunto<=7;
+               if Num_Conjunto<1 or Num_Conjunto>4 then Put("Valor no válido.");New_Line;end if;
+               exit when Num_Conjunto>=1 and Num_Conjunto<=4;
             end loop;
             conjuntos(Num_Conjunto,Wcet,Deadline,Period); --Establece los valores de las tareas
          elsif menu=2 then
             for i in 1..Num_tasks loop
-               Put("Introduzca el T. de Computo (C) de la tarea ");Put(i,1);Put(": ");
-               Get(data);
+               loop
+                  Put("Introduzca el T. de Computo (C) de la tarea ");Put(i,1);Put(" [1..25]: ");
+                  Get(data);
+                  if data<=0 or data>25 then Put("Valor no válido.");New_Line;end if;
+                  exit when data>0 and data<=25;
+               end loop;
                Wcet(i):=data;
-               Put("Introduzca el Plazo (D) de la tarea ");Put(i,1);Put(": ");
-               Get(data);
+               loop
+                  Put("Introduzca el Plazo (D) de la tarea ");Put(i,1);Put(" [1..25]: ");
+                  Get(data);
+                  if data<=0 or data>25 then Put("Valor no válido.");New_Line;end if;
+                  exit when data>0 and data<=25;
+               end loop;
                Deadline(i):=data;
-               Put("Introduzca el Periodo (T) de la tarea ");Put(i,1);Put(": ");
-               Get(data);
+               loop
+                  Put("Introduzca el Periodo (T) de la tarea ");Put(i,1);Put(" [1..25]: ");
+                  Get(data);
+                  if data<Deadline(i) then null; end if;
+                  if data<=0 or data>25 then Put("Valor no válido.");New_Line;end if;
+                  exit when data>0 and data<=25;
+               end loop;
                Period(i):=data;
             end loop;
          end if;
+         if menu<1 or menu>2 then Put("Valor no válido.");New_Line;end if;
          exit when menu=1 or menu=2;
       end loop;
    end Setdata;
@@ -131,13 +152,15 @@ package body data is
       loop
          Put("Introduzca el tiempo de computo de los eventos [1..5]: ");
          Get(dataTime);
+         if dataTime<=1 or dataTime>5 then Put("Valor no válido.");New_Line;end if;
          exit when dataTime>=1 and dataTime<=5;
       end loop;
       for i in aperiodicdata'Range loop
          loop
-            Put("Introduzca el tiempo del evento aperiódico ");Put(i,1);Put(" [0..100]: ");
+            Put("Introduzca el tiempo del evento aperiódico ");Put(i,1);Put(" [");Put(lastdata,0);Put("..100]: ");
             Get(data);
-            exit when data>0 and data<100 and data>lastdata;
+            if data<1 or data>100 or data<=lastdata then Put("Valor no válido.");New_Line;end if;
+            exit when data>=1 and data<=100 and data>lastdata;
          end loop;
          lastdata:=data;
          aperiodicdata(i).task_id:=i;
@@ -190,7 +213,6 @@ package body data is
       Put("]");New_Line;
    end Inittasks;
 
-
    procedure conjuntos (conjunto: in integer;Wcet, Deadline, Period: in out v_enteros) is
    begin
       if conjunto=1 and Num_tasks=3 then
@@ -202,7 +224,7 @@ package body data is
          Deadline:=(8,10,15,18);
          Period:=(10,12,20,22);
       elsif conjunto=3 and Num_tasks=4 then
-         Wcet:=(2,3,5,2);          --No planificable
+         Wcet:=(2,3,5,2);          -- No planificable en DM
          Deadline:=(5,10,16,24);
          Period:=(5,13,20,24);
       else
@@ -210,6 +232,27 @@ package body data is
          Put_Line("Tareas no definidas.");
       end if;
    end conjuntos;
+
+   function CompruebaParametros (Wcet, Deadline, Period: in out v_enteros) return integer is
+      test:integer:=0;
+   begin
+      for i in Wcet'Range loop
+         if Wcet(i)>Deadline(i) or Wcet(i)>Period(i) or Period(i)<Deadline(i) then
+            test:=1;
+            return test;
+         end if;
+      end loop;
+
+      for i in Wcet'Range loop
+          for j in 2..Num_tasks loop
+             if Wcet(i)+Wcet(j)>Deadline(j) then
+                test:=2;
+                return test;
+            end if;
+         end loop;
+      end loop;
+      return test;
+   end CompruebaParametros;
 
    procedure ShowStateTasks (time:in integer;taskgroup:in v_taskgroup) is
    begin
@@ -238,9 +281,9 @@ package body data is
       Num_tasks:=N_tasks;
    end SetNumTasks;
 
-   function Getpriority return integer is
+   function GetTaskON return integer is
    begin
       return Task_ON;
-   end Getpriority;
+   end GetTaskON;
 
 end data;

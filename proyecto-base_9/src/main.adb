@@ -6,7 +6,7 @@ with text_io; use text_io;
 with data; use data;
 
 procedure Main is
-
+   ErrorData, NoPlani:exception;
    -- prioridad de tereas por índice más bajo
    -- índice de tarea activa, si 0 no hay
    taskactiva:integer:=-1;
@@ -24,12 +24,14 @@ begin
       loop
          Put("Introduzca el número de tareas del conjunto [1..9]: ");
          Get(num_tasks);
+         if num_tasks<=0 or num_tasks>=10 then Put("Valor no válido.");New_Line; end if;      
       exit when num_tasks>0 and num_tasks<10;
       end loop;
 
       loop
          Put("Introduzca el número de eventos aperiódicos [1..9]: ");
          Get(num_aperiodic);
+         if num_aperiodic<=0 or num_aperiodic>=10 then Put("Valor no válido.");New_Line;end if;      
       exit when num_aperiodic>0 and num_aperiodic<10;
       end loop;
    declare 
@@ -39,8 +41,6 @@ begin
       period:v_enteros(1..num_tasks);
    -- vector de tiempos de ocurrencia de eventos aperiodicos
       aperiodicgroup:v_taskgroup(1..num_aperiodic);
-   -- vector con el valor actualizado del tiempo de computo   
-      real_WCET:v_enteros(1..num_tasks);
    -- vector con parámetros de tareas   
       taskgroup:v_taskgroup(1..num_tasks);
    begin 
@@ -48,11 +48,13 @@ begin
    -- Mejora: se pueden pedir por teclado
       SetNumTasks(num_tasks);
       Setdata(wcet,deadline,period);
- 
    -- Introducimos los datos de computo aperiódico 
    -- y tiempos en los que suceden los eventos
    -- Mejora: se pueden pedir por teclado 
       aperiodicgroup:=SetTimeEvents(num_aperiodic);
+   -- Comprobación de volores de las tareas   
+      if CompruebaParametros(wcet,deadline,period)=1 then raise ErrorData;
+      elsif CompruebaParametros(wcet,deadline,period)=2 then raise NoPlani; end if;      
    -- Se muestra por pantalla los valores de las tareas   
       Imprimir(wcet,deadline,period);
    -- Se muestra por pantalla los tiempos de los eventos aperiódicos
@@ -60,8 +62,6 @@ begin
       --Inicializar lo que haga falta
       Inittasks(taskgroup,wcet,deadline,period);
 
-      -- copio tiempos de computo para manejarlos
-      real_WCET:=wcet;
       -- Planificacion -----------------------------------------------------
       for time in 0..99 loop     
          -- Actualizar tareas activas
@@ -71,29 +71,28 @@ begin
          -- Ver si hay algun evento aperiodico activado en este tiempo
          -- Si hay evento aperiodico, decidir que hacer. Si se elige para
          -- ejecutar la tarea aperiodica entonces task_id=0
-      -- muestra por consola el tiempo y el estado de las tareas 
-      ShowStateTasks(time,taskgroup);
+         -- muestra por consola el tiempo y el estado de las tareas 
+         ShowStateTasks(time,taskgroup);
          -- Si no hay nigun evento aperiodico,
-      if Getpriority=0 then
+         if GetTaskON=0 then
             exec:=exec+1;
-            chrono(exec).task_id:=Getpriority;
+            chrono(exec).task_id:=GetTaskON;
             chrono(exec).start:=time;
             chrono(exec).finish:=chrono(exec).start +1;
 
-         --    elegir la tarea según el algoritmo de planificacion
-         --    considerar el caso de que no haya ninguna activa
+            --    elegir la tarea según el algoritmo de planificacion
+            --    considerar el caso de que no haya ninguna activa
         
-         -- Escribir en chrono 
-      elsif Getpriority>0 then
+            -- Escribir en chrono 
+         elsif GetTaskON>0 then
             exec:=exec+1;
-            chrono(exec).task_id:=taskgroup(Getpriority).task_id;
+            chrono(exec).task_id:=taskgroup(GetTaskON).task_id;
             chrono(exec).start:=time;
             chrono(exec).finish:=chrono(exec).start +1;
-      end if;
-
+         end if;
          -- Decrementar computo pendiente de la tarea elegida 
          --    y si llega a cero, suspenderla            
-      Refreshcomput(taskgroup,aperiodicgroup,wcet);
+         Refreshcomput(taskgroup,aperiodicgroup,wcet);
       end loop;
       --------------------------
       -- Y lo escribimos en un fichero
@@ -102,6 +101,11 @@ begin
       --end loop;
       write_chronogram(period, deadline, chrono, num_tasks, exec, "test.svg");
       Put_line("Cronograma generado en test.svg");
-   end;
+end;
+Exception 
+   when ErrorData =>
+      Put("Error en los datos introducidos, no es posible ejecutar las tareas.");
+   when NoPlani =>
+      Put("Las tareas no son planificables.");        
 end Main;
 
