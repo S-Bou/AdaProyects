@@ -44,7 +44,7 @@ begin
    begin 
       -- Introducimos los datos de las tareas aqui a mano o elegimos uno conjunto predefinido
       -- Mejora: se pueden pedir por teclado
-      Setdata(wcet,deadline,period);
+      if Setdata(wcet,deadline,period) then raise ErrorData; end if;
       -- Introducimos los datos de computo aperiódico y tiempos en los que suceden los eventos
       -- Mejora: se pueden pedir por teclado 
       aperiodicgroup:=SetTimeEvents(num_aperiodic);

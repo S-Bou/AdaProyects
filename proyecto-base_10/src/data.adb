@@ -102,8 +102,9 @@ package body data is
    end Refreshcomput;
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Opciones del menú en consola según la opción elegida
-   procedure Setdata (Wcet, Deadline, Period: in out v_enteros) is
+   function Setdata (Wcet, Deadline, Period: in out v_enteros) return boolean is
       menu, Num_Conjunto, data: integer:=0;
+      SetData: boolean:=false;
    begin
       loop
          Put_Line("1. Seleccionar conjunto predefinido.");
@@ -117,7 +118,7 @@ package body data is
                if Num_Conjunto<1 or Num_Conjunto>4 then Put("Valor no válido.");New_Line;end if;
                exit when Num_Conjunto>=1 and Num_Conjunto<=4;
             end loop;
-            conjuntos(Num_Conjunto,Wcet,Deadline,Period); --Establece los valores de las tareas
+            SetData:=conjuntos(Num_Conjunto,Wcet,Deadline,Period); --Establece los valores de las tareas
          elsif menu=2 then
             for i in 1..Num_tasks loop
                loop
@@ -147,6 +148,7 @@ package body data is
          if menu<1 or menu>2 then Put("Valor no válido.");New_Line;end if;
          exit when menu=1 or menu=2;
       end loop;
+      Return SetData;
    end Setdata;
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Opciones del menú por consola para establecer los eventos aperiódicos
@@ -225,24 +227,31 @@ package body data is
    end Inittasks;
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Conjuntos predefinidos
-   procedure conjuntos (conjunto: in integer;Wcet, Deadline, Period: in out v_enteros) is
+   function conjuntos (conjunto: in integer;Wcet, Deadline, Period: in out v_enteros) return boolean is
+      ErrorConjuntos: boolean:=false;
    begin
       if conjunto=1 and Num_tasks=3 then
          Wcet:=(2,3,4);
          Deadline:=(8,10,15);
          Period:=(10,12,20);
-      elsif conjunto=2 and Num_tasks=4 then
+      elsif conjunto=2 and Num_tasks=3 then
+         Wcet:=(3,4,5);
+         Deadline:=(9,11,16);
+         Period:=(11,13,21);
+      elsif conjunto=3 and Num_tasks=4 then
          Wcet:=(2,3,4,5);
          Deadline:=(8,10,15,18);
          Period:=(10,12,20,22);
-      elsif conjunto=3 and Num_tasks=4 then
-         Wcet:=(2,3,5,2);          -- No planificable en DM
+      elsif conjunto=4 and Num_tasks=4 then
+         Wcet:=(2,3,5,2);
          Deadline:=(5,10,16,24);
          Period:=(5,13,20,24);
       else
          Put_Line("El número de tareas no coincide con el conjunto.");
          Put_Line("Tareas no definidas.");
+         ErrorConjuntos:=true;
       end if;
+      Return ErrorConjuntos;
    end conjuntos;
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Comprobación de que los parámetros introducidos tienen valores lógicos y son realizables
@@ -289,12 +298,6 @@ package body data is
       Put("] ");Put("Task_ON: ");Put(Task_ON,2);Put(" Aperiodic_ON: ");Put(Aperiodic_ON,2);
       New_Line;
    end ShowStateTasks;
----------------------------------------------------------------------------------------------------------------------------------
--- Establece el numero de tareas elegido por el usuario
-   procedure SetNumTasks (N_tasks:in integer) is
-   begin
-      Num_tasks:=N_tasks;
-   end SetNumTasks;
 ---------------------------------------------------------------------------------------------------------------------------------
 -- Devuelve la tarea activa
    function GetTaskON return integer is

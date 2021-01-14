@@ -20,12 +20,11 @@ package data is
    type v_taskgroup is array (integer range <>) of tarea;
    type v_enteros is array (integer range <>) of integer;
 
-   procedure SetNumTasks (N_tasks:in integer);
    procedure Refreshcomput (grupotareas,grupoaperiodicos: in out v_taskgroup;wcet: in v_enteros);
    procedure Estadotareas (time_loop: in integer;grupotareas,grupoaperiodicos: in out v_taskgroup);
-   procedure Setdata (Wcet, Deadline, Period: in out v_enteros);
+   function Setdata (Wcet, Deadline, Period: in out v_enteros) return boolean;
    procedure Setpriority (grupotareas,grupoaperiodicos: in out v_taskgroup;time: in integer);
-   procedure conjuntos (conjunto: in integer; Wcet, Deadline, Period: in out v_enteros);
+   function conjuntos (conjunto: in integer;Wcet, Deadline, Period: in out v_enteros) return boolean;
    procedure Inittasks (taskgroup:in out v_taskgroup;wcet,deadline,period:in v_enteros);
    procedure Imprimir (Wcet, Deadline, Period: in v_enteros);
    procedure ImprimirAperiodicos (T_Compu:in integer; aperiodicdata: in v_taskgroup);
