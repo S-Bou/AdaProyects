@@ -1,5 +1,5 @@
 package data is
-   Num_tasks:integer;
+   num_tasks:integer;
    Task_ON:integer:=1;
    Tarea_activa:Boolean:=false;
    Aperiodic_ON:integer;

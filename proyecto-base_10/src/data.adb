@@ -73,6 +73,7 @@ package body data is
    -- Si no hay tareas activas ni eventos aperiodicos se actualiza Task_ON
       if Tarea_activa then
          Task_ON:=-1;
+         Aperiodic_ON:=0;
          Tarea_activa:=true;
       end if;
    end Setpriority;
