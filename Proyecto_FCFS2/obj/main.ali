@@ -16,7 +16,7 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		f2db0ac4 NE OO SU
+U main%b		main.adb		d0442bdd NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -38,10 +38,10 @@ D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
 D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
 D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
-D data.ads		20210114182142 b42909e9 data%s
+D data.ads		20210115081034 96b628f0 data%s
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
-D main.adb		20210114182214 4f9ee241 main%b
+D main.adb		20210115080548 4f9ee241 main%b
 D schedule_output_functions.ads  20201218134410 de95a050 schedule_output_functions%s
 D system.ads		20200819050648 32a08138 system%s
 D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
@@ -59,17 +59,17 @@ D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
 D text_io.ads		20200819050648 21b2c898 text_io%s
 G a e
 G c Z b b [main standard 8 11 none]
-G r c none [main standard 8 11 none] [setdata data 25 13 none]
-G r c none [main standard 8 11 none] [settimeevents data 31 13 none]
+G r c none [main standard 8 11 none] [setdata data 26 13 none]
+G r c none [main standard 8 11 none] [settimeevents data 27 13 none]
 G r c none [main standard 8 11 none] [compruebaparametros data 32 13 none]
-G r c none [main standard 8 11 none] [imprimir data 29 14 none]
-G r c none [main standard 8 11 none] [imprimiraperiodicos data 30 14 none]
-G r c none [main standard 8 11 none] [inittasks data 28 14 none]
-G r c none [main standard 8 11 none] [estadotareas data 24 14 none]
-G r c none [main standard 8 11 none] [setpriority data 26 14 none]
+G r c none [main standard 8 11 none] [imprimir data 28 14 none]
+G r c none [main standard 8 11 none] [imprimiraperiodicos data 29 14 none]
+G r c none [main standard 8 11 none] [inittasks data 30 14 none]
+G r c none [main standard 8 11 none] [estadotareas data 23 14 none]
+G r c none [main standard 8 11 none] [setpriority data 24 14 none]
 G r c none [main standard 8 11 none] [showstatetasks data 33 14 none]
 G r c none [main standard 8 11 none] [gettaskon data 34 13 none]
-G r c none [main standard 8 11 none] [refreshcomput data 23 14 none]
+G r c none [main standard 8 11 none] [refreshcomput data 25 14 none]
 G r c none [main standard 8 11 none] [write_chronogram schedule_output_functions 5 11 none]
 X 1 ada.ads
 16K9*Ada 20e8 13|4r6 4r31
@@ -88,14 +88,14 @@ X 10 data.ads
 12i7*task_id{integer} 13|82r56
 20A9*v_taskgroup(11R9)<integer> 13|40r22 42r17
 21A9*v_enteros(integer)<integer> 13|36r12 37r16 38r14
-23U14*Refreshcomput 13|88s10
-24U14*Estadotareas 13|64s10
-25V13*Setdata{boolean} 13|47s10
-26U14*Setpriority 13|65s10
-28U14*Inittasks 13|59s7
-29U14*Imprimir 13|55s7
-30U14*ImprimirAperiodicos 13|57s7
-31V13*SetTimeEvents{20A9} 13|50s23
+23U14*Estadotareas 13|64s10
+24U14*Setpriority 13|65s10
+25U14*Refreshcomput 13|88s10
+26V13*Setdata{boolean} 13|47s10
+27V13*SetTimeEvents{20A9} 13|50s23
+28U14*Imprimir 13|55s7
+29U14*ImprimirAperiodicos 13|57s7
+30U14*Inittasks 13|59s7
 32V13*CompruebaParametros{integer} 13|52s10 53s13
 33U14*ShowStateTasks 13|71s10
 34V13*GetTaskON{integer} 13|73s13 75s35 79s16 82s45

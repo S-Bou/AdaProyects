@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file>D:\Programas\GNAT\AdaProyects\proyecto-base_9\default.gpr</vfs_file>
+  <Project >
     <file_marker column=" 17" line=" 93" >
       <vfs_project>D:\Programas\GNAT\AdaProyects\proyecto-base_9\default.gpr</vfs_project>
       <vfs_file>D:\Programas\GNAT\AdaProyects\proyecto-base_9\src\main.adb</vfs_file>

@@ -113,10 +113,10 @@ package body data is
          Get(menu);
          if menu=1 then
             loop
-               Put("Introduzca el numero del conjunto [1..4]: ");
+               Put("Introduzca el numero del conjunto [1..5]: ");
                Get(Num_Conjunto);
-               if Num_Conjunto<1 or Num_Conjunto>4 then Put("Valor no válido.");New_Line;end if;
-               exit when Num_Conjunto>=1 and Num_Conjunto<=4;
+               if Num_Conjunto<1 or Num_Conjunto>5 then Put("Valor no válido.");New_Line;end if;
+               exit when Num_Conjunto>=1 and Num_Conjunto<=5;
             end loop;
             SetData:=conjuntos(Num_Conjunto,Wcet,Deadline,Period); --Establece los valores de las tareas
          elsif menu=2 then
@@ -230,22 +230,26 @@ package body data is
    function conjuntos (conjunto: in integer;Wcet, Deadline, Period: in out v_enteros) return boolean is
       ErrorConjuntos: boolean:=false;
    begin
-      if conjunto=1 and Num_tasks=3 then
-         Wcet:=(2,3,4);
-         Deadline:=(8,10,15);
-         Period:=(10,12,20);
-      elsif conjunto=2 and Num_tasks=3 then
-         Wcet:=(3,4,5);
-         Deadline:=(9,11,16);
-         Period:=(11,13,21);
+      if    conjunto=1 and Num_tasks=3 then
+         Wcet:=    ( 2, 3, 4);
+         Deadline:=( 8,10,15);
+         Period:=  (10,12,20);
       elsif conjunto=3 and Num_tasks=4 then
-         Wcet:=(2,3,4,5);
-         Deadline:=(8,10,15,18);
-         Period:=(10,12,20,22);
-      elsif conjunto=4 and Num_tasks=4 then
-         Wcet:=(2,3,5,2);
-         Deadline:=(5,10,16,24);
-         Period:=(5,13,20,24);
+         Wcet:=    ( 2, 3, 4, 5);
+         Deadline:=( 8,10,15,18);
+         Period:=  (10,12,20,22);
+      elsif conjunto=2 and Num_tasks=5 then
+         Wcet:=    ( 3, 4, 5, 6, 7);
+         Deadline:=( 9,11,16,16,18);
+         Period:=  (11,13,21,18,26);
+      elsif conjunto=4 and Num_tasks=6 then
+         Wcet:=    ( 2, 3, 4, 5, 3, 3);
+         Deadline:=(16,15,17,18,17,24);
+         Period:=  (22,18,20,21,19,25);
+      elsif conjunto=5 and Num_tasks=6 then
+         Wcet:=    ( 2, 3, 4, 5, 3, 3);
+         Deadline:=(16,15,17,18,17,24);
+         Period:=  (22,18,20,21,19,23); -- Periodo(6) < plazo(6) = error
       else
          Put_Line("El número de tareas no coincide con el conjunto.");
          Put_Line("Tareas no definidas.");

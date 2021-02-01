@@ -22,7 +22,7 @@ begin
       Get(posi(i));
    end loop;
 
-   Put("P1 = (");Put(posi(0), 1, 1, 0);Put(", ");Put(posi(1), 1, 1, 0);Put(")");    --(X, SpaceLeft, Decimals, Exponents)
+   Put("P1 = (");Put(posi(0), 1, 1, 0);Put(", ");Put(posi(1), 1, 1, 0);Put(")");    --(float, SpaceLeft, Decimals, Exponents)
    New_Line;
    Put("P2 = (");Put(posi(2), 1, 1, 0);Put(", ");Put(posi(3), 1, 1, 0);Put(")");
    New_Line;
@@ -31,7 +31,7 @@ begin
    dy := posi(3)-posi(1);
    distance := sqrt(dx*dx+dy*dy);
 
-   Put("Distancia de separación: ");Put(distance, 1, 1, 0); --Expresion by floats: Put(X, left space, decimals, exponents)
+   Put("Distancia de separación: ");Put(distance, 1, 1, 0); --Expresion by floats: Put(float, left space, decimals, exponents)
    Put_line(" unidades");
    New_line;
 end Main;

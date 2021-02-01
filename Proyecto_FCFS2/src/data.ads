@@ -20,15 +20,15 @@ package data is
    type v_taskgroup is array (integer range <>) of tarea;
    type v_enteros is array (integer range <>) of integer;
 
-   procedure Refreshcomput (grupotareas,grupoaperiodicos: in out v_taskgroup;wcet: in v_enteros);
    procedure Estadotareas (time_loop: in integer;grupotareas,grupoaperiodicos: in out v_taskgroup);
-   function Setdata (Wcet, Deadline, Period: in out v_enteros) return boolean;
    procedure Setpriority (grupotareas,grupoaperiodicos: in out v_taskgroup;time: in integer);
-   function conjuntos (conjunto: in integer;Wcet, Deadline, Period: in out v_enteros) return boolean;
-   procedure Inittasks (taskgroup:in out v_taskgroup;wcet,deadline,period:in v_enteros);
+   procedure Refreshcomput (grupotareas,grupoaperiodicos: in out v_taskgroup;wcet: in v_enteros);
+   function Setdata (Wcet, Deadline, Period: in out v_enteros) return boolean;
+   function SetTimeEvents (N_aperiodicos:in integer) return v_taskgroup;
    procedure Imprimir (Wcet, Deadline, Period: in v_enteros);
    procedure ImprimirAperiodicos (T_Compu:in integer; aperiodicdata: in v_taskgroup);
-   function SetTimeEvents (N_aperiodicos:in integer) return v_taskgroup;
+   procedure Inittasks (taskgroup:in out v_taskgroup;wcet,deadline,period:in v_enteros);
+   function conjuntos (conjunto: in integer;Wcet, Deadline, Period: in out v_enteros) return boolean;
    function CompruebaParametros (Wcet, Deadline, Period: in out v_enteros) return integer;
    procedure ShowStateTasks (time:in integer;taskgroup:in v_taskgroup);
    function GetTaskON return integer;

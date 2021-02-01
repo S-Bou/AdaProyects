@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project >
-    <file_marker column=" 16" line=" 35" >
+  <Project>
+    <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\schedulerrm.gpr</vfs_file>
+    <file_marker column=" 20" line=" 60" >
       <vfs_project>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\schedulerrm.gpr</vfs_project>
       <vfs_file>D:\Programas\GNAT\AdaProyects\Practica_4b_FULL\src\data.adb</vfs_file>
     </file_marker>

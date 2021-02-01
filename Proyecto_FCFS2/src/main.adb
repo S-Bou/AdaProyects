@@ -1,5 +1,5 @@
 -- Trabajo 2: Planificador FCFS y eventos con la menor prioridad; por Sergio Bou Grau.
--- Prioridad de tereas por índice más bajo.
+-- Prioridad de tareas por índice más bajo.
 with schedule_output_functions; use schedule_output_functions;
 with ada.Integer_Text_IO; use ada.Integer_Text_IO;
 with text_io; use text_io;
